@@ -91,6 +91,23 @@ export default async function Page() {
                 <dt className={styles.infoTitle}>資本金</dt>
                 <dd className={styles.infoDescription}>9,000,000円</dd>
               </dl>
+              <dl className={styles.info}>
+                <dt className={styles.infoTitle}>事業内容</dt>
+                <dd className={styles.infoDescription}>
+                  1.WEBサイト、ホームページ及び各種デジタルコンテンツの企画、設計、制作、運営及び保守
+                  <br />
+                  2.アプリケーション、ソフトウェア及び情報システムの企画、開発、販売、運営及び保守
+                  <br />
+                  3.IT、デジタルマーケティング及び情報システムに関するコンサルティング業務
+                </dd>
+                <dd className={styles.infoDescription}>
+                  4.障害者総合支援法に基づく就労継続支援B型事業所の運営及び管理
+                  <br />
+                  5.不動産の所有、取得、管理、賃貸及び運営
+                  <br />
+                  6.前各号に附帯又は関連する一切の業務
+                </dd>
+              </dl>
             </div>
           </div>
         </section>
