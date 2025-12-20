@@ -13,9 +13,9 @@ export default async function Page() {
     <>
       <section className={styles.top}>
         <div>
-          <h1 className={styles.title}>テクノロジーの力で世界を変える</h1>
+          <h1 className={styles.title}>未来を切り開く あなたのパートナー</h1>
           <p className={styles.description}>
-            私たちは市場をリードしているグローバルテックカンパニーです。
+            起業支援・マーケティング・共育・業務効率化をワンストップで。プロフェッショナルチームが成果創出まで伴走します。
           </p>
         </div>
         <Image
@@ -40,9 +40,9 @@ export default async function Page() {
             <h2 className={styles.sectionTitleEn}>Business</h2>
             <p className={styles.sectionTitleJa}>事業内容</p>
             <p className={styles.sectionDescription}>
-              当社は、次世代テクノロジーの研究開発・製造・販売を行う革新的な企業です。
+              起業準備から法人登記、SNS/SEO・MEO、共育、業務効率化システム、ビジネスマッチング、フランチャイズ支援までを一社完結で提供します。
               <br />
-              AI、ロボット工学、自律システムなど、幅広い分野でのソリューション提供を通じて、社会の進化と未来の創造に貢献します。
+              「出来ない言い訳より出来る方法」をモットーに、実行力まで含めた伴走支援で成果を作ります。
             </p>
             <ButtonLink href="/business">もっとみる</ButtonLink>
           </div>
@@ -69,31 +69,27 @@ export default async function Page() {
               <h2 className={styles.sectionTitleEn}>About Us</h2>
               <p className={styles.sectionTitleJa}>私たちについて</p>
               <p className={styles.sectionDescription}>
-                「テクノロジーの力で世界を変える」をミッションに掲げ、日々活動をしています。
+                ビジネスの各ステージで最適なサポートを提供する NEXTGAME。正しいリスクと努力で障壁を超え、成果に直結する戦略と実行を届けます。
               </p>
               <dl className={styles.info}>
                 <dt className={styles.infoTitle}>社名</dt>
-                <dd className={styles.infoDescription}>株式会社Simple</dd>
-              </dl>
-              <dl className={styles.info}>
-                <dt className={styles.infoTitle}>設立</dt>
-                <dd className={styles.infoDescription}>2023年4月</dd>
+                <dd className={styles.infoDescription}>NEXTGAME株式会社</dd>
               </dl>
               <dl className={styles.info}>
                 <dt className={styles.infoTitle}>所在地</dt>
                 <dd className={styles.infoDescription}>
-                  〒000-0000
+                  〒461-0001
                   <br />
-                  東京都渋谷区渋谷1-1-1
+                  愛知県名古屋市東区泉2-19-11-1
                 </dd>
               </dl>
               <dl className={styles.info}>
                 <dt className={styles.infoTitle}>代表者</dt>
-                <dd className={styles.infoDescription}>鈴木 太郎</dd>
+                <dd className={styles.infoDescription}>内山 博貴</dd>
               </dl>
               <dl className={styles.info}>
                 <dt className={styles.infoTitle}>資本金</dt>
-                <dd className={styles.infoDescription}>1,000万円</dd>
+                <dd className={styles.infoDescription}>5,000,000円</dd>
               </dl>
             </div>
           </div>
