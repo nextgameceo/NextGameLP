@@ -89,7 +89,7 @@ export default async function Page() {
               </dl>
               <dl className={styles.info}>
                 <dt className={styles.infoTitle}>資本金</dt>
-                <dd className={styles.infoDescription}>9,000,000円</dd>
+                <dd className={styles.infoDescription}>900万円</dd>
               </dl>
               <dl className={styles.info}>
                 <dt className={styles.infoTitle}>事業内容</dt>
