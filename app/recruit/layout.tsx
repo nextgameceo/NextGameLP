@@ -2,12 +2,12 @@ import Hero from '@/app/_components/Hero';
 import Sheet from '@/app/_components/Sheet';
 
 export const metadata = {
-  title: 'メンバー｜シンプルなコーポレートサイト',
+  title: '採用情報|NextGame採用情報',
   openGraph: {
-    title: 'メンバー｜シンプルなコーポレートサイト',
+    title: '採用情報|NextGame採用情報',
   },
   alternates: {
-    canonical: '/members',
+    canonical: '/recruit',
   },
 };
 
@@ -18,7 +18,7 @@ type Props = {
 export default function RootLayout({ children }: Props) {
   return (
     <>
-      <Hero title="Members" sub="メンバー" />
+      <Hero title="recruit" sub="採用情報" />
       <Sheet>{children}</Sheet>
     </>
   );
