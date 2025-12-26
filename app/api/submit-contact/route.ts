@@ -8,6 +8,7 @@ function validateEmail(email: string) {
 }
 
 const SUPPORT_EMAIL = 'support@nextgame-limited.com';
+const DEFAULT_FROM = 'NextGame Contact <support@nextgame-limited.com>';
 
 export async function POST(request: NextRequest) {
   const json = await request.json();
@@ -89,6 +90,7 @@ export async function POST(request: NextRequest) {
       },
     );
   }
+  const from = process.env.RESEND_FROM ?? DEFAULT_FROM;
 
   const subject = `【お問い合わせ】${company} ${lastname}${firstname} 様`;
   const text = [
@@ -111,7 +113,7 @@ export async function POST(request: NextRequest) {
       'Content-Type': 'application/json',
     },
     body: JSON.stringify({
-      from: `NextGame Contact <${SUPPORT_EMAIL}>`,
+      from,
       to: SUPPORT_EMAIL,
       subject,
       text,
@@ -120,7 +122,9 @@ export async function POST(request: NextRequest) {
   });
 
   if (!response.ok) {
-    const errorBody = await response.json().catch(() => ({}));
+    const errorBody = await response
+      .json()
+      .catch(async () => ({ message: await response.text().catch(() => '') }));
     return NextResponse.json(
       {
         status: 'error',
