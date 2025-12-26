@@ -46,9 +46,9 @@ export default async function Page() {
             <h2 className={styles.sectionTitleEn}>Business</h2>
             <p className={styles.sectionTitleJa}>事業内容</p>
             <p className={styles.sectionDescription}>
-              起業準備から法人登記、SNS/SEO・MEO、共育、業務効率化システム、ビジネスマッチング、フランチャイズ支援までを一社完結で提供します。
-              <br />
-              「出来ない言い訳より出来る方法」をモットーに、実行力まで含めた伴走支援で成果を作ります。
+            「障害者が『スキル』で稼ぎ、従業員が『絶対高給』で報われる、止まらない経済圏を創る」ことをビジョンとしています。
+            <br/>
+            従来の単純作業中心ではなく、ITスキル習得を通じて障害のある方の経済的自立を促し、持続可能なビジネスモデルを構築することを目指しています。
             </p>
             <ButtonLink href="/business">もっとみる</ButtonLink>
           </div>
