@@ -8,11 +8,11 @@ export default function Header() {
     <header className={styles.header}>
       <Link href="/" className={styles.logoLink}>
         <Image
-          src="/logo.svg"
-          alt="logo"
+          src="/favicons/android-chrome-192x192.png"
+          alt="NEXTGAME"
           className={styles.logo}
-          width={348}
-          height={133}
+          width={192}
+          height={192}
           priority
         />
       </Link>

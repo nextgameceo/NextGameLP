@@ -14,11 +14,21 @@ export default async function Page() {
   return (
     <>
       <section className={styles.top}>
-        <div>
-          <h1 className={styles.title}>未来を切り開く あなたのパートナー</h1>
-          <p className={styles.description}>
-            起業支援・マーケティング・共育・業務効率化をワンストップで。プロフェッショナルチームが成果創出まで伴走します。
-          </p>
+        <div className={styles.heroContent}>
+          <Image
+            className={styles.heroLogo}
+            src="/logo.png"
+            alt="NEXTGAME ロゴ"
+            width={512}
+            height={512}
+            priority
+          />
+          <div className={styles.heroText}>
+            <h1 className={styles.title}>出来ない言い訳より出来る方法を</h1>
+            <p className={styles.description}>
+              起業支援・マーケティング・共育・業務効率化をワンストップで。プロフェッショナルチームが成果創出まで伴走します。
+            </p>
+          </div>
         </div>
         <Image
           className={styles.bgimg}

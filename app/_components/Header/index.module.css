@@ -13,8 +13,9 @@
 }
 
 .logo {
-  height: 133px;
-  width: auto;
+  height: 72px;
+  width: 72px;
+  border-radius: 16px;
 }
 
 @media (max-width: 640px) {

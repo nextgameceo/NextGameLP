@@ -18,10 +18,31 @@
   pointer-events: none;
 }
 
+.heroContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  text-align: center;
+  z-index: 1;
+  padding: 0 24px;
+}
+
+.heroLogo {
+  width: min(640px, 100vw);
+  height: auto;
+}
+
+.heroText {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
 .title {
   font-size: 3.2rem;
   font-weight: 800;
-  text-align: left;
+  text-align: center;
   margin-bottom: 1rem;
   line-height: 1.2;
 }
@@ -176,6 +197,10 @@
     font-size: 2.6rem;
   }
 
+  .heroLogo {
+    width: min(420px, 80vw);
+  }
+
   .news {
     margin: -40px auto 0;
     padding: 28px;
@@ -193,12 +218,12 @@
 @media (max-width: 640px) {
   .top {
     padding: 120px 16px 100px;
-    text-align: left;
+    text-align: center;
   }
 
   .title {
     font-size: 2.2rem;
-    text-align: left;
+    text-align: center;
   }
 
   .description {
