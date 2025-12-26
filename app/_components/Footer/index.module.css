@@ -21,9 +21,9 @@
 @media (max-width: 640px) {
   .items {
     flex-wrap: wrap;
-    gap: 8px 0;
+    gap: 8px 0px;
   }
   .item {
-    width: 50%;
+    width: 25%;
   }
 }
