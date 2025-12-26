@@ -26,7 +26,7 @@ export default async function Page() {
           <div className={styles.heroText}>
             <h1 className={styles.title}>出来ない言い訳より出来る方法を</h1>
             <p className={styles.description}>
-              起業支援・マーケティング・共育・業務効率化をワンストップで。プロフェッショナルチームが成果創出まで伴走します。
+              ITで障害者福祉を革新、利用者・従業員・投資家の三方を勝てるサービスを提供します。
             </p>
           </div>
         </div>
@@ -39,13 +39,7 @@ export default async function Page() {
           priority
         />
       </section>
-      <section className={styles.news}>
-        <h2 className={styles.newsTitle}>News</h2>
-        <NewsList articles={data.contents} />
-        <div className={styles.newsLink}>
-          <ButtonLink href="/news">もっとみる</ButtonLink>
-        </div>
-      </section>
+      
       <section className={styles.section}>
         <div className={styles.horizontal}>
           <div>
@@ -143,6 +137,13 @@ export default async function Page() {
             width={960}
             height={960}
           />
+        </div>
+      </section>
+      <section className={styles.news}>
+        <h2 className={styles.newsTitle}>News</h2>
+        <NewsList articles={data.contents} />
+        <div className={styles.newsLink}>
+          <ButtonLink href="/news">もっとみる</ButtonLink>
         </div>
       </section>
     </>
