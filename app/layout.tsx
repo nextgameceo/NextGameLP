@@ -59,7 +59,7 @@ export default async function RootLayout({ children }: Props) {
       </head>
       <body className={styles.body}>
         <Header />
-        <main>{children}</main>
+        <main className={styles.main}>{children}</main>
         <Footer />
       </body>
     </html>

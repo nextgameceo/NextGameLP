@@ -2,3 +2,13 @@
   background-color: var(--color-bg-main);
   min-height: 100vh;
 }
+
+.main {
+  padding-top: 96px;
+}
+
+@media (max-width: 640px) {
+  .main {
+    padding-top: 104px;
+  }
+}
