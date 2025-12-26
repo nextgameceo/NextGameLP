@@ -109,6 +109,55 @@ export default async function Page() {
             </div>
           </div>
         </section>
+        <section className={`${styles.section} ${styles.messageSection}`}>
+          <div className={styles.messageWrapper}>
+            <div className={styles.messageIntro}>
+              <p className={styles.messageLabel}>CEO MESSAGE</p>
+              <h2 className={styles.sectionTitleEn}>代表者メッセージ</h2>
+              <p className={styles.sectionDescription}>
+                絶望の淵から見出した「正しい努力が報われる社会」を、NEXTGAME はデジタルと
+                福祉の融合で実装します。創業者 内山博貴が、この事業に込めた覚悟をお伝えします。
+              </p>
+            </div>
+            <div className={styles.messageCard}>
+              <div className={styles.messageContent}>
+                <h3 className={styles.messageSubTitle}>創業の背景 ― なぜ内山博貴が挑むのか</h3>
+                <p className={styles.messageLead}>
+                  私は「統合失調感情障害」により精神科の隔離病棟という生き地獄を経験し、退院後は
+                  B型事業所の利用者として現場に立ちました。福祉業界の構造的な闇と、投資家としての失敗で
+                  味わった悔しさが NEXTGAME の原動力です。
+                </p>
+                <ul className={styles.messageList}>
+                  <li>
+                    <span>福祉の闇</span>
+                    障害者を単純作業に閉じ込め、賃金の低さが離職を生む負のループを目の当たりにしました。
+                  </li>
+                  <li>
+                    <span>投資家としての挫折</span>
+                    入院前に筆頭株主だった複数企業が、私の不在中に失速し、責任の重さを突き付けられました。
+                  </li>
+                </ul>
+                <p className={styles.messageMission}>
+                  「障害者が『スキル』で稼ぎ、従業員が『絶対高給』で報われる、止まらない経済圏を創る」
+                </p>
+                <p>
+                  隔離病棟での地獄、利用者としての屈辱、投資家としての挫折。その全てを燃料に、日本の
+                  福祉構造の本質を変革することが私の使命です。
+                </p>
+                <h3 className={styles.messageSubTitle}>内山博貴の覚悟</h3>
+                <p>
+                  精神の闇に落ち、事業崩壊の痛みも知った私だからこそ、勝つためのロジックを描ける。
+                  隔離病棟から生還し、福祉の現場を内側から見てきた経験を武器に、誰も取り残さない
+                  エコシステムを築いていきます。
+                </p>
+              </div>
+              <div className={styles.messageQuote}>
+                <p>「人生に無駄なことはない。」</p>
+                <p className={styles.messageSignature}>代表取締役 内山 博貴</p>
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
       <section className={styles.section}>
         <div className={styles.horizontal}>
