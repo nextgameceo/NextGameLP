@@ -105,8 +105,7 @@ export default async function Page() {
                   2.アプリケーション、ソフトウェア及び情報システムの企画、開発、販売、運営及び保守
                   <br />
                   3.IT、デジタルマーケティング及び情報システムに関するコンサルティング業務
-                </dd>
-                <dd className={styles.infoDescription}>
+                  <br />
                   4.障害者総合支援法に基づく就労継続支援B型事業所の運営及び管理
                   <br />
                   5.不動産の所有、取得、管理、賃貸及び運営
