@@ -35,17 +35,6 @@ export async function POST(request: NextRequest) {
       },
     );
   }
-  if (!company) {
-    return NextResponse.json(
-      {
-        status: 'error',
-        message: '会社名を入力してください',
-      },
-      {
-        status: 400,
-      },
-    );
-  }
   if (!email) {
     return NextResponse.json(
       {
@@ -90,15 +79,27 @@ export async function POST(request: NextRequest) {
       },
     );
   }
-  const from = process.env.RESEND_FROM ?? DEFAULT_FROM;
+  if (!process.env.RESEND_FROM) {
+    return NextResponse.json(
+      {
+        status: 'error',
+        message: '送信元メールアドレスの設定が不足しています',
+      },
+      {
+        status: 500,
+      },
+    );
+  }
+
+  const from = process.env.RESEND_FROM;
   const to = process.env.RESEND_TO ?? SUPPORT_EMAIL;
 
-  const subject = `【お問い合わせ】${company} ${lastname}${firstname} 様`;
+  const subject = `【お問い合わせ】${company ? `${company} ` : ''}${lastname}${firstname} 様`;
   const text = [
     'お問い合わせが届きました。',
     '',
     `氏名: ${lastname} ${firstname}`,
-    `会社名: ${company}`,
+    `会社名: ${company ?? '-'}`,
     `メールアドレス: ${email}`,
     '',
     'メッセージ:',
