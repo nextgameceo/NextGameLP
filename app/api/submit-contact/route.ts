@@ -79,19 +79,7 @@ export async function POST(request: NextRequest) {
       },
     );
   }
-  if (!process.env.RESEND_FROM) {
-    return NextResponse.json(
-      {
-        status: 'error',
-        message: '送信元メールアドレスの設定が不足しています',
-      },
-      {
-        status: 500,
-      },
-    );
-  }
-
-  const from = process.env.RESEND_FROM;
+  const from = process.env.RESEND_FROM ?? DEFAULT_FROM;
   const to = process.env.RESEND_TO ?? SUPPORT_EMAIL;
 
   const subject = `【お問い合わせ】${company ? `${company} ` : ''}${lastname}${firstname} 様`;
