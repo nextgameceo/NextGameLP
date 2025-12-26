@@ -30,6 +30,14 @@ export type Member = {
   image?: MicroCMSImage;
 };
 
+// 採用情報の型定義
+export type Recruit = {
+  role: string;
+  wages: string;
+  limit: string;
+  'working-hours': string;
+};
+
 // 事業内容の型定義
 export type Business = {
   logo?: MicroCMSImage;
@@ -118,6 +126,17 @@ export const getMembersList = async (queries?: MicroCMSQueries) => {
   const listData = await client
     .getList<Member>({
       endpoint: 'members',
+      queries,
+    })
+    .catch(notFound);
+  return listData;
+};
+
+// 採用情報一覧を取得
+export const getRecruitList = async (queries?: MicroCMSQueries) => {
+  const listData = await client
+    .getList<Recruit>({
+      endpoint: 'recruit',
       queries,
     })
     .catch(notFound);
