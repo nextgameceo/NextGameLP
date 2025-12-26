@@ -69,6 +69,12 @@ export async function POST(request: NextRequest) {
     );
   }
   if (!process.env.RESEND_API_KEY) {
+    if (process.env.NODE_ENV === 'development') {
+      return NextResponse.json({
+        status: 'ok',
+        result: { skipped: true, reason: 'RESEND_API_KEY is missing' },
+      });
+    }
     return NextResponse.json(
       {
         status: 'error',
