@@ -29,8 +29,8 @@ export default function Menu() {
             </Link>
           </li>
           <li>
-            <Link href="/members" onClick={close}>
-              メンバー
+            <Link href="/recruit" onClick={close}>
+              採用情報
             </Link>
           </li>
           <li>
