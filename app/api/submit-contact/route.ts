@@ -91,6 +91,7 @@ export async function POST(request: NextRequest) {
     );
   }
   const from = process.env.RESEND_FROM ?? DEFAULT_FROM;
+  const to = process.env.RESEND_TO ?? SUPPORT_EMAIL;
 
   const subject = `【お問い合わせ】${company} ${lastname}${firstname} 様`;
   const text = [
@@ -114,7 +115,7 @@ export async function POST(request: NextRequest) {
     },
     body: JSON.stringify({
       from,
-      to: SUPPORT_EMAIL,
+      to,
       subject,
       text,
       reply_to: email,
