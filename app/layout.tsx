@@ -20,6 +20,23 @@ export async function generateMetadata(): Promise<Metadata> {
       description: data.ogDescription,
       images: [data.ogImage?.url || ''],
     },
+    icons: {
+      icon: [
+        { url: '/favicons/favicon.ico' },
+        { url: '/favicons/icon-16x16.png', sizes: '16x16', type: 'image/png' },
+        { url: '/favicons/icon-32x32.png', sizes: '32x32', type: 'image/png' },
+        { url: '/favicons/icon-192x192.png', sizes: '192x192', type: 'image/png' },
+        { url: '/favicons/icon-512x512.png', sizes: '512x512', type: 'image/png' },
+      ],
+      apple: [
+        {
+          url: '/favicons/apple-touch-icon.png',
+          sizes: '180x180',
+          rel: 'apple-touch-icon',
+        },
+      ],
+    },
+    manifest: '/favicons/manifest.json',
     alternates: {
       canonical: data.canonical,
     },
@@ -33,6 +50,13 @@ type Props = {
 export default async function RootLayout({ children }: Props) {
   return (
     <html lang="ja">
+      <head>
+        <link rel="icon" href="/favicons/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicons/icon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicons/icon-16x16.png" />
+        <link rel="apple-touch-icon" href="/favicons/apple-touch-icon.png" />
+        <link rel="manifest" href="/favicons/manifest.json" />
+      </head>
       <body className={styles.body}>
         <Header />
         <main>{children}</main>
