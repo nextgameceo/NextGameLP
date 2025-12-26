@@ -7,6 +7,8 @@ function validateEmail(email: string) {
   return pattern.test(email);
 }
 
+const SUPPORT_EMAIL = 'support@nextgame-limited.com';
+
 export async function POST(request: NextRequest) {
   const json = await request.json();
   const { lastname, firstname, company, email, message } = json;
@@ -76,47 +78,61 @@ export async function POST(request: NextRequest) {
       },
     );
   }
-  const result = await fetch(
-    `https://api.hsforms.com/submissions/v3/integration/submit/${process.env.HUBSPOT_PORTAL_ID}/${process.env.HUBSPOT_FORM_ID}`,
-    {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
+  if (!process.env.RESEND_API_KEY) {
+    return NextResponse.json(
+      {
+        status: 'error',
+        message: 'メール送信の設定が不足しています',
       },
-      body: JSON.stringify({
-        context: {
-          hutk: request.cookies.get('hubspotutk')?.value,
-          pageUri: request.headers.get('referer'),
-        },
-        fields: [
-          {
-            objectTypeId: '0-1',
-            name: 'lastname',
-            value: lastname,
-          },
-          {
-            objectTypeId: '0-1',
-            name: 'firstname',
-            value: firstname,
-          },
-          {
-            objectTypeId: '0-1',
-            name: 'company',
-            value: company,
-          },
-          {
-            objectTypeId: '0-1',
-            name: 'email',
-            value: email,
-          },
-          {
-            objectTypeId: '0-1',
-            name: 'message',
-            value: message,
-          },
-        ],
-      }),
+      {
+        status: 500,
+      },
+    );
+  }
+
+  const subject = `【お問い合わせ】${company} ${lastname}${firstname} 様`;
+  const text = [
+    'お問い合わせが届きました。',
+    '',
+    `氏名: ${lastname} ${firstname}`,
+    `会社名: ${company}`,
+    `メールアドレス: ${email}`,
+    '',
+    'メッセージ:',
+    message,
+    '',
+    `送信元ページ: ${request.headers.get('referer') ?? 'unknown'}`,
+  ].join('\n');
+
+  const response = await fetch('https://api.resend.com/emails', {
+    method: 'POST',
+    headers: {
+      Authorization: `Bearer ${process.env.RESEND_API_KEY}`,
+      'Content-Type': 'application/json',
     },
-  ).then((res) => res.json());
-  return NextResponse.json(result);
+    body: JSON.stringify({
+      from: `NextGame Contact <${SUPPORT_EMAIL}>`,
+      to: SUPPORT_EMAIL,
+      subject,
+      text,
+      reply_to: email,
+    }),
+  });
+
+  if (!response.ok) {
+    const errorBody = await response.json().catch(() => ({}));
+    return NextResponse.json(
+      {
+        status: 'error',
+        message: 'メール送信に失敗しました',
+        details: errorBody,
+      },
+      {
+        status: 502,
+      },
+    );
+  }
+
+  const result = await response.json();
+  return NextResponse.json({ status: 'ok', result });
 }
