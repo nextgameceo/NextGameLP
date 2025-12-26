@@ -64,13 +64,6 @@ export default async function Page() {
       <div className={styles.aboutus}>
         <section className={styles.section}>
           <div className={styles.horizontal}>
-            <Image
-              className={styles.aboutusImg}
-              src="/img-aboutus.jpg"
-              alt=""
-              width={6000}
-              height={4000}
-            />
             <div>
               <h2 className={styles.sectionTitleEn}>About Us</h2>
               <p className={styles.sectionTitleJa}>私たちについて</p>
