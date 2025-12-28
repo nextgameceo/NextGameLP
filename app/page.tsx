@@ -46,7 +46,7 @@ export default async function Page() {
             <h2 className={styles.sectionTitleEn}>Business</h2>
             <p className={styles.sectionTitleJa}>事業内容</p>
             <p className={styles.sectionDescription}>
-            「障害者が『スキル』で稼ぎ、従業員が『絶対高給』で報われる、止まらない経済圏を創る」ことをビジョンとしています。
+            「障害者が『スキル』で稼ぎ、従業員が『業界屈指の高給料』で報われる、止まらない経済圏を創る」ことをビジョンとしています。
             <br/>
             従来の単純作業中心ではなく、ITスキル習得を通じて障害のある方の経済的自立を促し、持続可能なビジネスモデルを構築することを目指しています。
             </p>
@@ -131,7 +131,7 @@ export default async function Page() {
                   </li>
                 </ul>
                 <p className={styles.messageMission}>
-                  「障害者が『スキル』で稼ぎ、従業員が『絶対高給』で報われる、止まらない経済圏を創る」
+                  「障害者が『スキル』で稼ぎ、従業員が『業界屈指の高給料』で報われる、止まらない経済圏を創る」
                 </p>
                 <p>
                   隔離病棟での地獄、利用者としての屈辱、投資家としての挫折。その全てを燃料に、日本の
