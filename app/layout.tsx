@@ -7,17 +7,24 @@ import styles from './layout.module.css';
 
 export async function generateMetadata(): Promise<Metadata> {
   const data = await getMeta();
+
+  const defaultTitle = 'NEXTGAME株式会社 | 未来と今を繋げるゲーム';
+  const defaultDesc = '愛知県名古屋市のNEXTGAME株式会社です。';
+
   if (!data) {
-    return {};
+    return{
+      title: defaultTitle,
+      description: defaultDesc,
+    }
   }
 
   return {
     metadataBase: new URL(process.env.BASE_URL || 'http://localhost:3000'),
-    title: data.title,
-    description: data.description,
+    title: data.title || defaultTitle,
+    description: data.description || defaultDesc,
     openGraph: {
-      title: data.ogTitle,
-      description: data.ogDescription,
+      title: data.ogTitle || defaultTitle,
+      description: data.ogDescription || defaultDesc,
       images: [data.ogImage?.url || ''],
     },
     icons: {
@@ -50,13 +57,6 @@ type Props = {
 export default async function RootLayout({ children }: Props) {
   return (
     <html lang="ja">
-      <head>
-        <link rel="icon" href="/favicons/favicon.ico" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicons/icon-32x32.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicons/icon-16x16.png" />
-        <link rel="apple-touch-icon" href="/favicons/apple-touch-icon.png" />
-        <link rel="manifest" href="/favicons/manifest.json" />
-      </head>
       <body className={styles.body}>
         <Header />
         <main className={styles.main}>{children}</main>

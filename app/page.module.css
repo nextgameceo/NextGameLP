@@ -127,6 +127,61 @@
   color: rgba(255, 255, 255, 0.85);
 }
 
+.hiringBody {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  margin-bottom: 32px;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.hiringLead {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.hiringBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 20px 24px;
+  border-radius: 20px;
+  border: 1px solid rgba(109, 190, 214, 0.25);
+  background: rgba(9, 11, 12, 0.6);
+}
+
+.hiringHeading {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--color-current);
+}
+
+.hiringSubheading {
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.hiringList {
+  display: grid;
+  gap: 6px;
+  padding-left: 20px;
+  margin: 0;
+}
+
+.hiringGrid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.hiringNote {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
 .horizontal {
   display: flex;
   justify-content: space-between;

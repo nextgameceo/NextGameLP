@@ -46,19 +46,12 @@ export default async function Page() {
             <h2 className={styles.sectionTitleEn}>Business</h2>
             <p className={styles.sectionTitleJa}>事業内容</p>
             <p className={styles.sectionDescription}>
-            「障害者が『スキル』で稼ぎ、従業員が『絶対高給』で報われる、止まらない経済圏を創る」ことをビジョンとしています。
+            「障害者が『スキル』で稼ぎ、従業員が『業界屈指の高給料』で報われる、止まらない経済圏を創る」ことをビジョンとしています。
             <br/>
             従来の単純作業中心ではなく、ITスキル習得を通じて障害のある方の経済的自立を促し、持続可能なビジネスモデルを構築することを目指しています。
             </p>
             <ButtonLink href="/business">もっとみる</ButtonLink>
           </div>
-          <Image
-            className={styles.businessImg}
-            src="/img-business.png"
-            alt=""
-            width={1024}
-            height={1024}
-          />
         </div>
       </section>
       <div className={styles.aboutus}>
@@ -138,7 +131,7 @@ export default async function Page() {
                   </li>
                 </ul>
                 <p className={styles.messageMission}>
-                  「障害者が『スキル』で稼ぎ、従業員が『絶対高給』で報われる、止まらない経済圏を創る」
+                  「障害者が『スキル』で稼ぎ、従業員が『業界屈指の高給料』で報われる、止まらない経済圏を創る」
                 </p>
                 <p>
                   隔離病棟での地獄、利用者としての屈辱、投資家としての挫折。その全てを燃料に、日本の
@@ -164,20 +157,74 @@ export default async function Page() {
           <div>
             <h2 className={styles.sectionTitleEn}>We are hiring</h2>
             <p className={styles.sectionTitleJa}>採用情報</p>
-            <p className={styles.sectionDescription}>
-              当社では、チャレンジ精神を持った人材を求めています。
-              <br />
-              新しいアイデアを出し合い、成長する環境で活躍したい方は、ぜひご応募ください。当社でのキャリアを築きながら、技術の最前線で力を発揮しましょう。
-            </p>
+            <div className={styles.hiringBody}>
+              <p className={styles.hiringLead}>
+                障害者がスキルで稼ぎ、支援者が高給で報われる経済圏を、本気で実現するために生まれたのが
+                NEXTGAMEです。
+              </p>
+              <div className={styles.hiringBlock}>
+                <h3 className={styles.hiringHeading}>なぜ募集するのか</h3>
+                <ul className={styles.hiringList}>
+                  <li>単純作業しか与えられない利用者が多い</li>
+                  <li>低賃金で疲弊する支援者が多い</li>
+                  <li>成長しない事業所が多い</li>
+                </ul>
+                <p>
+                  私たちはその構造を壊し、ITスキルを本気で教え、市場で通用する仕事を回し、
+                  「できる人が、きちんと稼げる」福祉をつくります。
+                </p>
+              </div>
+              <div className={styles.hiringBlock}>
+                <h3 className={styles.hiringHeading}>NEXTGAMEで働く意味</h3>
+                <div className={styles.hiringGrid}>
+                  <div>
+                    <p className={styles.hiringSubheading}>福祉業界トップクラスの待遇</p>
+                    <ul className={styles.hiringList}>
+                      <li>サービス管理責任者：月給45万円〜</li>
+                      <li>IT指導員：月給35万円〜</li>
+                      <li>エリアマネージャー：月給50万円〜</li>
+                    </ul>
+                    <p>「やりがい搾取」はしません。成果と責任に、正当な報酬を支払います。</p>
+                  </div>
+                  <div>
+                    <p className={styles.hiringSubheading}>IT×実務×成長環境</p>
+                    <ul className={styles.hiringList}>
+                      <li>Web制作 / LP制作</li>
+                      <li>動画編集</li>
+                      <li>アプリ・ゲーム制作</li>
+                    </ul>
+                    <p>実際に売れる仕事を、利用者と一緒に回します。</p>
+                  </div>
+                  <div>
+                    <p className={styles.hiringSubheading}>囲い込まない支援</p>
+                    <p>
+                      ゴールは「通所」ではなく、独立・業務委託・市場参加。外に出て稼げるならそれが成功です。
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className={styles.hiringBlock}>
+                <h3 className={styles.hiringHeading}>こんな人と働きたい</h3>
+                <ul className={styles.hiringList}>
+                  <li>福祉を「変えたい」と本気で思っている</li>
+                  <li>ITやスキル教育を“実務”として教えられる</li>
+                  <li>利用者を「対等なビジネスパートナー」と見られる</li>
+                  <li>ぬるい環境より、成長する現場を選びたい</li>
+                  <li>高給をもらう覚悟がある</li>
+                </ul>
+                <p className={styles.hiringNote}>※ 優しさだけの人は向いていません。</p>
+              </div>
+              <div className={styles.hiringBlock}>
+                <h3 className={styles.hiringHeading}>最後に</h3>
+                <p>
+                  NEXTGAMEは命をかけてでも成功させる覚悟の事業です。福祉で本気の価値を生み出す側に回りたい人、
+                  ぜひ一緒にやりましょう。
+                </p>
+              </div>
+            </div>
             <ButtonLink href="/recruit">採用情報へ</ButtonLink>
           </div>
-          <Image
-            className={styles.hiringImg}
-            src="/img-hiring.jpg"
-            alt=""
-            width={960}
-            height={960}
-          />
+
         </div>
       </section>
       <section className={styles.news}>

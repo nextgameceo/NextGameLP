@@ -20,6 +20,7 @@ export const formatRichText = (richText: string) => {
     }
     const text = $(elm).text().trim();
     $(elm).replaceWith(`<figure><img src="${href}" alt="${text || ''}" /></figure>`);
+
   });
   $('pre code').each((_, elm) => {
     const lang = $(elm).attr('class');
