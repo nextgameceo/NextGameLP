@@ -157,89 +157,71 @@ export default async function Page() {
           <div>
             <h2 className={styles.sectionTitleEn}>We are hiring</h2>
             <p className={styles.sectionTitleJa}>採用情報</p>
-            <p className={styles.sectionDescription}>
-            採用メッセージ
-
-なぜ、NEXTGAMEは人を募集するのか
-
-NEXTGAMEは、
-「障害者がスキルで稼ぎ、支援者が高給で報われる経済圏」
-を本気で実現するために生まれました。
-
-世の中には、
-・単純作業しか与えられない利用者
-・低賃金で疲弊する支援者
-・成長しない事業所
-
-が溢れています。
-
-私たちは、その構造を壊す側に回ります。
-
-ITスキルを本気で教え、
-市場で通用する仕事を受注し、
-「できる人が、きちんと稼げる」
-当たり前の世界を福祉の中につくります。
-
-これは“優しい仕事”ではありません。
-本気の事業です。
-
-NEXTGAMEで働く意味
-✔️ 福祉業界トップクラスの待遇
-
-サービス管理責任者：月給45万円〜
-
-IT指導員：月給35万円〜
-
-エリアマネージャー：月給50万円〜
-
-「やりがい搾取」はしません。
-成果と責任に、正当な報酬を支払います。
-
-✔️ IT×実務×成長環境
-
-Web制作
-
-LP制作
-
-動画編集
-
-アプリ・ゲーム制作
-
-実際に売れる仕事を、利用者と一緒に回します。
-机上の支援ではなく、現場で結果を出す福祉です。
-
-✔️ 囲い込まない支援
-
-NEXTGAMEのゴールは「通所」ではありません。
-独立・業務委託・市場参加です。
-
-利用者が外に出て稼げるなら、
-それが一番の成功だと考えています。
-
-こんな人と働きたい
-
-福祉を「変えたい」と本気で思っている
-
-ITやスキル教育を“実務”として教えられる
-
-利用者を「対等なビジネスパートナー」と見られる
-
-ぬるい環境より、成長する現場を選びたい
-
-高給をもらう覚悟がある
-
-※ 優しさだけの人は向いていません。
-
-最後に
-
-NEXTGAMEは、
-命をかけてでも成功させる覚悟の事業です。
-
-福祉を食い物にする側ではなく、
-福祉で本気の価値を生み出す側に回りたい人。
-
-ぜひ、一緒にやりましょう。
-            </p>
+            <div className={styles.hiringBody}>
+              <p className={styles.hiringLead}>
+                障害者がスキルで稼ぎ、支援者が高給で報われる経済圏を、本気で実現するために生まれたのが
+                NEXTGAMEです。
+              </p>
+              <div className={styles.hiringBlock}>
+                <h3 className={styles.hiringHeading}>なぜ募集するのか</h3>
+                <ul className={styles.hiringList}>
+                  <li>単純作業しか与えられない利用者が多い</li>
+                  <li>低賃金で疲弊する支援者が多い</li>
+                  <li>成長しない事業所が多い</li>
+                </ul>
+                <p>
+                  私たちはその構造を壊し、ITスキルを本気で教え、市場で通用する仕事を回し、
+                  「できる人が、きちんと稼げる」福祉をつくります。
+                </p>
+              </div>
+              <div className={styles.hiringBlock}>
+                <h3 className={styles.hiringHeading}>NEXTGAMEで働く意味</h3>
+                <div className={styles.hiringGrid}>
+                  <div>
+                    <p className={styles.hiringSubheading}>福祉業界トップクラスの待遇</p>
+                    <ul className={styles.hiringList}>
+                      <li>サービス管理責任者：月給45万円〜</li>
+                      <li>IT指導員：月給35万円〜</li>
+                      <li>エリアマネージャー：月給50万円〜</li>
+                    </ul>
+                    <p>「やりがい搾取」はしません。成果と責任に、正当な報酬を支払います。</p>
+                  </div>
+                  <div>
+                    <p className={styles.hiringSubheading}>IT×実務×成長環境</p>
+                    <ul className={styles.hiringList}>
+                      <li>Web制作 / LP制作</li>
+                      <li>動画編集</li>
+                      <li>アプリ・ゲーム制作</li>
+                    </ul>
+                    <p>実際に売れる仕事を、利用者と一緒に回します。</p>
+                  </div>
+                  <div>
+                    <p className={styles.hiringSubheading}>囲い込まない支援</p>
+                    <p>
+                      ゴールは「通所」ではなく、独立・業務委託・市場参加。外に出て稼げるならそれが成功です。
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className={styles.hiringBlock}>
+                <h3 className={styles.hiringHeading}>こんな人と働きたい</h3>
+                <ul className={styles.hiringList}>
+                  <li>福祉を「変えたい」と本気で思っている</li>
+                  <li>ITやスキル教育を“実務”として教えられる</li>
+                  <li>利用者を「対等なビジネスパートナー」と見られる</li>
+                  <li>ぬるい環境より、成長する現場を選びたい</li>
+                  <li>高給をもらう覚悟がある</li>
+                </ul>
+                <p className={styles.hiringNote}>※ 優しさだけの人は向いていません。</p>
+              </div>
+              <div className={styles.hiringBlock}>
+                <h3 className={styles.hiringHeading}>最後に</h3>
+                <p>
+                  NEXTGAMEは命をかけてでも成功させる覚悟の事業です。福祉で本気の価値を生み出す側に回りたい人、
+                  ぜひ一緒にやりましょう。
+                </p>
+              </div>
+            </div>
             <ButtonLink href="/recruit">採用情報へ</ButtonLink>
           </div>
           <Image
