@@ -52,13 +52,6 @@ export default async function Page() {
             </p>
             <ButtonLink href="/business">もっとみる</ButtonLink>
           </div>
-          <Image
-            className={styles.businessImg}
-            src="/img-business.png"
-            alt=""
-            width={1024}
-            height={1024}
-          />
         </div>
       </section>
       <div className={styles.aboutus}>
