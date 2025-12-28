@@ -25,19 +25,19 @@ export default async function Page(props: Props) {
             <li key={business.id} className={styles.list}>
               <dl className={styles.flex}>
                 <dt className={styles.name}>
-                  <Image
-                    src={business.logo?.url as string}
-                    alt=""
-                    width={business.logo?.width}
-                    height={business.logo?.height}
-                    className={styles.logo}
-                  />
+                  {business.logo && (
+                    <Image
+                      src={business.logo.url}
+                      alt=""
+                      width={business.logo.width}
+                      height={business.logo.height}
+                      className={styles.logo}
+                    />
+                  )}
                 </dt>
                 <dd className={styles.description}>{business.description}</dd>
                 <dd className={styles.action}>
-                  <ButtonLink href={business.link} isExternal>
-                    サービスサイトへ
-                  </ButtonLink>
+                  <ButtonLink href={`/business/${business.id}`}>詳細を見る</ButtonLink>
                 </dd>
               </dl>
               <Image
