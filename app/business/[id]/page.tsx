@@ -46,25 +46,24 @@ export default async function Page(props: Props) {
 
   return (
     <main className={styles.container}>
-      <div className={styles.header}>
-        {data.logo && (
-          <Image
-            src={data.logo.url}
-            alt=""
-            width={data.logo.width}
-            height={data.logo.height}
-            className={styles.logo}
-          />
-        )}
-        <p className={styles.description}>{data.description}</p>
-      </div>
+      <h1 className={styles.title}>事業内容</h1>
+      <p className={styles.description}>{data.description}</p>
+      {data.logo && (
+        <Image
+          src={data.logo.url}
+          alt=""
+          width={data.logo.width}
+          height={data.logo.height}
+          className={styles.logo}
+        />
+      )}
       {data.image && (
         <Image
           src={data.image.url}
           alt=""
           width={data.image.width}
           height={data.image.height}
-          className={styles.image}
+          className={styles.thumbnail}
         />
       )}
       <div
