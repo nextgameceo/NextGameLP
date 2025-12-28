@@ -35,9 +35,7 @@ export default async function Page(props: Props) {
                 </dt>
                 <dd className={styles.description}>{business.description}</dd>
                 <dd className={styles.action}>
-                  <ButtonLink href={business.link} isExternal>
-                    サービスサイトへ
-                  </ButtonLink>
+                  <ButtonLink href={`/business/${business.id}`}>詳細を見る</ButtonLink>
                 </dd>
               </dl>
               <Image

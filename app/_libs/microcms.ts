@@ -44,6 +44,7 @@ export type Business = {
   description: string;
   image?: MicroCMSImage;
   link: string;
+  content: string;
 };
 
 // メタ情報の型定義
@@ -152,6 +153,19 @@ export const getBusinessList = async (queries?: MicroCMSQueries) => {
     })
     .catch(notFound);
   return listData;
+};
+
+// 事業内容の詳細を取得
+export const getBusinessDetail = async (contentId: string, queries?: MicroCMSQueries) => {
+  const detailData = await client
+    .getListDetail<Business>({
+      endpoint: 'business',
+      contentId,
+      queries,
+    })
+    .catch(notFound);
+
+  return detailData;
 };
 
 // メタ情報を取得
