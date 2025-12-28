@@ -19,9 +19,8 @@ export const formatRichText = (richText: string) => {
       return;
     }
     const text = $(elm).text().trim();
-    const figcaption = text ? `<figcaption>${text}</figcaption>` : '';
     $(elm).replaceWith(
-      `<figure><img src="${href}" alt="${text || ''}" />${figcaption}</figure>`,
+      `<figure><img src="${href}" alt="${text || ''}" /></figure>`,
     );
   });
   $('pre code').each((_, elm) => {
