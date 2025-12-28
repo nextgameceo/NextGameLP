@@ -46,17 +46,20 @@ export default async function Page(props: Props) {
 
   return (
     <main className={styles.container}>
-      <h1 className={styles.title}>事業内容</h1>
+      <h1 className={styles.title}>
+        {data.logo ? (
+          <Image
+            src={data.logo.url}
+            alt=""
+            width={data.logo.width}
+            height={data.logo.height}
+            className={styles.logo}
+          />
+        ) : (
+          '事業内容'
+        )}
+      </h1>
       <p className={styles.description}>{data.description}</p>
-      {data.logo && (
-        <Image
-          src={data.logo.url}
-          alt=""
-          width={data.logo.width}
-          height={data.logo.height}
-          className={styles.logo}
-        />
-      )}
       {data.image && (
         <Image
           src={data.image.url}
