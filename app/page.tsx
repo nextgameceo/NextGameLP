@@ -224,13 +224,7 @@ export default async function Page() {
             </div>
             <ButtonLink href="/recruit">採用情報へ</ButtonLink>
           </div>
-          <Image
-            className={styles.hiringImg}
-            src="/img-hiring.jpg"
-            alt=""
-            width={960}
-            height={960}
-          />
+
         </div>
       </section>
       <section className={styles.news}>
