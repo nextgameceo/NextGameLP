@@ -153,17 +153,26 @@
 .content > table {
   width: 100%;
   margin: 2rem 0;
+  border-collapse: collapse;
 }
 
 .content > table th {
   background-color: var(--color-bg-sub);
   text-align: left;
   padding: 1rem;
+  border: 1px solid var(--color-border);
 }
 
 .content > table td {
   text-align: left;
   padding: 1rem;
+  border: 1px solid var(--color-border);
+}
+
+.content img {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 
 .footer {
