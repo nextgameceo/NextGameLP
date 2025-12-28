@@ -19,10 +19,10 @@ export const formatRichText = (richText: string) => {
       return;
     }
     const text = $(elm).text().trim();
-    if (text && !text.includes(href.split('/').pop() || '')) {
-      return;
-    }
-    $(elm).replaceWith(`<img src="${href}" alt="${text || ''}" />`);
+    const figcaption = text ? `<figcaption>${text}</figcaption>` : '';
+    $(elm).replaceWith(
+      `<figure><img src="${href}" alt="${text || ''}" />${figcaption}</figure>`,
+    );
   });
   $('pre code').each((_, elm) => {
     const lang = $(elm).attr('class');
