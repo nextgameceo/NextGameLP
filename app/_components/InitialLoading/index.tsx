@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 import styles from './index.module.css';
 
@@ -9,6 +9,7 @@ const LOGO_FADE_MS = 800;
 export default function InitialLoading() {
   const [isActive, setIsActive] = useState(true);
   const [showLogo, setShowLogo] = useState(false);
+  const videoRef = useRef<HTMLVideoElement | null>(null);
 
   useEffect(() => {
     if (typeof window === 'undefined') {
@@ -16,6 +17,7 @@ export default function InitialLoading() {
     }
 
     document.body.classList.add('loading-active');
+    videoRef.current?.play().catch(() => {});
 
     const logoTimer = window.setTimeout(() => {
       setShowLogo(true);
@@ -38,14 +40,16 @@ export default function InitialLoading() {
   }
 
   return (
-    <div className={styles.overlay} aria-live="polite">
+    <div className={styles.overlay} data-loading-overlay="true" aria-live="polite">
       <div className={styles.content}>
         <video
+          ref={videoRef}
           className={`${styles.video} ${showLogo ? styles.videoHidden : ''}`}
           src="/loads/loading_video.mp4"
           autoPlay
           muted
           playsInline
+          preload="auto"
         />
         <div className={`${styles.logoWrapper} ${showLogo ? styles.logoVisible : ''}`}>
           <Image
