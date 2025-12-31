@@ -42,3 +42,14 @@
   opacity: 1;
   transform: scale(1);
 }
+
+.logo {
+  width: min(640px, 100vw);
+  height: auto;
+}
+
+@media (max-width: 1000px) {
+  .logo {
+    width: min(420px, 80vw);
+  }
+}

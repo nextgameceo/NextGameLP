@@ -9,7 +9,8 @@ const LOGO_FADE_MS = 800;
 const STORAGE_KEY = 'nextgame_initial_loading_shown';
 
 export default function InitialLoading() {
-  const [isActive, setIsActive] = useState(false);
+  const [isActive, setIsActive] = useState(true);
+  const [shouldPlay, setShouldPlay] = useState(false);
   const [showLogo, setShowLogo] = useState(false);
 
   useEffect(() => {
@@ -19,10 +20,11 @@ export default function InitialLoading() {
 
     const hasShown = window.localStorage.getItem(STORAGE_KEY);
     if (hasShown) {
+      setIsActive(false);
       return;
     }
 
-    setIsActive(true);
+    setShouldPlay(true);
 
     const logoTimer = window.setTimeout(() => {
       setShowLogo(true);
@@ -46,15 +48,24 @@ export default function InitialLoading() {
   return (
     <div className={styles.overlay} aria-live="polite">
       <div className={styles.content}>
-        <video
-          className={`${styles.video} ${showLogo ? styles.videoHidden : ''}`}
-          src="/loads/loading_video.mp4"
-          autoPlay
-          muted
-          playsInline
-        />
+        {shouldPlay && (
+          <video
+            className={`${styles.video} ${showLogo ? styles.videoHidden : ''}`}
+            src="/loads/loading_video.mp4"
+            autoPlay
+            muted
+            playsInline
+          />
+        )}
         <div className={`${styles.logoWrapper} ${showLogo ? styles.logoVisible : ''}`}>
-          <Image src="/logo.png" alt="NEXTGAME ロゴ" width={320} height={320} priority />
+          <Image
+            className={styles.logo}
+            src="/logo.png"
+            alt="NEXTGAME ロゴ"
+            width={512}
+            height={512}
+            priority
+          />
         </div>
       </div>
     </div>
