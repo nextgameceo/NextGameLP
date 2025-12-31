@@ -39,6 +39,15 @@ body {
   background-color: var(--color-bg-main);
 }
 
+body.loading-active {
+  overflow: hidden;
+}
+
+body.loading-active main {
+  opacity: 0;
+  visibility: hidden;
+}
+
 code {
   font-family: menlo, inconsolata, monospace;
 }

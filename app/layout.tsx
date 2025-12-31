@@ -58,7 +58,7 @@ type Props = {
 export default async function RootLayout({ children }: Props) {
   return (
     <html lang="ja">
-      <body className={styles.body}>
+      <body className={`${styles.body} loading-active`}>
         <InitialLoading />
         <Header />
         <main className={styles.main}>{children}</main>

@@ -20,10 +20,12 @@ export default function InitialLoading() {
 
     const hasShown = window.localStorage.getItem(STORAGE_KEY);
     if (hasShown) {
+      document.body.classList.remove('loading-active');
       setIsActive(false);
       return;
     }
 
+    document.body.classList.add('loading-active');
     setShouldPlay(true);
 
     const logoTimer = window.setTimeout(() => {
@@ -32,12 +34,14 @@ export default function InitialLoading() {
 
     const hideTimer = window.setTimeout(() => {
       setIsActive(false);
+      document.body.classList.remove('loading-active');
       window.localStorage.setItem(STORAGE_KEY, 'true');
     }, MIN_LOADING_MS + LOGO_FADE_MS);
 
     return () => {
       window.clearTimeout(logoTimer);
       window.clearTimeout(hideTimer);
+      document.body.classList.remove('loading-active');
     };
   }, []);
 
