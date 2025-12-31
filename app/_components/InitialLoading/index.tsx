@@ -9,6 +9,7 @@ const LOGO_FADE_MS = 800;
 export default function InitialLoading() {
   const [isActive, setIsActive] = useState(true);
   const [showLogo, setShowLogo] = useState(false);
+  const [isFadingOut, setIsFadingOut] = useState(false);
   const videoRef = useRef<HTMLVideoElement | null>(null);
 
   useEffect(() => {
@@ -23,14 +24,21 @@ export default function InitialLoading() {
       setShowLogo(true);
     }, MIN_LOADING_MS);
 
+    let fadeOutTimer: number | undefined;
     const hideTimer = window.setTimeout(() => {
-      setIsActive(false);
-      document.body.classList.remove('loading-active');
+      setIsFadingOut(true);
+      fadeOutTimer = window.setTimeout(() => {
+        setIsActive(false);
+        document.body.classList.remove('loading-active');
+      }, 500);
     }, MIN_LOADING_MS + LOGO_FADE_MS);
 
     return () => {
       window.clearTimeout(logoTimer);
       window.clearTimeout(hideTimer);
+      if (fadeOutTimer) {
+        window.clearTimeout(fadeOutTimer);
+      }
       document.body.classList.remove('loading-active');
     };
   }, []);
@@ -40,7 +48,11 @@ export default function InitialLoading() {
   }
 
   return (
-    <div className={styles.overlay} data-loading-overlay="true" aria-live="polite">
+    <div
+      className={`${styles.overlay} ${isFadingOut ? styles.overlayFadeOut : ''}`}
+      data-loading-overlay="true"
+      aria-live="polite"
+    >
       <div className={styles.content}>
         <video
           ref={videoRef}
