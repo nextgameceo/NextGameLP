@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import { getMeta } from '@/app/_libs/microcms';
 import Footer from '@/app/_components/Footer';
 import Header from '@/app/_components/Header';
+import InitialLoading from '@/app/_components/InitialLoading';
 import './globals.css';
 import styles from './layout.module.css';
 
@@ -57,7 +58,8 @@ type Props = {
 export default async function RootLayout({ children }: Props) {
   return (
     <html lang="ja">
-      <body className={styles.body}>
+      <body className={`${styles.body} loading-active`}>
+        <InitialLoading />
         <Header />
         <main className={styles.main}>{children}</main>
         <Footer />
