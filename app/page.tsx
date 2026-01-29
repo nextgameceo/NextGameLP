@@ -46,11 +46,11 @@ export default async function Page() {
             <h2 className={styles.sectionTitleEn}>Business</h2>
             <p className={styles.sectionTitleJa}>事業内容</p>
             <p className={styles.sectionDescription}>
-            「障害者が『スキル』を取得し、従業員が『業界最高峰の給料』で報われる、画期的な経済圏を創る」ことをビジョンとしています。
+            「障害者が『これからの未来に適応したスキル』を取得し、従業員が『業界最高峰の給料』で報われる、画期的な経済圏を創る」ことをビジョンとしています。
             <br/>
-            弊社は従来の単純作業中心ではなく、利用者の皆様にAIとITのスキルを会得させ、障害のある方々の経済的自立を促す、画期的なビジネスモデルです。。
+            弊社は従来の単純作業中心ではなく、利用者の皆様にAIとITのスキルを会得させ、障害のある方々の経済的自立を促す、画期的なビジネスモデルです。
             </p>
-            <ButtonLink href="/business">もっとみる</ButtonLink>
+            <ButtonLink href="/business">MORE READ</ButtonLink>
           </div>
         </div>
       </section>
@@ -61,7 +61,7 @@ export default async function Page() {
               <h2 className={styles.sectionTitleEn}>About Us</h2>
               <p className={styles.sectionTitleJa}>私たちについて</p>
               <p className={styles.sectionDescription}>
-                ビジネスの各ステージで最適なサポートを提供する NEXTGAME。正しいリスクと努力で障壁を超え、成果に直結する戦略と実行を届けます。
+                ビジネスの各ステージで最適なサポートを提供する NEXTGAME。正しい環境と努力で障壁を壊し、成果に直結する戦略と実行を届けます。
               </p>
               <dl className={styles.info}>
                 <dt className={styles.infoTitle}>社名</dt>
@@ -128,7 +128,7 @@ export default async function Page() {
                 <ul className={styles.messageList}>
                   <li>
                     <span>福祉の闇</span>
-                    障害者を何の生産性もない単純作業に閉じ込め、また、利用者の方々への工賃やの、従業員の賃金の低さが離職を生む負のループを目の当たりにしました。
+                    障害者を何の生産性もない単純作業に閉じ込め、また、利用者の方々への工賃や、従業員の賃金の低さが離職を生む負のループを目の当たりにしました。
                   </li>
                   <li>
                     <span>投資家としての挫折</span>
@@ -136,7 +136,7 @@ export default async function Page() {
                   </li>
                 </ul>
                 <p className={styles.messageMission}>
-                  「障害者が『スキル』で稼ぎ、従業員が『業界最高峰の高給料』で報われる、前人未到な会社を作る」
+                  「障害者が『スキル』で稼ぎ、従業員が『業界最高峰の高給料』で報われる、前人未到な帝国を創る」
                 </p>
                 <p>
                   隔離病棟での地獄、利用者としての屈辱、投資家としての挫折。その全てを燃料に、日本の
@@ -164,7 +164,7 @@ export default async function Page() {
             <p className={styles.sectionTitleJa}>採用情報</p>
             <div className={styles.hiringBody}>
               <p className={styles.hiringLead}>
-                障害者がスキルで稼ぎ、その分だけ従業員へ業界最高峰の還元が出来る革命的な事業を、本気で実現する為に舞い戻って来た私が直接経営する"NEXTGAME"です。
+                障害者がスキルで稼ぎ、その分だけ従業員が業界最高峰の所得を得れる革命的な未来を、本気で実現する為に舞い戻って来た私が直接経営する"NEXTGAME"
               </p>
               <div className={styles.hiringBlock}>
                 <h3 className={styles.hiringHeading}>なぜ募集するのか</h3>
@@ -174,7 +174,7 @@ export default async function Page() {
                   <li>成長しない作業所が多い</li>
                 </ul>
                 <p>
-                  私がその構造を壊し、AIとITスキルを本気で教え、これからの社会で通用する仕事を回し、
+                  私がこの構造をブチ壊し、AIとITスキルを本気で教え、これからの社会に順応する仕事を回し、
                   「AIにITの仕事をさせる精神障害者を大量に排出する」未だかつて無い帝国を創ります。
                 </p>
               </div>
@@ -187,15 +187,15 @@ export default async function Page() {
                       <li>サービス管理責任者：月給手残り45万円</li>
                       <li>IT指導員：月給手残り35万円</li>
 　　　　　　　　　　　　　　 <li>生活指導員：月給手残り35万円</li>
-                      <li>責任者：月給手残り50万円</li>
+                      <li>責任者：月給手残り50万円〜150万円</li>
                     </ul>
-                    <p>「搾取」はしません。成果と責任に、正当な報酬を支払います。</p>
+                    <p>私は「搾取」を一切しません。成果と責任に、正当な報酬を支払います。</p>
                   </div>
                   <div>
                     <p className={styles.hiringSubheading}>AI×IT×実務×成長環境</p>
                     <ul className={styles.hiringList}>
                     </ul>
-                    <p>実際に楽しく稼げるビジネスというGAMEのような帝国を、この私が直接経営で築き上げます。</p>
+                    <p>楽しく稼げるビジネスという、GAMEのような帝国を、私が直接経営で築き上げます。</p>
                   </div>
                   <div>
                     <p className={styles.hiringSubheading}>囲い込まない支援</p>
