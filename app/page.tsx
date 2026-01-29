@@ -84,7 +84,6 @@ export default async function Page() {
                 <dd className={styles.infoDescription}>300,000円</dd>
               </dl>
               <dl className={styles.info}>
-                <dt className={styles.infoTitle}>事業内容</dt>
                <dt className={styles.infoTitle}>事業内容</dt>
 <dd className={styles.infoDescription}>
   1. 障害者の日常生活及び社会生活を総合的に支援するための法律に基づく障害福祉サービス事業
