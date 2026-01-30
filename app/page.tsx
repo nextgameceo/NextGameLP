@@ -46,9 +46,9 @@ export default async function Page() {
             <h2 className={styles.sectionTitleEn}>Business</h2>
             <p className={styles.sectionTitleJa}>事業内容</p>
             <p className={styles.sectionDescription}>
-            「障害者が『これからの未来に適応したスキル』を取得し、従業員が『業界最高峰の給料』で報われる、画期的な経済圏を創る」ことをビジョンとしています。
+            例え障害者だろうと『これからの未来に適応したスキル』さえ取得すれば、社会から求められる存在になれます。
             <br/>
-            弊社は従来の単純作業中心ではなく、利用者の皆様にAIとITのスキルを会得させ、障害のある方々の経済的自立を促す、画期的なビジネスモデルです。
+            弊社は従来の単純作業中心な作業所ではなく、AIに作業をさせる仕組みを学べる居場所です。
             </p>
             <ButtonLink href="/business">MORE READ</ButtonLink>
           </div>
@@ -61,7 +61,7 @@ export default async function Page() {
               <h2 className={styles.sectionTitleEn}>About Us</h2>
               <p className={styles.sectionTitleJa}>私たちについて</p>
               <p className={styles.sectionDescription}>
-                ビジネスの各ステージで最適なサポートを提供する NEXTGAME。正しい環境と努力で障壁を壊し、成果に直結する戦略と実行を届けます。
+                ただ努力しても無駄です。正しい環境で、努力を継続することが成功の秘訣です。
               </p>
               <dl className={styles.info}>
                 <dt className={styles.infoTitle}>社名</dt>
@@ -123,7 +123,7 @@ export default async function Page() {
                 <h3 className={styles.messageSubTitle}>創業の背景 ― なぜ内山博貴が挑むのか</h3>
                 <p className={styles.messageLead}>
                   私は「統合失調感情障害」という精神病を発症し、精神科の隔離病棟へ措置入院という生き地獄を経験し、退院後は
-                  B型事業所の利用者として現場に立ちました。そこで私は、代表者が利益を独占し、従業員は低賃金という、福祉業界の構造をこの目で見抜いたのが NEXTGAME の原点です。
+                  B型事業所の利用者として現場に立ちました。そこで私は、代表者が利益を独占し、従業員は低賃金という、福祉業界の構造をこの目で見抜いたのが本事業の原点です。
                 </p>
                 <ul className={styles.messageList}>
                   <li>
@@ -136,17 +136,15 @@ export default async function Page() {
                   </li>
                 </ul>
                 <p className={styles.messageMission}>
-                  「障害者が『スキル』で稼ぎ、従業員が『業界最高峰の高給料』で報われる、前人未到な帝国を創る」
+                  障害者が『スキル』を身に付け、フリーランスへと卒業していく、前人未到な帝国を創ります。
                 </p>
                 <p>
-                  隔離病棟での地獄、利用者としての屈辱、投資家としての挫折。その全てを燃料に、日本の
-                  障害者福祉業界構造の本質に革命を起こす事が私の執念です。
+                  隔離病棟での生き地獄、利用者としての屈辱、投資家としての無念、それら全てを燃料に、日本の
+                  障害者福祉業界構造の本質に革命を起こす事こそが私の宿命です。
                 </p>
                 <h3 className={styles.messageSubTitle}>内山博貴の覚悟</h3>
                 <p>
-                  精神の底に落ち、全事業崩壊という底も味わった私だからこそ、このロジックを描けた。
-                  隔離病棟から生還し、福祉の現場を内側から見てきた経験を武器に、誰も取り残さない
-                  エコシステムを築いていきます。これこそ、社名に恥じない、次のゲーム。
+                  精神が崩壊しても、社会復帰が出来た私だからこそ、この時代に特化した成功ロジックを描けました。
                 </p>
               </div>
               <div className={styles.messageQuote}>
@@ -164,7 +162,7 @@ export default async function Page() {
             <p className={styles.sectionTitleJa}>採用情報</p>
             <div className={styles.hiringBody}>
               <p className={styles.hiringLead}>
-                誰もが業界最高峰の所得を得られる革命的な未来へ。私の直接経営でNEXTGAMEを導いていきます。
+                誰もが愉しみながら所得を得られる革命的な未来へと、私がNEXTGAMEを導いて参ります。
               </p>
               <div className={styles.hiringBlock}>
                 <h3 className={styles.hiringHeading}>なぜ募集するのか</h3>
@@ -184,10 +182,10 @@ export default async function Page() {
                   <div>
                     <p className={styles.hiringSubheading}>福祉業界トップクラスの待遇</p>
                     <ul className={styles.hiringList}>
-                      <li>サービス管理責任者：月給手残り45万円</li>
-                      <li>IT指導員：月給手残り35万円</li>
-　　　　　　　　　　　　　　 <li>生活指導員：月給手残り35万円</li>
-                      <li>責任者：月給手残り50万円〜150万円</li>
+                      <li>サービス管理責任者:月給手残り45万円</li>
+                      <li>IT指導員:月給手残り35万円</li>
+　　　　　　　　　　　　　　 <li>生活指導員:月給手残り35万円</li>
+                      <li>責任者:月給手残り50万円〜150万円</li>
                     </ul>
                     <p>私は「搾取」を一切しません。成果と責任に、正当な報酬を支払います。</p>
                   </div>
@@ -195,12 +193,12 @@ export default async function Page() {
                     <p className={styles.hiringSubheading}>AI×IT×実務×成長環境</p>
                     <ul className={styles.hiringList}>
                     </ul>
-                    <p>楽しく稼げるビジネスという、GAMEのような帝国を、私が直接経営で築き上げます。</p>
+                    <p>楽しく稼げるゲームのような帝国を、私が築き上げます。</p>
                   </div>
                   <div>
                     <p className={styles.hiringSubheading}>囲い込まない支援</p>
                     <p>
-                      ゴールは「通所」ではなく、独立・業務委託・社会への参加。外に出て稼げる事が福祉業界の成功です。
+                      就労継続支援という事業の目的は「通所」させる事ではなく、利用者全員を社会と繋げる事です。
                     </p>
                   </div>
                 </div>
@@ -209,17 +207,17 @@ export default async function Page() {
                 <h3 className={styles.hiringHeading}>こんな人と働きたい</h3>
                 <ul className={styles.hiringList}>
                   <li>福祉を「変えたい」と本気で思っている</li>
-                  <li>AIとITのスキル教育を“実務”として教えられる</li>
+                  <li>AIとITのスキル教育を「実務」として教えられる</li>
                   <li>利用者を「対等なビジネスパートナー」と見られる</li>
                   <li>ぬるい環境より、成長する現場を選びたい</li>
                   <li>高給をもらう覚悟がある</li>
                 </ul>
-                <p className={styles.hiringNote}>※ 優しさだけの人は向いていません。</p>
+                <p className={styles.hiringNote}>※優しさだけの人は向いていません。</p>
               </div>
               <div className={styles.hiringBlock}>
                 <h3 className={styles.hiringHeading}>最後に</h3>
                 <p>
-                  NEXTGAMEは命をかけてでも成功させる覚悟の事業です。私と本気の価値を生み出す側に回りたい方、
+                  NEXTGAMEは命をかけてでも成功させる覚悟の事業です。私と本気の価値を生み出す側に回りたい方は
                   是非私の描く未来まで付いて来て下さい。
                 </p>
               </div>
