@@ -164,7 +164,8 @@ export default async function Page() {
             <p className={styles.sectionTitleJa}>採用情報</p>
             <div className={styles.hiringBody}>
               <p className={styles.hiringLead}>
-                障害者がスキルで稼ぎ、その分だけ従業員が業界最高峰の所得を得れる革命的な未来を、本気で実現する為に舞い戻って来た私が直接経営する"NEXTGAME"
+                誰もが業界最高峰の所得を得られる革命的な未来へ。
+私の直接経営でNEXTGAMEを導いていきます。
               </p>
               <div className={styles.hiringBlock}>
                 <h3 className={styles.hiringHeading}>なぜ募集するのか</h3>
