@@ -15,6 +15,7 @@ export default async function Page(props: Props) {
   const data = await getRecruitList({
     draftKey: searchParams.dk,
   });
+
   return (
     <div className={styles.container}>
       <section className={styles.positions}>
@@ -31,21 +32,37 @@ export default async function Page(props: Props) {
             {data.contents.map((role) => (
               <li key={role.id} className={styles.card}>
                 <div className={styles.cardHeader}>
-                  <h3 className={styles.roleTitle}>{role.role}</h3>
+                  {/* microCMSのフィールド「役職(title)」に合わせて修正 */}
+                  <h3 className={styles.roleTitle}>{role.title}</h3>
                   <span className={styles.cardBadge}>New</span>
                 </div>
+                
                 <div className={styles.cardBody}>
+                  {/* 仕事内容（リッチエディタ）の表示エリアを追加 */}
+                  {role.job_description && (
+                    <div className={styles.descriptionSection}>
+                      <p className={styles.cardLabel}>仕事内容</p>
+                      <div 
+                        className={styles.jobDescription}
+                        dangerouslySetInnerHTML={{ __html: role.job_description }} 
+                      />
+                    </div>
+                  )}
+
                   <div className={styles.cardRow}>
-                    <p className={styles.cardLabel}>給与</p>
-                    <p className={styles.cardValue}>{role.wages}</p>
+                    <p className={styles.cardLabel}>給与・待遇</p>
+                    {/* wages → salary に変更 */}
+                    <p className={styles.cardValue}>{role.salary}</p>
                   </div>
                   <div className={styles.cardRow}>
                     <p className={styles.cardLabel}>募集人数</p>
-                    <p className={styles.cardValue}>{role.limit}</p>
+                    {/* limit → capacity に変更 */}
+                    <p className={styles.cardValue}>{role.capacity}</p>
                   </div>
                   <div className={styles.cardRow}>
                     <p className={styles.cardLabel}>勤務時間</p>
-                    <p className={styles.cardValue}>{role['working-hours']}</p>
+                    {/* working-hours → working_hours に変更 */}
+                    <p className={styles.cardValue}>{role.working_hours}</p>
                   </div>
                 </div>
               </li>
@@ -54,6 +71,7 @@ export default async function Page(props: Props) {
         )}
       </section>
 
+      {/* 選考フロー以降は変更なし */}
       <section className={styles.process}>
         <div className={styles.sectionHeader}>
           <h2 className={styles.sectionTitle}>選考フロー</h2>
