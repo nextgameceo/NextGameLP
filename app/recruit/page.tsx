@@ -3,16 +3,14 @@ import styles from './page.module.css';
 import ButtonLink from '@/app/_components/ButtonLink';
 
 /**
- * ⚠ Edge Runtime は使わない（microCMS buildエラー回避）
+ * Edge runtime は使わない
  */
 // export const runtime = 'edge';
 
-export default async function Page({
-  searchParams,
-}: {
-  searchParams?: { [key: string]: string | string[] | undefined };
-}) {
-  let data: { contents: any[] } = { contents: [] };
+export default async function Page(props: any) {
+  const searchParams = props?.searchParams;
+
+  let data = { contents: [] as any[] };
 
   try {
     const draftKey =
@@ -20,9 +18,7 @@ export default async function Page({
         ? searchParams.dk
         : undefined;
 
-    data = await getRecruitList({
-      draftKey,
-    });
+    data = await getRecruitList({ draftKey });
   } catch (error) {
     console.error('Failed to fetch recruit list:', error);
   }
