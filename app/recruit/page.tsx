@@ -2,19 +2,31 @@ import { getRecruitList } from '@/app/_libs/microcms';
 import styles from './page.module.css';
 import ButtonLink from '@/app/_components/ButtonLink';
 
-export const runtime = 'edge';
+/**
+ * ⚠️ Edge Runtime は microCMS と相性が悪く、
+ * build 時に環境変数未定義で落ちるため使用しない
+ */
+// export const runtime = 'edge';
 
 type Props = {
-  searchParams: Promise<{
-    dk: string;
-  }>;
+  searchParams?: {
+    dk?: string;
+  };
 };
 
-export default async function Page(props: Props) {
-  const searchParams = await props.searchParams;
-  const data = await getRecruitList({
-    draftKey: searchParams.dk,
-  });
+export default async function Page({ searchParams }: Props) {
+  let data: {
+    contents: any[];
+  } = { contents: [] };
+
+  try {
+    data = await getRecruitList({
+      draftKey: searchParams?.dk,
+    });
+  } catch (error) {
+    console.error('Failed to fetch recruit list:', error);
+    // build を落とさないために握りつぶす
+  }
 
   return (
     <div className={styles.container}>
@@ -33,7 +45,9 @@ export default async function Page(props: Props) {
             {data.contents.map((role: any) => (
               <li key={role.id} className={styles.card}>
                 <div className={styles.cardHeader}>
-                  <h3 className={styles.roleTitle}>{role.title}</h3>
+                  <h3 className={styles.roleTitle}>
+                    {role.title ?? '職種名未設定'}
+                  </h3>
                   <span className={styles.cardBadge}>New</span>
                 </div>
 
@@ -50,20 +64,26 @@ export default async function Page(props: Props) {
                     </div>
                   )}
 
-                  <div className={styles.cardRow}>
-                    <p className={styles.cardLabel}>給与・待遇</p>
-                    <p className={styles.cardValue}>{role.salary}</p>
-                  </div>
+                  {role.salary && (
+                    <div className={styles.cardRow}>
+                      <p className={styles.cardLabel}>給与・待遇</p>
+                      <p className={styles.cardValue}>{role.salary}</p>
+                    </div>
+                  )}
 
-                  <div className={styles.cardRow}>
-                    <p className={styles.cardLabel}>募集人数</p>
-                    <p className={styles.cardValue}>{role.capacity}</p>
-                  </div>
+                  {role.capacity && (
+                    <div className={styles.cardRow}>
+                      <p className={styles.cardLabel}>募集人数</p>
+                      <p className={styles.cardValue}>{role.capacity}</p>
+                    </div>
+                  )}
 
-                  <div className={styles.cardRow}>
-                    <p className={styles.cardLabel}>勤務時間</p>
-                    <p className={styles.cardValue}>{role.working_hours}</p>
-                  </div>
+                  {role.working_hours && (
+                    <div className={styles.cardRow}>
+                      <p className={styles.cardLabel}>勤務時間</p>
+                      <p className={styles.cardValue}>{role.working_hours}</p>
+                    </div>
+                  )}
                 </div>
               </li>
             ))}
@@ -89,7 +109,6 @@ export default async function Page(props: Props) {
               </p>
             </div>
           </li>
-
           <li className={styles.processItem}>
             <span className={styles.processNumber}>02</span>
             <div>
@@ -99,7 +118,6 @@ export default async function Page(props: Props) {
               </p>
             </div>
           </li>
-
           <li className={styles.processItem}>
             <span className={styles.processNumber}>03</span>
             <div>
