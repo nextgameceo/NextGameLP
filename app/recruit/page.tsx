@@ -3,29 +3,28 @@ import styles from './page.module.css';
 import ButtonLink from '@/app/_components/ButtonLink';
 
 /**
- * ⚠️ Edge Runtime は microCMS と相性が悪く、
- * build 時に環境変数未定義で落ちるため使用しない
+ * ⚠ Edge Runtime は使わない（microCMS buildエラー回避）
  */
 // export const runtime = 'edge';
 
-type Props = {
-  searchParams?: {
-    dk?: string;
-  };
-};
-
-export default async function Page({ searchParams }: Props) {
-  let data: {
-    contents: any[];
-  } = { contents: [] };
+export default async function Page({
+  searchParams,
+}: {
+  searchParams?: { [key: string]: string | string[] | undefined };
+}) {
+  let data: { contents: any[] } = { contents: [] };
 
   try {
+    const draftKey =
+      typeof searchParams?.dk === 'string'
+        ? searchParams.dk
+        : undefined;
+
     data = await getRecruitList({
-      draftKey: searchParams?.dk,
+      draftKey,
     });
   } catch (error) {
     console.error('Failed to fetch recruit list:', error);
-    // build を落とさないために握りつぶす
   }
 
   return (
@@ -39,7 +38,9 @@ export default async function Page({ searchParams }: Props) {
         </div>
 
         {data.contents.length === 0 ? (
-          <p className={styles.empty}>現在公開されている募集はありません。</p>
+          <p className={styles.empty}>
+            現在公開されている募集はありません。
+          </p>
         ) : (
           <ul className={styles.grid}>
             {data.contents.map((role: any) => (
@@ -81,7 +82,9 @@ export default async function Page({ searchParams }: Props) {
                   {role.working_hours && (
                     <div className={styles.cardRow}>
                       <p className={styles.cardLabel}>勤務時間</p>
-                      <p className={styles.cardValue}>{role.working_hours}</p>
+                      <p className={styles.cardValue}>
+                        {role.working_hours}
+                      </p>
                     </div>
                   )}
                 </div>
@@ -109,6 +112,7 @@ export default async function Page({ searchParams }: Props) {
               </p>
             </div>
           </li>
+
           <li className={styles.processItem}>
             <span className={styles.processNumber}>02</span>
             <div>
@@ -118,6 +122,7 @@ export default async function Page({ searchParams }: Props) {
               </p>
             </div>
           </li>
+
           <li className={styles.processItem}>
             <span className={styles.processNumber}>03</span>
             <div>
@@ -133,9 +138,13 @@ export default async function Page({ searchParams }: Props) {
       <div className={styles.footer}>
         <div>
           <h2 className={styles.message}>We are hiring</h2>
-          <p>私たちは共にチャレンジする仲間を募集しています。</p>
+          <p>
+            私たちは共にチャレンジする仲間を募集しています。
+          </p>
         </div>
-        <ButtonLink href="/contact">エントリーする</ButtonLink>
+        <ButtonLink href="/contact">
+          エントリーする
+        </ButtonLink>
       </div>
     </div>
   );
