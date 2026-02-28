@@ -33,7 +33,7 @@ export default async function Page(props: Props) {
               <li key={role.id} className={styles.card}>
                 <div className={styles.cardHeader}>
                   {/* microCMSのフィールド「役職(title)」に合わせて修正 */}
-                  <h3 className={styles.roleTitle}>{role.title}</h3>
+                  <h3 className={styles.roleTitle}>{(role as any).title}</h3>
                   <span className={styles.cardBadge}>New</span>
                 </div>
                 
