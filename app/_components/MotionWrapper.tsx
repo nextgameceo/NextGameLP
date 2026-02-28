@@ -11,4 +11,4 @@ export default function MotionWrapper({ children }: { children: React.ReactNode 
       {children}
     </motion.div>
   );
-
+}
