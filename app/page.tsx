@@ -25,8 +25,8 @@ export default async function Page() {
             priority
           />
           <div className={styles.heroText}>
-            <h1 className={styles.title}>出来ない言い訳より出来る方法を</h1>
-            <p className={styles.description}>IT×AIで障害者福祉業界に革命を起こします</p>
+            <h1 className={styles.title}>過集中を、経営資産に。</h1>
+            <p className={styles.description}>弊社は、各々の才能を価値へと変える、最高の環境を提供します。</p>
           </div>
         </div>
 
