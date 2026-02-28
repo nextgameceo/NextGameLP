@@ -3,6 +3,7 @@ import { getMeta } from '@/app/_libs/microcms';
 import Footer from '@/app/_components/Footer';
 import Header from '@/app/_components/Header';
 import InitialLoading from '@/app/_components/InitialLoading';
+import MotionWrapper from '@/app/_components/MotionWrapper'; // 【追記1】読み込み
 import './globals.css';
 import styles from './layout.module.css';
 
@@ -61,7 +62,12 @@ export default async function RootLayout({ children }: Props) {
       <body className={`${styles.body} loading-active`}>
         <InitialLoading />
         <Header />
-        <main className={styles.main}>{children}</main>
+        {/* 【追記2】mainの中身をMotionWrapperで囲む */}
+        <main className={styles.main}>
+          <MotionWrapper>
+            {children}
+          </MotionWrapper>
+        </main>
         <Footer />
       </body>
     </html>
