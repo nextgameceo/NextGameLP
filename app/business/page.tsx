@@ -3,7 +3,7 @@ import { getBusinessList } from '@/app/_libs/microcms';
 import styles from './page.module.css';
 import ButtonLink from '@/app/_components/ButtonLink';
 
-export const runtime = 'edge';
+
 type Props = {
   searchParams: Promise<{
     dk: string;
