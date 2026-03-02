@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 
-export const runtime = 'edge';
+
 
 function validateEmail(email: string) {
   const pattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
