@@ -5,7 +5,7 @@ import NewsList from '@/app/_components/NewsList';
 import styles from './page.module.css';
 import ButtonLink from '@/app/_components/ButtonLink';
 
-export const runtime = 'edge';
+
 
 export default async function Page() {
   const data = await getNewsList({
