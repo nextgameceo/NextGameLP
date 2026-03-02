@@ -201,10 +201,10 @@ export default async function Page() {
                   <div>
                     <p className={styles.hiringSubheading}>福祉業界トップクラスの待遇</p>
                     <ul className={styles.hiringList}>
-                      <li>サービス管理責任者：月給手残り45万円</li>
-                      <li>IT指導員：月給手残り35万円</li>
-                      <li>生活指導員：月給手残り35万円</li>
-                      <li>責任者：月給手残り50万円〜150万円</li>
+                      <li>サービス管理責任者：月給手取り35万円〜</li>
+                      <li>IT指導員：月給手取り30万円〜</li>
+                      <li>生活指導員：月給手取り30万円〜</li>
+                      <li>責任者：月給手取り50万円〜</li>
                     </ul>
                     <p>私は「搾取」を一切しません。成果と責任に、正当な報酬を支払います。</p>
                   </div>
