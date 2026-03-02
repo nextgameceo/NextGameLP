@@ -17,8 +17,7 @@
     "jsxSingleQuote": false,
     "printWidth": 100
   },
-  "engines": {
-    "node": ">=22.x"
+  
   },
   "dependencies": {
     "@types/node": "^22.13.10",
