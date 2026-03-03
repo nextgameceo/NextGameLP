@@ -11,58 +11,14 @@ import { notFound } from 'next/navigation';
    型定義
 ================================ */
 
-// カテゴリー
-export type Category = {
-  name: string;
-} & MicroCMSContentId &
-  MicroCMSDate;
-
-// ニュース
-export type News = {
-  title: string;
-  description: string;
-  content: string;
-  thumbnail?: MicroCMSImage;
-  category: Category;
-};
-
-// Article型
-export type Article = News & MicroCMSContentId & MicroCMSDate;
-
-// メンバー
-export type Member = {
-  name: string;
-  position: string;
-  profile: string;
-  image?: MicroCMSImage;
-};
-
-// 採用情報
 export type Recruit = {
   role: string;
-  wages: string;
-  limit: string;
-  'working-hours': string;
-};
-
-// 事業内容
-export type Business = {
-  logo?: MicroCMSImage;
-  description: string;
-  image?: MicroCMSImage;
-  link: string;
-  content: string;
-};
-
-// メタ情報
-export type Meta = {
-  title?: string;
-  description?: string;
-  ogTitle?: string;
-  ogDescription?: string;
-  ogImage?: MicroCMSImage;
-  canonical?: string;
-};
+  job_description?: string;
+  salary?: string;
+  capacity?: string;
+  working_hours?: string;
+} & MicroCMSContentId &
+  MicroCMSDate;
 
 /* ===============================
    環境変数チェック
@@ -77,86 +33,13 @@ if (!process.env.MICROCMS_API_KEY) {
 }
 
 /* ===============================
-   Client初期化（🔥キャッシュ無効）
+   Client初期化
 ================================ */
 
 export const client = createClient({
-  serviceDomain: process.env.MICROCMS_SERVICE_DOMAIN!,
-  apiKey: process.env.MICROCMS_API_KEY!,
-
-  // 🔥 ここが超重要
-  customFetch: (input, init) => {
-    return fetch(input, {
-      ...init,
-      cache: 'no-store', // 常に最新取得
-    });
-  },
+  serviceDomain: process.env.MICROCMS_SERVICE_DOMAIN,
+  apiKey: process.env.MICROCMS_API_KEY,
 });
-
-/* ===============================
-   News
-================================ */
-
-export const getNewsList = async (queries?: MicroCMSQueries) => {
-  return await client
-    .getList<News>({
-      endpoint: 'news',
-      queries,
-    })
-    .catch(notFound);
-};
-
-export const getNewsDetail = async (
-  contentId: string,
-  queries?: MicroCMSQueries
-) => {
-  return await client
-    .getListDetail<News>({
-      endpoint: 'news',
-      contentId,
-      queries,
-    })
-    .catch(notFound);
-};
-
-/* ===============================
-   Category
-================================ */
-
-export const getCategoryList = async (queries?: MicroCMSQueries) => {
-  return await client
-    .getList<Category>({
-      endpoint: 'categories',
-      queries,
-    })
-    .catch(notFound);
-};
-
-export const getCategoryDetail = async (
-  contentId: string,
-  queries?: MicroCMSQueries
-) => {
-  return await client
-    .getListDetail<Category>({
-      endpoint: 'categories',
-      contentId,
-      queries,
-    })
-    .catch(notFound);
-};
-
-/* ===============================
-   Members
-================================ */
-
-export const getMembersList = async (queries?: MicroCMSQueries) => {
-  return await client
-    .getList<Member>({
-      endpoint: 'members',
-      queries,
-    })
-    .catch(notFound);
-};
 
 /* ===============================
    Recruit
@@ -169,43 +52,4 @@ export const getRecruitList = async (queries?: MicroCMSQueries) => {
       queries,
     })
     .catch(notFound);
-};
-
-/* ===============================
-   Business
-================================ */
-
-export const getBusinessList = async (queries?: MicroCMSQueries) => {
-  return await client
-    .getList<Business>({
-      endpoint: 'business',
-      queries,
-    })
-    .catch(notFound);
-};
-
-export const getBusinessDetail = async (
-  contentId: string,
-  queries?: MicroCMSQueries
-) => {
-  return await client
-    .getListDetail<Business>({
-      endpoint: 'business',
-      contentId,
-      queries,
-    })
-    .catch(notFound);
-};
-
-/* ===============================
-   Meta
-================================ */
-
-export const getMeta = async (queries?: MicroCMSQueries) => {
-  return await client
-    .getObject<Meta>({
-      endpoint: 'meta',
-      queries,
-    })
-    .catch(() => null);
 };
