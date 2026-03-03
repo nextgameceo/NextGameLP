@@ -3,7 +3,7 @@ import styles from './page.module.css';
 import ButtonLink from '../_components/ButtonLink';
 
 export const runtime = 'edge';
-export const dynamic = 'force-dynamic'; // 🔥 これが超重要
+export const dynamic = 'force-dynamic';
 
 export default async function Page(props: any) {
   const searchParams = props?.searchParams;
@@ -34,9 +34,23 @@ export default async function Page(props: any) {
           {data.contents.map((item) => (
             <li key={item.id} className={styles.positionItem}>
               <h3>{item.role}</h3>
-              <p>給与：{item.wages}</p>
-              <p>定員：{item.limit}</p>
-              <p>勤務時間：{item['working-hours']}</p>
+
+              {/* 仕事内容（リッチテキスト） */}
+              <div
+                dangerouslySetInnerHTML={{
+                  __html: item.job_description,
+                }}
+              />
+
+              {/* 給与（リッチテキスト） */}
+              <div
+                dangerouslySetInnerHTML={{
+                  __html: item.salary,
+                }}
+              />
+
+              <p>募集人数：{item.capacity}</p>
+              <p>勤務時間：{item.working_hours}</p>
             </li>
           ))}
         </ul>
