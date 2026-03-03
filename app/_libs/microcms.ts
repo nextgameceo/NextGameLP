@@ -1,4 +1,4 @@
-　import { createClient } from 'microcms-js-sdk';
+import { createClient } from 'microcms-js-sdk';
 import type {
   MicroCMSQueries,
   MicroCMSImage,
@@ -27,6 +27,9 @@ export type News = {
 } & MicroCMSContentId &
   MicroCMSDate;
 
+// 🔥 Article型（これが必要）
+export type Article = News;
+
 // メンバー
 export type Member = {
   name: string;
@@ -36,7 +39,7 @@ export type Member = {
 } & MicroCMSContentId &
   MicroCMSDate;
 
-// 採用情報（microCMSの実データ構造に合わせる）
+// 採用情報
 export type Recruit = {
   role: string;
   job_description?: string;
@@ -79,7 +82,7 @@ if (!process.env.MICROCMS_API_KEY) {
 }
 
 /* ===============================
-   Client初期化（🔥customFetch削除）
+   Client初期化
 ================================ */
 
 export const client = createClient({
@@ -124,4 +127,43 @@ export const getRecruitList = async (queries?: MicroCMSQueries) => {
       queries,
     })
     .catch(notFound);
+};
+
+/* ===============================
+   Business
+================================ */
+
+export const getBusinessList = async (queries?: MicroCMSQueries) => {
+  return await client
+    .getList<Business>({
+      endpoint: 'business',
+      queries,
+    })
+    .catch(notFound);
+};
+
+export const getBusinessDetail = async (
+  contentId: string,
+  queries?: MicroCMSQueries
+) => {
+  return await client
+    .getListDetail<Business>({
+      endpoint: 'business',
+      contentId,
+      queries,
+    })
+    .catch(notFound);
+};
+
+/* ===============================
+   Meta（🔥これも必要）
+================================ */
+
+export const getMeta = async (queries?: MicroCMSQueries) => {
+  return await client
+    .getObject<Meta>({
+      endpoint: 'meta',
+      queries,
+    })
+    .catch(() => null);
 };
