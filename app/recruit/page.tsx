@@ -3,6 +3,7 @@ import styles from './page.module.css';
 import ButtonLink from '../_components/ButtonLink';
 
 export const runtime = 'edge';
+export const revalidate = 0;
 
 export default async function Page(props: any) {
   const searchParams = props?.searchParams;
