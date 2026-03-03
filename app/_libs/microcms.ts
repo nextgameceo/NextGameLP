@@ -27,7 +27,7 @@ export type News = {
 } & MicroCMSContentId &
   MicroCMSDate;
 
-// 🔥 Article型（これが必要）
+// Article（テンプレが参照しているため必須）
 export type Article = News;
 
 // メンバー
@@ -117,6 +117,45 @@ export const getNewsDetail = async (
 };
 
 /* ===============================
+   Category
+================================ */
+
+export const getCategoryList = async (queries?: MicroCMSQueries) => {
+  return await client
+    .getList<Category>({
+      endpoint: 'categories',
+      queries,
+    })
+    .catch(notFound);
+};
+
+export const getCategoryDetail = async (
+  contentId: string,
+  queries?: MicroCMSQueries
+) => {
+  return await client
+    .getListDetail<Category>({
+      endpoint: 'categories',
+      contentId,
+      queries,
+    })
+    .catch(notFound);
+};
+
+/* ===============================
+   Member
+================================ */
+
+export const getMembersList = async (queries?: MicroCMSQueries) => {
+  return await client
+    .getList<Member>({
+      endpoint: 'members',
+      queries,
+    })
+    .catch(notFound);
+};
+
+/* ===============================
    Recruit
 ================================ */
 
@@ -156,7 +195,7 @@ export const getBusinessDetail = async (
 };
 
 /* ===============================
-   Meta（🔥これも必要）
+   Meta
 ================================ */
 
 export const getMeta = async (queries?: MicroCMSQueries) => {
