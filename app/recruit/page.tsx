@@ -3,7 +3,7 @@ import styles from './page.module.css';
 import ButtonLink from '../_components/ButtonLink';
 
 export const runtime = 'edge';
-export const revalidate = 0;
+export const dynamic = 'force-dynamic'; // 🔥 これが超重要
 
 export default async function Page(props: any) {
   const searchParams = props?.searchParams;
@@ -16,7 +16,9 @@ export default async function Page(props: any) {
         ? searchParams.dk
         : undefined;
 
-    data = await getRecruitList({ draftKey });
+    data = await getRecruitList(
+      draftKey ? { draftKey } : undefined
+    );
   } catch (error) {
     console.error('Failed to fetch recruit list:', error);
   }
@@ -31,8 +33,10 @@ export default async function Page(props: any) {
         <ul className={styles.positionList}>
           {data.contents.map((item) => (
             <li key={item.id} className={styles.positionItem}>
-              <h3>{item.title}</h3>
-              <p>{item.description}</p>
+              <h3>{item.role}</h3>
+              <p>給与：{item.wages}</p>
+              <p>定員：{item.limit}</p>
+              <p>勤務時間：{item['working-hours']}</p>
             </li>
           ))}
         </ul>
