@@ -3,6 +3,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
+
+  height: 100vh;   /* ←追加 */
+
   background-color: rgba(24, 24, 24, 0.85);
   color: var(--color-text-unpainted);
   overflow: hidden;
