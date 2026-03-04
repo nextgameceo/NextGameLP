@@ -4,12 +4,13 @@
   align-items: center;
   justify-content: center;
 
-  height: 100vh;   /* ←追加 */
+  min-height: 100vh;   /* これ追加 */
+
+  flex-direction: column;
 
   background-color: rgba(24, 24, 24, 0.85);
   color: var(--color-text-unpainted);
   overflow: hidden;
-  padding: 100px 0;
 }
 
 .title {
