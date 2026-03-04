@@ -1,19 +1,21 @@
-import type { Metadata } from "next";
-import Hero from "@/app/_components/Hero";
-import Sheet from "@/app/_components/Sheet";
+import type { Metadata } from 'next';
+import type { ReactNode } from 'react';
+
+import Hero from '@/app/_components/Hero';
+import Sheet from '@/app/_components/Sheet';
 
 export const metadata: Metadata = {
-  title: "事業内容｜シンプルなコーポレートサイト",
+  title: '事業内容｜シンプルなコーポレートサイト',
   openGraph: {
-    title: "事業内容｜シンプルなコーポレートサイト",
+    title: '事業内容｜シンプルなコーポレートサイト',
   },
   alternates: {
-    canonical: "/business",
+    canonical: '/business',
   },
 };
 
 type Props = {
-  children: React.ReactNode;
+  children: ReactNode;
 };
 
 export default function RootLayout({ children }: Props) {
