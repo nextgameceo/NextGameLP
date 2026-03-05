@@ -1,7 +1,13 @@
 import styles from './index.module.css'
 import Image from 'next/image'
 
-export default function Hero() {
+// ✅ Props型を追加
+type Props = {
+  title?: string;
+  sub?: string;
+};
+
+export default function Hero({ title, sub }: Props) {
   return (
     <section className={styles.container}>
 
