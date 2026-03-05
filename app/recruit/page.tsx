@@ -2,12 +2,12 @@ import { getRecruitList } from '../_libs/microcms';
 import styles from './page.module.css';
 import ButtonLink from '../_components/ButtonLink';
 
-export const runtime = 'edge';
+// ✅ runtime = 'edge' を削除
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;
 
 export default async function Page(props: any) {
-  const searchParams = props?.searchParams;
+  const searchParams = await props?.searchParams;
 
   let data = { contents: [] as any[] };
 
