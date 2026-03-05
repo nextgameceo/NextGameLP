@@ -11,13 +11,11 @@ import { notFound } from 'next/navigation';
    型定義
 ================================ */
 
-// カテゴリー
 export type Category = {
   name: string;
 } & MicroCMSContentId &
   MicroCMSDate;
 
-// ニュース
 export type News = {
   title: string;
   description: string;
@@ -27,10 +25,8 @@ export type News = {
 } & MicroCMSContentId &
   MicroCMSDate;
 
-// Article（テンプレが参照しているため必須）
 export type Article = News;
 
-// メンバー
 export type Member = {
   name: string;
   position: string;
@@ -39,7 +35,6 @@ export type Member = {
 } & MicroCMSContentId &
   MicroCMSDate;
 
-// 採用情報
 export type Recruit = {
   role: string;
   job_description?: string;
@@ -49,7 +44,6 @@ export type Recruit = {
 } & MicroCMSContentId &
   MicroCMSDate;
 
-// 事業内容
 export type Business = {
   logo?: MicroCMSImage;
   description: string;
@@ -59,7 +53,6 @@ export type Business = {
 } & MicroCMSContentId &
   MicroCMSDate;
 
-// メタ情報
 export type Meta = {
   title?: string;
   description?: string;
@@ -156,7 +149,7 @@ export const getMembersList = async (queries?: MicroCMSQueries) => {
 };
 
 /* ===============================
-   Recruit
+   Recruit（✅ cache: 'no-store' 追加）
 ================================ */
 
 export const getRecruitList = async (queries?: MicroCMSQueries) => {
@@ -164,6 +157,9 @@ export const getRecruitList = async (queries?: MicroCMSQueries) => {
     .getList<Recruit>({
       endpoint: 'recruit',
       queries,
+      customRequestInit: {
+        cache: 'no-store', // ✅ 追加
+      },
     })
     .catch(notFound);
 };
