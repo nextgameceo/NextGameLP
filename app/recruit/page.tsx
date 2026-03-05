@@ -25,41 +25,77 @@ export default async function Page(props: any) {
 
   return (
     <div className={styles.container}>
+
       <section className={styles.positions}>
         <div className={styles.sectionHeader}>
           <h2 className={styles.sectionTitle}>募集職種</h2>
+          <p className={styles.sectionLead}>
+            NEXTGAMEで共に挑戦する仲間を募集しています。
+          </p>
         </div>
 
-        <ul className={styles.positionList}>
-          {data.contents.map((item) => (
-            <li key={item.id} className={styles.positionItem}>
-              <h3>{item.role}</h3>
+        {data.contents.length === 0 ? (
+          <div className={styles.empty}>現在募集中のポジションはありません。</div>
+        ) : (
+          <div className={styles.grid}>
+            {data.contents.map((item) => (
+              <div key={item.id} className={styles.card}>
 
-              {item.job_description && (
-                <div
-                  dangerouslySetInnerHTML={{
-                    __html: item.job_description,
-                  }}
-                />
-              )}
+                <div className={styles.cardHeader}>
+                  <h3 className={styles.roleTitle}>{item.role}</h3>
+                  <span className={styles.cardBadge}>OPEN</span>
+                </div>
 
-              {item.salary && (
-                <div
-                  dangerouslySetInnerHTML={{
-                    __html: item.salary,
-                  }}
-                />
-              )}
+                <div className={styles.cardBody}>
+                  {item.job_description && (
+                    <div className={styles.cardRow}>
+                      <p className={styles.cardLabel}>仕事内容</p>
+                      <div
+                        className={styles.cardValue}
+                        dangerouslySetInnerHTML={{
+                          __html: item.job_description,
+                        }}
+                      />
+                    </div>
+                  )}
 
-              {item.capacity && <p>募集人数：{item.capacity}</p>}
-              {item.working_hours && <p>勤務時間：{item.working_hours}</p>}
-            </li>
-          ))}
-        </ul>
+                  {item.salary && (
+                    <div className={styles.cardRow}>
+                      <p className={styles.cardLabel}>給与</p>
+                      <div
+                        className={styles.cardValue}
+                        dangerouslySetInnerHTML={{
+                          __html: item.salary,
+                        }}
+                      />
+                    </div>
+                  )}
+
+                  {item.capacity && (
+                    <div className={styles.cardRow}>
+                      <p className={styles.cardLabel}>募集人数</p>
+                      <p className={styles.cardValue}>{item.capacity}</p>
+                    </div>
+                  )}
+
+                  {item.working_hours && (
+                    <div className={styles.cardRow}>
+                      <p className={styles.cardLabel}>勤務時間</p>
+                      <p className={styles.cardValue}>{item.working_hours}</p>
+                    </div>
+                  )}
+                </div>
+
+              </div>
+            ))}
+          </div>
+        )}
       </section>
 
-      <section className={styles.process}>
-        <h2 className={styles.sectionTitle}>選考フロー</h2>
+      <section>
+        <div className={styles.sectionHeader}>
+          <h2 className={styles.sectionTitle}>選考フロー</h2>
+        </div>
 
         <ol className={styles.processList}>
           <li className={styles.processItem}>
@@ -97,14 +133,13 @@ export default async function Page(props: any) {
       <div className={styles.footer}>
         <div>
           <h2 className={styles.message}>We are hiring</h2>
-          <p>
-            私たちは共にチャレンジする仲間を募集しています。
-          </p>
+          <p>私たちは共にチャレンジする仲間を募集しています。</p>
         </div>
         <ButtonLink href="/contact">
           エントリーする
         </ButtonLink>
       </div>
+
     </div>
   );
 }
