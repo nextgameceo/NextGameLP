@@ -4,6 +4,7 @@ import { TOP_NEWS_LIMIT } from '@/app/_constants';
 import NewsList from '@/app/_components/NewsList';
 import styles from './page.module.css';
 import ButtonLink from '@/app/_components/ButtonLink';
+import AboutTabs from '@/app/_components/AboutTabs';
 
 
 
@@ -56,9 +57,13 @@ export default async function Page() {
       </section>
 
       <div className={styles.aboutus}>
-        <section className={styles.section}>
-          <div className={styles.horizontal}>
-            <div>
+  <section className={styles.section}>
+    <h2 className={styles.sectionTitleEn}>About Us</h2>
+    <p className={styles.sectionTitleJa}>私たちについて</p>
+    <AboutTabs />
+  </section>
+</div>
+
               <h2 className={styles.sectionTitleEn}>About Us</h2>
               <p className={styles.sectionTitleJa}>私たちについて</p>
               <p className={styles.sectionDescription}>
