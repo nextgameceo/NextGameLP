@@ -12,7 +12,7 @@ export default function Hero({ title, sub }: Props) {
       <div className={styles.content}>
 
         <Image
-          src="/logo.png"  {/* ✅ nextgame-logo.png → logo.png に修正 */}
+          src="/logo.png"
           alt="NEXTGAME"
           width={320}
           height={120}
