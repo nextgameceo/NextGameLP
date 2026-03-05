@@ -1,6 +1,5 @@
 .container {
   position: relative;
-  min-height: 100vh;
   height: 100vh;
 
   display: flex;
@@ -11,8 +10,8 @@
   color: white;
   text-align: center;
 
-  /* ヘッダー分を引いてぴったり100%に */
-  box-sizing: border-box;
+  margin-top: -72px;
+  padding-top: 72px;
 }
 
 .content {
@@ -37,10 +36,10 @@
   margin-top: 40px;
   font-size: 0.8rem;
   opacity: 0.6;
-  animation: scroll 2s infinite;
+  animation: scrollAnim 2s infinite;
 }
 
-@keyframes scroll {
+@keyframes scrollAnim {
   0%  { transform: translateY(0); }
   50% { transform: translateY(10px); }
   100%{ transform: translateY(0); }
