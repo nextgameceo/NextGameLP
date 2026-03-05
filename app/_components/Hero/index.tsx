@@ -1,7 +1,6 @@
 import styles from './index.module.css'
 import Image from 'next/image'
 
-// ✅ Props型を追加
 type Props = {
   title?: string;
   sub?: string;
@@ -10,11 +9,10 @@ type Props = {
 export default function Hero({ title, sub }: Props) {
   return (
     <section className={styles.container}>
-
       <div className={styles.content}>
 
         <Image
-          src="/nextgame-logo.png"
+          src="/logo.png"  {/* ✅ nextgame-logo.png → logo.png に修正 */}
           alt="NEXTGAME"
           width={320}
           height={120}
@@ -34,7 +32,6 @@ export default function Hero({ title, sub }: Props) {
         </div>
 
       </div>
-
     </section>
   )
 }
