@@ -137,7 +137,7 @@ export default async function Page() {
                 <h3 className={styles.hiringHeading}>こんな人と働きたい</h3>
                 <ul className={styles.hiringList}>
                   <li>福祉を「変えたい」と本気で思っている</li>
-                  <li>AIとITのスキル教育を"実務"として教えられる</li>
+                  <li>AIとITのスキル教育を実務として教えられる</li>
                   <li>利用者を「対等なビジネスパートナー」と見られる</li>
                   <li>ぬるい環境より、成長する現場を選びたい</li>
                   <li>高給をもらう覚悟がある</li>
