@@ -2,27 +2,29 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
-  padding: 14px 22px;
-  border-radius: 12px;
-  min-width: 180px;
-  font-weight: 700;
+  gap: 8px;
+  padding: 11px 28px;
+  border-radius: 8px;
+  min-width: 160px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
   color: var(--color-bg-main);
   background: linear-gradient(135deg, #6dbed6 0%, #8ce4fb 45%, #6dbed6 100%);
-  box-shadow: 0 18px 40px rgba(109, 190, 214, 0.45);
+  box-shadow: 0 8px 24px rgba(109, 190, 214, 0.3);
   transition: transform 150ms ease, box-shadow 150ms ease, opacity 150ms ease;
 }
 
 .button:hover {
-  opacity: 0.95;
-  transform: translateY(-1px);
-  box-shadow: 0 20px 44px rgba(109, 190, 214, 0.55);
+  opacity: 0.9;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 32px rgba(109, 190, 214, 0.4);
 }
 
 @media (max-width: 640px) {
   .button {
-    width: 100%;
-    min-width: 0;
-    padding: 14px 18px;
+    width: auto;
+    min-width: 140px;
+    padding: 10px 24px;
   }
 }
