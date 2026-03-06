@@ -108,16 +108,15 @@ NEXTGAMEの核は、プロンプトエンジニアリングです。
                     <div>
                       <p className={styles.hiringSubheading}>福祉業界トップクラスの待遇</p>
                       <ul className={styles.hiringList}>
-                        <li>サービス管理責任者：月給手取り35万円〜</li>
-                        <li>IT指導員：月給手取り30万円〜</li>
-                        <li>生活指導員：月給手取り30万円〜</li>
-                        <li>責任者：月給手取り50万円〜</li>
+                        <li>サービス管理責任者：保証月給最低35万円</li>
+                        <li>IT指導員：保証月給30万円</li>
+                        <li>生活指導員：保証月給30万円</li>
                       </ul>
                       <p>私は搾取を一切しません。成果と責任に、正当な報酬を支払います。</p>
                     </div>
                     <div>
-                      <p className={styles.hiringSubheading}>AI×IT×実務×成長環境</p>
-                      <p>楽しく稼げるビジネスという、GAMEのような帝国を、私が直接経営で築き上げます。</p>
+                      <p className={styles.hiringSubheading}>AI×実務×成長環境</p>
+                      <p>楽しく稼げるビジネスという、GAMEのような会社を、私と築き上げましょう！</p>
                     </div>
                     <div>
                       <p className={styles.hiringSubheading}>囲い込まない支援</p>
@@ -131,17 +130,17 @@ NEXTGAMEの核は、プロンプトエンジニアリングです。
                   <h3 className={styles.hiringHeading}>こんな人と働きたい</h3>
                   <ul className={styles.hiringList}>
                     <li>福祉を変えたいと本気で思っている</li>
-                    <li>AIとITのスキル教育を実務として教えられる</li>
+                    <li>スキル教育を実務として行える</li>
                     <li>利用者を対等なビジネスパートナーと見られる</li>
                     <li>ぬるい環境より、成長する現場を選びたい</li>
                     <li>高給をもらう覚悟がある</li>
                   </ul>
-                  <p className={styles.hiringNote}>※ 優しさだけの人は向いていません。</p>
+                  <p className={styles.hiringNote}>※本気の方以外は不要です。</p>
                 </div>
                 <div className={styles.hiringBlock}>
                   <h3 className={styles.hiringHeading}>最後に</h3>
                   <p>
-                    NEXTGAMEは命をかけてでも成功させる覚悟の事業です。私と本気の価値を生み出す側に回りたい方、是非私の描く未来まで付いて来て下さい。
+                    NEXTGAMEは命をかけてでも成功させる覚悟の事業です。私と本気の価値を生み出す側に回りたい方のみ、是非私の描く未来まで付いて来て下さい。
                   </p>
                 </div>
               </div>
