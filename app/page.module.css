@@ -5,7 +5,7 @@
   justify-content: center;
   min-height: 100vh;
   padding: 72px 0 0;
-  background: linear-gradient(135deg, #101112 0%, #15181a 45%, #1c2123 100%);
+  background:#000000;
   color: var(--color-text-unpainted);
   overflow: hidden;
 }
