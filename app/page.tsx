@@ -86,7 +86,7 @@ export default async function Page() {
               <p className={styles.sectionTitleJa}>採用情報</p>
               <div className={styles.hiringBody}>
                 <p className={styles.hiringLead}>
-                  私たちは、名古屋市内でのB型事業所開所にあたり、
+                  名古屋市内でのB型事業所開所にあたり、
 共に事業を創り上げるオープニングスタッフと利用者を募集いたします。
 NEXTGAMEの核は、プロンプトエンジニアリングです。
 従来の枠組みにとらわれず、AIという強力なレバレッジを使いこなし、個々のポテンシャルを「確かな市場価値」へと変換する環境を構築します。
