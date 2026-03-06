@@ -5,7 +5,7 @@
   justify-content: center;
   min-height: 100vh;
   padding: 72px 0 0;
-  background:#000000;
+  background: #000000;
   color: var(--color-text-unpainted);
   overflow: hidden;
 }
@@ -92,13 +92,85 @@
   z-index: -1;
 }
 
+.section {
+  width: 1040px;
+  max-width: calc(100% - 48px);
+  margin: 0 auto;
+  padding: 100px 0;
+}
+
+.sectionInner {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.sectionLabel {
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  color: var(--color-current);
+  opacity: 0.8;
+}
+
+.sectionTitleEn {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: white;
+}
+
+.sectionDescription {
+  line-height: 1.9;
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 0.95rem;
+  max-width: 680px;
+}
+
+.wageSection {
+  background: linear-gradient(180deg, #1b1b1b 0%, #181818 100%);
+  border-top: 1px solid var(--color-accent-soft);
+  border-bottom: 1px solid var(--color-accent-soft);
+}
+
+.wageStats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin: 8px 0;
+}
+
+.wageStat {
+  padding: 20px 16px;
+  border-radius: 12px;
+  border: 1px solid rgba(109, 190, 214, 0.3);
+  background: rgba(109, 190, 214, 0.06);
+  text-align: center;
+}
+
+.wageNumber {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: var(--color-current);
+  line-height: 1.2;
+}
+
+.wageNumber span {
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.wageLabel {
+  margin-top: 6px;
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.6);
+}
+
 .news {
   position: relative;
   background-color: #1f1f1f;
   width: 960px;
   max-width: calc(100% - 48px);
-  margin: -60px auto 0;
-  padding: 32px 40px 48px;
+  margin: 0 auto;
+  padding: 48px 40px;
   border-radius: 20px;
   box-shadow: 0 24px 80px rgba(0, 0, 0, 0.5);
   border: 1px solid var(--color-accent-soft);
@@ -112,273 +184,9 @@
 }
 
 .newsLink {
-  position: absolute;
-  right: 24px;
-  bottom: -32px;
-}
-
-.section {
-  width: 1040px;
-  max-width: calc(100% - 48px);
-  margin: 0 auto;
-  padding: 120px 0;
-}
-
-.sectionTitleEn {
-  font-size: 2.6rem;
-  font-weight: 800;
-  color: var(--color-current);
-}
-
-.sectionTitleJa {
+  margin-top: 24px;
   display: flex;
-  align-items: center;
-  gap: 16px;
-  margin-bottom: 28px;
-  font-weight: 700;
-  letter-spacing: 0.02em;
-  color: var(--color-text-sub);
-}
-
-.sectionTitleJa::before {
-  content: '';
-  display: block;
-  height: 1px;
-  width: 48px;
-  background-color: var(--color-current);
-  opacity: 0.8;
-}
-
-.sectionDescription {
-  margin-bottom: 32px;
-  line-height: 1.8;
-  color: rgba(255, 255, 255, 0.85);
-}
-
-.hiringBody {
-  display: flex;
-  flex-direction: column;
-  gap: 28px;
-  margin-bottom: 32px;
-  line-height: 1.8;
-  color: rgba(255, 255, 255, 0.85);
-}
-
-.hiringLead {
-  font-size: 1.05rem;
-  font-weight: 600;
-  color: rgba(255, 255, 255, 0.92);
-}
-
-.hiringBlock {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  padding: 20px 24px;
-  border-radius: 20px;
-  border: 1px solid rgba(109, 190, 214, 0.25);
-  background: rgba(9, 11, 12, 0.6);
-}
-
-.hiringHeading {
-  font-size: 1.1rem;
-  font-weight: 700;
-  color: var(--color-current);
-}
-
-.hiringSubheading {
-  font-weight: 700;
-  margin-bottom: 8px;
-  color: rgba(255, 255, 255, 0.9);
-}
-
-.hiringList {
-  display: grid;
-  gap: 6px;
-  padding-left: 20px;
-  margin: 0;
-}
-
-.hiringGrid {
-  display: grid;
-  gap: 20px;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-}
-
-.hiringNote {
-  font-size: 0.95rem;
-  color: rgba(255, 255, 255, 0.7);
-}
-
-.horizontal {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 80px;
-}
-
-.businessImg {
-  width: 420px;
-  max-width: 100%;
-  height: auto;
-  border-radius: 16px;
-  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.5);
-  border: 1px solid rgba(109, 190, 214, 0.25);
-}
-
-.aboutus {
-  background: linear-gradient(180deg, #1b1b1b 0%, #181818 100%);
-  border-top: 1px solid var(--color-accent-soft);
-  border-bottom: 1px solid var(--color-accent-soft);
-}
-
-.aboutusImg {
-  width: 100%;
-  height: auto;
-  margin-left: -40%;
-  border-radius: 20px;
-  box-shadow: 0 32px 80px rgba(0, 0, 0, 0.55);
-  border: 1px solid rgba(109, 190, 214, 0.25);
-}
-
-.messageSection {
-  position: relative;
-}
-
-.messageWrapper {
-  display: flex;
-  flex-direction: column;
-  gap: 32px;
-  padding: 48px;
-  border-radius: 32px;
-  border: 1px solid rgba(109, 190, 214, 0.35);
-  background: radial-gradient(80% 80% at 20% 20%, rgba(109, 190, 214, 0.15), transparent),
-    radial-gradient(60% 60% at 80% 0%, rgba(109, 190, 214, 0.08), transparent),
-    #111314;
-  box-shadow: 0 40px 120px rgba(0, 0, 0, 0.5);
-  overflow: hidden;
-}
-
-.messageIntro {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-
-.messageLabel {
-  width: fit-content;
-  padding: 6px 14px;
-  font-size: 0.85rem;
-  letter-spacing: 0.2em;
-  border-radius: 999px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  color: rgba(255, 255, 255, 0.85);
-}
-
-.messageCard {
-  background: rgba(8, 9, 10, 0.8);
-  border-radius: 24px;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  padding: 40px;
-  display: flex;
-  flex-direction: column;
-  gap: 32px;
-  backdrop-filter: blur(6px);
-}
-
-.messageContent {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.messageSubTitle {
-  font-size: 1.3rem;
-  font-weight: 700;
-  color: var(--color-text-unpainted);
-}
-
-.messageLead {
-  font-size: 1.05rem;
-  color: rgba(255, 255, 255, 0.9);
-}
-
-.messageList {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  padding-left: 0;
-  list-style: none;
-}
-
-.messageList li {
-  padding: 16px;
-  border-radius: 12px;
-  border: 1px solid rgba(109, 190, 214, 0.25);
-  background: rgba(23, 30, 33, 0.9);
-  line-height: 1.6;
-}
-
-.messageList li span {
-  display: block;
-  font-weight: 700;
-  margin-bottom: 4px;
-  color: var(--color-current);
-}
-
-.messageMission {
-  font-weight: 700;
-  font-size: 1.08rem;
-  padding: 18px 24px;
-  border-left: 4px solid var(--color-current);
-  background: rgba(109, 190, 214, 0.08);
-}
-
-.messageQuote {
-  padding: 24px;
-  border-radius: 20px;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  background: linear-gradient(120deg, rgba(109, 190, 214, 0.15), rgba(12, 16, 18, 0.9));
-  text-align: center;
-  font-size: 1.4rem;
-  font-weight: 700;
-  color: rgba(255, 255, 255, 0.9);
-}
-
-.messageSignature {
-  margin-top: 8px;
-  font-size: 0.95rem;
-  font-weight: 500;
-  letter-spacing: 0.08em;
-  color: rgba(255, 255, 255, 0.8);
-}
-
-.info {
-  display: flex;
-  border-bottom: 1px solid rgba(109, 190, 214, 0.25);
-  padding: 18px 0;
-  gap: 16px;
-}
-
-.infoTitle {
-  width: 120px;
-  font-weight: 700;
-  color: var(--color-current);
-}
-
-.infoDescription {
-  flex: 1;
-  color: rgba(255, 255, 255, 0.85);
-  line-height: 1.6;
-}
-
-.hiringImg {
-  width: 520px;
-  max-width: 100%;
-  height: auto;
-  border-radius: 16px;
-  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.5);
-  border: 1px solid rgba(109, 190, 214, 0.25);
+  justify-content: flex-end;
 }
 
 @keyframes fadeSlideDown {
@@ -407,25 +215,8 @@
     font-size: 2rem;
   }
 
-  .heroLogo {
-    width: min(380px, 80vw);
-  }
-
-  .news {
-    margin: -40px auto 0;
-    padding: 28px;
-  }
-
   .section {
-    padding: 100px 0;
-  }
-
-  .horizontal {
-    gap: 48px;
-  }
-
-  .messageWrapper {
-    padding: 32px;
+    padding: 80px 0;
   }
 }
 
@@ -450,50 +241,19 @@
 
   .news {
     width: calc(100% - 24px);
-    padding: 20px 18px 32px;
+    padding: 28px 20px;
   }
 
-  .newsLink {
-    position: relative;
-    right: auto;
-    bottom: auto;
-    margin-top: 12px;
+  .wageStats {
+    gap: 10px;
+  }
+
+  .wageNumber {
+    font-size: 1rem;
   }
 
   .section {
     width: 100%;
-    padding: 80px 0;
-  }
-
-  .horizontal {
-    flex-direction: column-reverse;
-    gap: 32px;
-  }
-
-  .aboutusImg {
-    margin-left: 0;
-  }
-
-  .info {
-    flex-direction: column;
-    gap: 6px;
-  }
-
-  .messageWrapper {
-    padding: 24px;
-    font-size: 0.8rem;
-  }
-
-  .messageCard {
-    padding: 24px;
-    font-size: 0.8rem;
-  }
-
-  .messageQuote {
-    font-size: 0.8rem;
-  }
-
-  .messageSignature {
-    font-size: 0.6rem;
+    padding: 60px 0;
   }
 }
