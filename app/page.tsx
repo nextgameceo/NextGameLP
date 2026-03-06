@@ -39,7 +39,7 @@ export default async function Page() {
             <ButtonLink href="/recruit">採用情報を見る</ButtonLink>
             <ButtonLink href="/business">事業内容を見る</ButtonLink>
           </div>
-          <div className={styles.heroScroll}>↓ Scroll</div>
+          <div className={styles.heroScroll}>scroll</div>
         </div>
         <Image
           className={styles.bgimg}
@@ -55,33 +55,45 @@ export default async function Page() {
       <section className={styles.section}>
         <FadeInSection>
           <div className={styles.sectionInner}>
-            <div className={styles.sectionTitleBlock}>
+            <div className={styles.sectionLeft}>
+              <p className={styles.sectionNumber}>01</p>
               <h2 className={styles.sectionTitleEn}>Business</h2>
-              <p className={styles.sectionTitleJa}>事業内容</p>
+              <span className={styles.sectionTitleJa}>事業内容</span>
             </div>
-            <p className={styles.sectionDescription}>
-              障害者が、これからの未来に適応したスキルを取得し、従業員が業界最高峰の給料で報われる、画期的な経済圏を創ることをビジョンとしています。
-              弊社は従来の単純作業中心ではなく、利用者の皆様にAIとITのスキルを会得させ、障害のある方々の経済的自立を促す、画期的なビジネスモデルです。
-            </p>
-            <ButtonLink href="/business">詳しく見る</ButtonLink>
+            <div className={styles.sectionRight}>
+              <p className={styles.sectionDescription}>
+                障害者が、これからの未来に適応したスキルを取得し、従業員が業界最高峰の給料で報われる、画期的な経済圏を創ることをビジョンとしています。
+                弊社は従来の単純作業中心ではなく、利用者の皆様にAIとITのスキルを会得させ、障害のある方々の経済的自立を促す、画期的なビジネスモデルです。
+              </p>
+              <div>
+                <ButtonLink href="/business">詳しく見る</ButtonLink>
+              </div>
+            </div>
           </div>
         </FadeInSection>
       </section>
 
-      {/* 利用者の方へ */}
+      <div className={styles.divider} />
+
+      {/* For Users */}
       <div className={styles.wageSection}>
         <section className={styles.section}>
           <FadeInSection>
             <div className={styles.sectionInner}>
-              <div className={styles.sectionTitleBlock}>
+              <div className={styles.sectionLeft}>
+                <p className={styles.sectionNumber}>02</p>
                 <h2 className={styles.sectionTitleEn}>For Users</h2>
-                <p className={styles.sectionTitleJa}>利用者の方へ</p>
+                <span className={styles.sectionTitleJa}>利用者の方へ</span>
               </div>
-              <p className={styles.sectionDescription}>
-                NEXTGAMEでは、通所実績とスキルに応じて工賃が上がる仕組みを用意しています。
-                段階的なキャリアアップを経て、最終的には業務委託・個人事業主として独立するキャリアパスを支援します。
-              </p>
-              <ButtonLink href="/wage">工賃・キャリアを見る</ButtonLink>
+              <div className={styles.sectionRight}>
+                <p className={styles.sectionDescription}>
+                  NEXTGAMEでは、通所実績とスキルに応じて工賃が上がる仕組みを用意しています。
+                  段階的なキャリアアップを経て、最終的には業務委託・個人事業主として独立するキャリアパスを支援します。
+                </p>
+                <div>
+                  <ButtonLink href="/wage">工賃・キャリアを見る</ButtonLink>
+                </div>
+              </div>
             </div>
           </FadeInSection>
         </section>
@@ -91,35 +103,45 @@ export default async function Page() {
       <section className={styles.section}>
         <FadeInSection>
           <div className={styles.sectionInner}>
-            <div className={styles.sectionTitleBlock}>
+            <div className={styles.sectionLeft}>
+              <p className={styles.sectionNumber}>03</p>
               <h2 className={styles.sectionTitleEn}>News</h2>
-              <p className={styles.sectionTitleJa}>お知らせ</p>
+              <span className={styles.sectionTitleJa}>お知らせ</span>
             </div>
-            <div className={styles.newsWrap}>
-              <NewsList articles={data.contents} />
-            </div>
-            <div>
-              <ButtonLink href="/news">もっとみる</ButtonLink>
+            <div className={styles.sectionRight}>
+              <div className={styles.newsWrap}>
+                <NewsList articles={data.contents} />
+              </div>
+              <div>
+                <ButtonLink href="/news">もっとみる</ButtonLink>
+              </div>
             </div>
           </div>
         </FadeInSection>
       </section>
 
-      {/* We are hiring */}
+      <div className={styles.divider} />
+
+      {/* Recruit */}
       <div className={styles.recruitSection}>
         <section className={styles.section}>
           <FadeInSection>
             <div className={styles.sectionInner}>
-              <div className={styles.sectionTitleBlock}>
-                <h2 className={styles.sectionTitleEn}>We are hiring</h2>
-                <p className={styles.sectionTitleJa}>採用情報</p>
+              <div className={styles.sectionLeft}>
+                <p className={styles.sectionNumber}>04</p>
+                <h2 className={styles.sectionTitleEn}>Recruit</h2>
+                <span className={styles.sectionTitleJa}>採用情報</span>
               </div>
-              <p className={styles.sectionDescription}>
-                福祉業界の構造を変える、本気の仲間を募集しています。
-                AIとITで障害者の経済的自立を実現する、未だかつてない挑戦に共に取り組みませんか。
-                業界最高峰の給与水準で、あなたの覚悟に応えます。
-              </p>
-              <ButtonLink href="/recruit">採用情報を見る</ButtonLink>
+              <div className={styles.sectionRight}>
+                <p className={styles.sectionDescription}>
+                  福祉業界の構造を変える、本気の仲間を募集しています。
+                  AIとITで障害者の経済的自立を実現する、未だかつてない挑戦に共に取り組みませんか。
+                  業界最高峰の給与水準で、あなたの覚悟に応えます。
+                </p>
+                <div>
+                  <ButtonLink href="/recruit">採用情報を見る</ButtonLink>
+                </div>
+              </div>
             </div>
           </FadeInSection>
         </section>
