@@ -2,20 +2,20 @@
   --font-mono: ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono', 'Roboto Mono',
     'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro', 'Fira Mono', 'Droid Sans Mono',
     'Courier New', monospace;
-  --color-text-main: #f0ebe0;
-  --color-text-sub: #c9b99a;
+  --color-text-main: #f5f5f5;
+  --color-text-sub: #c3d3da;
   --color-text-unpainted: #ffffff;
   --color-text-error: #ff6b6b;
-  --color-bg-main: #0a0905;
-  --color-bg-sub: #111009;
-  --color-bg-code: #1a1810;
-  --color-bg-painted: #2a2618;
-  --color-border-dark: #c9a84c;
-  --color-border: #2a2618;
-  --color-border-light: #1a1810;
-  --color-current: #c9a84c;
-  --color-button-primary: #c9a84c;
-  --color-accent-soft: rgba(201, 168, 76, 0.2);
+  --color-bg-main: #181818;
+  --color-bg-sub: #202020;
+  --color-bg-code: #232323;
+  --color-bg-painted: #3c3d3d;
+  --color-border-dark: #6dbed6;
+  --color-border: #2c2c2c;
+  --color-border-light: #1f1f1f;
+  --color-current: #6dbed6;
+  --color-button-primary: #6dbed6;
+  --color-accent-soft: rgba(109, 190, 214, 0.2);
   --border-radius: 4px;
 }
 
@@ -32,8 +32,8 @@ body {
 }
 
 body {
-  font-family: 'Hiragino Mincho ProN', 'HiraMinProN-W3', '游明朝', 'Yu Mincho', YuMincho,
-    'ヒラギノ明朝 ProN W3', serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', YuGothic, 'ヒラギノ角ゴ ProN W3',
+    Hiragino Kaku Gothic ProN, Arial, 'メイリオ', Meiryo, sans-serif;
   color: var(--color-text-main);
   line-height: 1.8;
   background-color: var(--color-bg-main);
