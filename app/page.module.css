@@ -102,20 +102,26 @@
 .sectionInner {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 24px;
 }
 
-.sectionLabel {
-  font-size: 0.75rem;
-  letter-spacing: 0.2em;
-  color: var(--color-current);
-  opacity: 0.8;
+.sectionTitleBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
 }
 
 .sectionTitleEn {
-  font-size: 2.2rem;
+  font-size: 2.6rem;
   font-weight: 800;
-  color: white;
+  color: var(--color-current);
+  line-height: 1;
+}
+
+.sectionTitleJa {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.5);
+  letter-spacing: 0.1em;
 }
 
 .sectionDescription {
@@ -125,68 +131,19 @@
   max-width: 680px;
 }
 
+.newsWrap {
+  margin: 0 -4px;
+}
+
 .wageSection {
-  background: linear-gradient(180deg, #1b1b1b 0%, #181818 100%);
+  background: linear-gradient(180deg, #141414 0%, #111111 100%);
   border-top: 1px solid var(--color-accent-soft);
   border-bottom: 1px solid var(--color-accent-soft);
 }
 
-.wageStats {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
-  margin: 8px 0;
-}
-
-.wageStat {
-  padding: 20px 16px;
-  border-radius: 12px;
-  border: 1px solid rgba(109, 190, 214, 0.3);
-  background: rgba(109, 190, 214, 0.06);
-  text-align: center;
-}
-
-.wageNumber {
-  font-size: 1.3rem;
-  font-weight: 800;
-  color: var(--color-current);
-  line-height: 1.2;
-}
-
-.wageNumber span {
-  font-size: 0.85rem;
-  font-weight: 600;
-}
-
-.wageLabel {
-  margin-top: 6px;
-  font-size: 0.75rem;
-  color: rgba(255, 255, 255, 0.6);
-}
-
-.news {
-  position: relative;
-  background-color: #1f1f1f;
-  width: 960px;
-  max-width: calc(100% - 48px);
-  margin: 0 auto;
-  padding: 48px 40px;
-  border-radius: 20px;
-  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.5);
-  border: 1px solid var(--color-accent-soft);
-}
-
-.newsTitle {
-  font-size: 1.6rem;
-  font-weight: 800;
-  margin-bottom: 16px;
-  color: var(--color-current);
-}
-
-.newsLink {
-  margin-top: 24px;
-  display: flex;
-  justify-content: flex-end;
+.recruitSection {
+  background: linear-gradient(180deg, #0f0f0f 0%, #0a0a0a 100%);
+  border-top: 1px solid var(--color-accent-soft);
 }
 
 @keyframes fadeSlideDown {
@@ -218,6 +175,10 @@
   .section {
     padding: 80px 0;
   }
+
+  .sectionTitleEn {
+    font-size: 2rem;
+  }
 }
 
 @media (max-width: 640px) {
@@ -239,21 +200,12 @@
     opacity: 0.24;
   }
 
-  .news {
-    width: calc(100% - 24px);
-    padding: 28px 20px;
-  }
-
-  .wageStats {
-    gap: 10px;
-  }
-
-  .wageNumber {
-    font-size: 1rem;
-  }
-
   .section {
     width: 100%;
     padding: 60px 0;
+  }
+
+  .sectionTitleEn {
+    font-size: 1.8rem;
   }
 }
