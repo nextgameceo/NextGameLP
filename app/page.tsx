@@ -4,7 +4,6 @@ import { TOP_NEWS_LIMIT } from '@/app/_constants';
 import NewsList from '@/app/_components/NewsList';
 import styles from './page.module.css';
 import ButtonLink from '@/app/_components/ButtonLink';
-import AboutTabs from '@/app/_components/AboutTabs';
 import FadeInSection from '@/app/_components/FadeInSection';
 
 export default async function Page() {
@@ -14,6 +13,7 @@ export default async function Page() {
 
   return (
     <>
+      {/* Hero */}
       <section className={styles.top}>
         <div className={styles.heroContent}>
           <div className={styles.heroLogoWrap}>
@@ -28,11 +28,11 @@ export default async function Page() {
           </div>
           <div className={styles.heroText}>
             <p className={styles.heroSubCatch}>
-              最先端のAIプロンプトを学び、個性で稼ぐ未来へ。
+              発達障害・精神障害のある方が、ITスキルで稼ぐ。
             </p>
-            <h1 className={styles.title}>アイデアを、資産に。</h1>
+            <h1 className={styles.title}>過集中を、経営資産に。</h1>
             <p className={styles.description}>
-              各々の才能を価値へと変える最高の環境を提供します
+              弊社は、各々の才能を価値へと変える、最高の環境を提供します。
             </p>
           </div>
           <div className={styles.heroCta}>
@@ -51,111 +51,76 @@ export default async function Page() {
         />
       </section>
 
+      {/* Business */}
       <section className={styles.section}>
         <FadeInSection>
-          <div className={styles.horizontal}>
-            <div>
-              <h2 className={styles.sectionTitleEn}>Business</h2>
-              <p className={styles.sectionTitleJa}>事業内容</p>
-              <p className={styles.sectionDescription}>
-                利用者の皆様が、業界最高峰の工賃を貰いつつ、これからの未来に適応したスキルを会得出来る、他に類を見ないB型作業所です。
-                <br />
-                弊社は従来の単純作業中心ではなく、利用者の皆様の未来に直結する、経済的自立を促すビジネスモデルです。
-              </p>
-              <ButtonLink href="/business">MORE READ</ButtonLink>
-            </div>
+          <div className={styles.sectionInner}>
+            <p className={styles.sectionLabel}>BUSINESS</p>
+            <h2 className={styles.sectionTitleEn}>事業内容</h2>
+            <p className={styles.sectionDescription}>
+              障害者が、これからの未来に適応したスキルを取得し、従業員が業界最高峰の給料で報われる、画期的な経済圏を創ることをビジョンとしています。
+              弊社は従来の単純作業中心ではなく、利用者の皆様にAIとITのスキルを会得させ、障害のある方々の経済的自立を促す、画期的なビジネスモデルです。
+            </p>
+            <ButtonLink href="/business">詳しく見る</ButtonLink>
           </div>
         </FadeInSection>
       </section>
 
-      <div className={styles.aboutus}>
+      {/* 利用者の方へ */}
+      <div className={styles.wageSection}>
         <section className={styles.section}>
           <FadeInSection>
-            <h2 className={styles.sectionTitleEn}>About Us</h2>
-            <p className={styles.sectionTitleJa}>私たちについて</p>
-            <AboutTabs />
+            <div className={styles.sectionInner}>
+              <p className={styles.sectionLabel}>FOR USERS</p>
+              <h2 className={styles.sectionTitleEn}>利用者の方へ</h2>
+              <p className={styles.sectionDescription}>
+                NEXTGAMEでは、通所実績とスキルに応じて工賃が上がる仕組みを用意しています。
+                最低工賃20,000円からスタートし、平均工賃50,000円以上を目指します。
+                最終的には業務委託・個人事業主として独立するキャリアパスを支援します。
+              </p>
+              <div className={styles.wageStats}>
+                <div className={styles.wageStat}>
+                  <p className={styles.wageNumber}>¥20,000<span>〜</span></p>
+                  <p className={styles.wageLabel}>スタート工賃</p>
+                </div>
+                <div className={styles.wageStat}>
+                  <p className={styles.wageNumber}>¥50,000<span>以上</span></p>
+                  <p className={styles.wageLabel}>平均工賃目標</p>
+                </div>
+                <div className={styles.wageStat}>
+                  <p className={styles.wageNumber}>PC<span>付与</span></p>
+                  <p className={styles.wageLabel}>卒業時プレゼント</p>
+                </div>
+              </div>
+              <ButtonLink href="/wage">工賃・キャリアを見る</ButtonLink>
+            </div>
           </FadeInSection>
         </section>
       </div>
 
-      <section className={styles.section}>
-        <FadeInSection>
-          <div className={styles.horizontal}>
-            <div>
-              <h2 className={styles.sectionTitleEn}>We are hiring</h2>
-              <p className={styles.sectionTitleJa}>採用情報</p>
-              <div className={styles.hiringBody}>
-                <p className={styles.hiringLead}>
-                  名古屋市内でのB型事業所開所にあたり、
-共に事業を創り上げるオープニングスタッフと利用者を募集いたします。
-NEXTGAMEの核は、プロンプトエンジニアリングです。
-従来の枠組みにとらわれず、AIという強力なレバレッジを使いこなし、個々のポテンシャルを「確かな市場価値」へと変換する環境を構築します。
-                </p>
-                <div className={styles.hiringBlock}>
-                  <h3 className={styles.hiringHeading}>なぜ募集するのか</h3>
-                  <ul className={styles.hiringList}>
-                    <li>単純作業しか与えられない利用者が多い</li>
-                    <li>低賃金で疲弊する従業員が多い</li>
-                    <li>成長しない作業所が多い</li>
-                  </ul>
-                  <p>
-                    私がこの構造をブチ壊し、AIとITスキルを本気で教え、これからの社会に順応する仕事を回し、未だかつて無い帝国を創ります。
-                  </p>
-                </div>
-                <div className={styles.hiringBlock}>
-                  <h3 className={styles.hiringHeading}>NEXTGAMEで働く意味</h3>
-                  <div className={styles.hiringGrid}>
-                    <div>
-                      <p className={styles.hiringSubheading}>福祉業界トップクラスの待遇</p>
-                      <ul className={styles.hiringList}>
-                        <li>サービス管理責任者：保証月給最低35万円</li>
-                        <li>IT指導員：保証月給30万円</li>
-                        <li>生活指導員：保証月給30万円</li>
-                      </ul>
-                      <p>私は搾取を一切しません。成果と責任に、正当な報酬を支払います。</p>
-                    </div>
-                    <div>
-                      <p className={styles.hiringSubheading}>AI×実務×成長環境</p>
-                      <p>楽しく稼げるビジネスという、GAMEのような会社を、私と築き上げましょう！</p>
-                    </div>
-                    <div>
-                      <p className={styles.hiringSubheading}>囲い込まない支援</p>
-                      <p>
-                        ゴールは通所ではなく、独立・業務委託・社会への参加。外に出て稼げる事が福祉業界の成功です。
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div className={styles.hiringBlock}>
-                  <h3 className={styles.hiringHeading}>こんな人と働きたい</h3>
-                  <ul className={styles.hiringList}>
-                    <li>福祉を変えたいと本気で思っている</li>
-                    <li>スキル教育を実務として行える</li>
-                    <li>利用者を対等なビジネスパートナーと見られる</li>
-                    <li>ぬるい環境より、成長する現場を選びたい</li>
-                    <li>高給をもらう覚悟がある</li>
-                  </ul>
-                  <p className={styles.hiringNote}>※本気の方以外は不要です。</p>
-                </div>
-                <div className={styles.hiringBlock}>
-                  <h3 className={styles.hiringHeading}>最後に</h3>
-                  <p>
-                    NEXTGAMEは命をかけてでも成功させる覚悟の事業です。私と本気の価値を生み出す側に回りたい方のみ、是非私の描く未来まで付いて来て下さい。
-                  </p>
-                </div>
-              </div>
-              <ButtonLink href="/recruit">採用情報へ</ButtonLink>
-            </div>
-          </div>
-        </FadeInSection>
-      </section>
-
+      {/* News */}
       <section className={styles.news}>
         <FadeInSection>
           <h2 className={styles.newsTitle}>News</h2>
           <NewsList articles={data.contents} />
           <div className={styles.newsLink}>
             <ButtonLink href="/news">もっとみる</ButtonLink>
+          </div>
+        </FadeInSection>
+      </section>
+
+      {/* We are hiring */}
+      <section className={styles.section}>
+        <FadeInSection>
+          <div className={styles.sectionInner}>
+            <p className={styles.sectionLabel}>RECRUIT</p>
+            <h2 className={styles.sectionTitleEn}>採用情報</h2>
+            <p className={styles.sectionDescription}>
+              福祉業界の構造を変える、本気の仲間を募集しています。
+              AIとITで障害者の経済的自立を実現する、未だかつてない挑戦に共に取り組みませんか。
+              業界最高峰の給与水準で、あなたの覚悟に応えます。
+            </p>
+            <ButtonLink href="/recruit">採用情報を見る</ButtonLink>
           </div>
         </FadeInSection>
       </section>
