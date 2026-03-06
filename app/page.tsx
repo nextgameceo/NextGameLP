@@ -28,9 +28,9 @@ export default async function Page() {
           </div>
           <div className={styles.heroText}>
             <p className={styles.heroSubCatch}>
-              障害のある方々に、最先端のAIプロンプトを教育し、個性で稼ぐ未来へ。
+              最先端のAIプロンプトを学び、個性で稼ぐ未来へ。
             </p>
-            <h1 className={styles.title}>過集中を、経営資産に。</h1>
+            <h1 className={styles.title}>アイデアを、資産に。</h1>
             <p className={styles.description}>
               各々の才能を価値へと変える最高の環境を提供します
             </p>
@@ -58,7 +58,7 @@ export default async function Page() {
               <h2 className={styles.sectionTitleEn}>Business</h2>
               <p className={styles.sectionTitleJa}>事業内容</p>
               <p className={styles.sectionDescription}>
-                利用者の皆様が、業界最高峰の工賃を貰いつつ、これからの未来に適応したスキルを会得出来る、他に類を見ないB型作業所です。。
+                利用者の皆様が、業界最高峰の工賃を貰いつつ、これからの未来に適応したスキルを会得出来る、他に類を見ないB型作業所です。
                 <br />
                 弊社は従来の単純作業中心ではなく、利用者の皆様の未来に直結する、経済的自立を促すビジネスモデルです。
               </p>
@@ -86,11 +86,10 @@ export default async function Page() {
               <p className={styles.sectionTitleJa}>採用情報</p>
               <div className={styles.hiringBody}>
                 <p className={styles.hiringLead}>
-                  障害者がスキルで稼ぎ、その分だけ従業員が業界最高峰の所得を得られる革命的な未来を、本気で実現する為に舞い戻って来た私が直接経営する「NEXTGAME」
-                  <br />
-                  誰もが業界最高峰の所得を得られる革命的な未来へ。
-                  <br />
-                  私の直接経営でNEXTGAMEを導いていきます。
+                  私たちは、名古屋市内でのB型事業所開所にあたり、
+共に事業を創り上げるオープニングスタッフと利用者を募集いたします。
+NEXTGAMEの核は、プロンプトエンジニアリングです。
+従来の枠組みにとらわれず、AIという強力なレバレッジを使いこなし、個々のポテンシャルを「確かな市場価値」へと変換する環境を構築します。
                 </p>
                 <div className={styles.hiringBlock}>
                   <h3 className={styles.hiringHeading}>なぜ募集するのか</h3>
