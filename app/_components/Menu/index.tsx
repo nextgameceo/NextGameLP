@@ -34,6 +34,11 @@ export default function Menu() {
             </Link>
           </li>
           <li>
+            <Link href="/wage" onClick={close}>
+              工賃・キャリア
+            </Link>
+          </li>
+          <li>
             <Link href="/contact" onClick={close}>
               お問い合わせ
             </Link>
