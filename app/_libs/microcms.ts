@@ -202,3 +202,4 @@ export const getMeta = async (queries?: MicroCMSQueries) => {
     })
     .catch(() => null);
 };
+
