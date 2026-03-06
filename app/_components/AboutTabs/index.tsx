@@ -28,7 +28,8 @@ export default function AboutTabs() {
       {active === 'about' && (
         <div className={styles.content}>
           <p className={styles.description}>
-            ビジネスの各ステージで最適なサポートを提供する NEXTGAME。正しい環境と努力で障壁を壊し、成果に直結する戦略と実行を届けます。
+            私たちは、単なる作業の提供ではなく、最新のAIツールを使いこなす「技術」の習得を支援の柱に据えています。個々の特性をデバッグし、AIというレバレッジを利かせることで、圧倒的な生産性と市場価値を創出する「次世代の就労支援モデル」の確立を目指します。
+
           </p>
           <dl className={styles.info}>
             <dt className={styles.infoTitle}>社名</dt>
@@ -36,7 +37,7 @@ export default function AboutTabs() {
           </dl>
           <dl className={styles.info}>
             <dt className={styles.infoTitle}>所在地</dt>
-            <dd className={styles.infoDescription}>〒461-0001<br />愛知県名古屋市中区丸の内</dd>
+            <dd className={styles.infoDescription}>〒461-0001<br />愛知県名古屋市</dd>
           </dl>
           <dl className={styles.info}>
             <dt className={styles.infoTitle}>代表者</dt>
