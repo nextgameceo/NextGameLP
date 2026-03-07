@@ -36,8 +36,8 @@ export default async function Page() {
             </p>
           </div>
           <div className={styles.heroCta}>
-            <ButtonLink href="/recruit">採用情報を見る</ButtonLink>
-            <ButtonLink href="/business">事業内容を見る</ButtonLink>
+            <ButtonLink href="/recruit">Read More</ButtonLink>
+            <ButtonLink href="/business">Read More</ButtonLink>
           </div>
           <div className={styles.heroScroll}>scroll</div>
         </div>
@@ -66,7 +66,7 @@ export default async function Page() {
                 データ処理やコンテンツ制作などの業務を高品質かつ柔軟に対応し、企業様の業務効率化とコスト削減を実現します。
               </p>
               <div>
-                <ButtonLink href="/business">詳しく見る</ButtonLink>
+                <ButtonLink href="/business">Read More</ButtonLink>
               </div>
             </div>
           </div>
@@ -93,7 +93,7 @@ export default async function Page() {
                   段階的なキャリアアップを経て、最終的には業務委託・個人事業主として独立するキャリアパスプランを設計します。
                 </p>
                 <div>
-                  <ButtonLink href="/wage">工賃・キャリアを見る</ButtonLink>
+                  <ButtonLink href="/wage">Read More</ButtonLink>
                 </div>
               </div>
             </div>
@@ -115,10 +115,10 @@ export default async function Page() {
             <div className={styles.sectionRight}>
               <p className={styles.sectionDescription}>
                 NEXTGAME株式会社は、愛知県名古屋市に拠点を置く就労継続支援B型事業所です。
-                代表取締役 内山博貴のもと、障害のある方々が「スキル」で稼ぎ、自立できる社会の実現を目指しています。
+                代表取締役 内山博貴のもと、障害のある方々がスキルで稼ぎ、自立できる社会の実現を目指しています。
               </p>
               <div>
-                <ButtonLink href="/about">企業情報を見る</ButtonLink>
+                <ButtonLink href="/about">Read More</ButtonLink>
               </div>
             </div>
           </div>
@@ -141,7 +141,7 @@ export default async function Page() {
                 <NewsList articles={data.contents} />
               </div>
               <div>
-                <ButtonLink href="/news">もっとみる</ButtonLink>
+                <ButtonLink href="/news">Read More</ButtonLink>
               </div>
             </div>
           </div>
@@ -167,7 +167,7 @@ export default async function Page() {
                   業界最高峰の給与水準で、あなたの覚悟に応えます。
                 </p>
                 <div>
-                  <ButtonLink href="/recruit">採用情報を見る</ButtonLink>
+                  <ButtonLink href="/recruit">Read More</ButtonLink>
                 </div>
               </div>
             </div>
