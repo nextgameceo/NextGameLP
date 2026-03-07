@@ -1,0 +1,125 @@
+.container {
+  width: 800px;
+  max-width: calc(100% - 48px);
+  margin: 0 auto;
+  padding: 120px 0 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  animation: fadeSlideUp 0.8s ease both;
+}
+
+.label {
+  width: fit-content;
+  padding: 6px 14px;
+  font-size: 0.85rem;
+  letter-spacing: 0.2em;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.title {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: var(--color-current);
+}
+
+.card {
+  background: rgba(8, 9, 10, 0.8);
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 48px;
+  animation: fadeSlideUp 0.8s ease 0.2s both;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 24px;
+  padding: 20px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.row:last-child {
+  border-bottom: none;
+}
+
+.term {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--color-current);
+  letter-spacing: 0.05em;
+  padding-top: 2px;
+}
+
+.desc {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.8;
+}
+
+.bizList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  list-style: none;
+  padding: 0;
+}
+
+.bizList li {
+  padding-left: 16px;
+  position: relative;
+  line-height: 1.7;
+}
+
+.bizList li::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  color: var(--color-current);
+  opacity: 0.6;
+}
+
+.cta {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  animation: fadeSlideUp 0.8s ease 0.4s both;
+}
+
+@keyframes fadeSlideUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 640px) {
+  .container {
+    padding: 100px 0 60px;
+  }
+
+  .title {
+    font-size: 1.8rem;
+  }
+
+  .card {
+    padding: 24px;
+  }
+
+  .row {
+    grid-template-columns: 80px 1fr;
+    gap: 16px;
+  }
+}
