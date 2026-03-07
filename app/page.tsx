@@ -28,11 +28,11 @@ export default async function Page() {
           </div>
           <div className={styles.heroText}>
             <p className={styles.heroSubCatch}>
-              発達障害・精神障害のある方が、ITスキルで稼ぐ。
+              業界最高峰の工賃を貰いながら、AIプロンプトを学べるB型作業所
             </p>
-            <h1 className={styles.title}>過集中を、経営資産に。</h1>
+            <h1 className={styles.title}>あなたのアイデアを資産に</h1>
             <p className={styles.description}>
-              弊社は、各々の才能を価値へと変える、最高の環境を提供します。
+              各々の才能を価値へと変える、最高の環境を提供します。
             </p>
           </div>
           <div className={styles.heroCta}>
@@ -62,8 +62,8 @@ export default async function Page() {
             </div>
             <div className={styles.sectionRight}>
               <p className={styles.sectionDescription}>
-                障害者が、これからの未来に適応したスキルを取得し、従業員が業界最高峰の給料で報われる、画期的な経済圏を創ることをビジョンとしています。
-                弊社は従来の単純作業中心ではなく、利用者の皆様にAIとITのスキルを会得させ、障害のある方々の経済的自立を促す、画期的なビジネスモデルです。
+                利用者の皆様が、これからの未来に適応したスキルを取得し、アイデアで稼げる未来をビジョンとしています。
+                弊社は従来の単純作業中心ではなく、利用者の皆様にプロンプトエンジニアリングスキルを会得させ、利用者皆様の経済的自立を促す、画期的なビジネスモデルです。
               </p>
               <div>
                 <ButtonLink href="/business">詳しく見る</ButtonLink>
