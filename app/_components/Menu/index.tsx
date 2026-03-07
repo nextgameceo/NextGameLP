@@ -29,6 +29,16 @@ export default function Menu() {
             </Link>
           </li>
           <li>
+            <Link href="/about" onClick={close}>
+              企業情報
+            </Link>
+          </li>
+          <li>
+            <Link href="/ceo-message" onClick={close}>
+              代表者メッセージ
+            </Link>
+          </li>
+          <li>
             <Link href="/recruit" onClick={close}>
               採用情報
             </Link>
