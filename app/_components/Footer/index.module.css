@@ -123,7 +123,7 @@
   color: var(--color-current);
 }
 
-@media (max-width: 640px) {
+@media (max-width: 768px) {
   .footer {
     padding: 48px 24px 24px;
     margin-top: 80px;
@@ -131,17 +131,46 @@
 
   .top {
     flex-direction: column;
-    gap: 32px;
+    gap: 40px;
+  }
+
+  .brand {
+    min-width: unset;
   }
 
   .nav {
-    flex-wrap: wrap;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 32px;
   }
 
+  .navGroup {
+    gap: 12px;
+  }
+
+  .navLabel {
+    font-size: 0.6rem;
+  }
+
+  .navItems li a {
+    font-size: 0.8rem;
+  }
+
   .bottom {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .legal {
     flex-direction: column;
     align-items: flex-start;
-    gap: 16px;
+    gap: 6px;
+    font-size: 0.7rem;
+  }
+
+  .legal span:last-child {
+    color: rgba(255, 255, 255, 0.25);
   }
 }
