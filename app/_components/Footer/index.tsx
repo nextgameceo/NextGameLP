@@ -7,7 +7,7 @@ export default function Footer() {
 
       <div className={styles.top}>
         <div className={styles.brand}>
-          <p className={styles.brandName}>NEXTGAME</p>
+          <p className={styles.brandName}>NEXTGAME LIMITED</p>
           <p className={styles.brandSub}>就労継続支援B型事業所</p>
         </div>
 
@@ -64,9 +64,9 @@ export default function Footer() {
         </div>
 
         <div className={styles.legal}>
-          <Link href="/privacy">プライバシーポリシー</Link>
-          <span>|</span>
-          <span>© NEXTGAME株式会社 All Rights Reserved 2024</span>
+          <Link href="/privacy">Privacy Policy</Link>
+          <span></span>
+          <span>© NEXTGAME,LTD All Rights Reserved 2026</span>
         </div>
       </div>
 
