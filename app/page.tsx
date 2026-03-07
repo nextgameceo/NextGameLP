@@ -32,7 +32,7 @@ export default async function Page() {
             </p>
             <h1 className={styles.title}>THE IDEA INTO AN ASSET</h1>
             <p className={styles.description}>
-              ご自身の才能を価値へと変える、最高の環境を提供します。
+              ご自身の才能を価値へと変える最高の環境を提供します
             </p>
           </div>
           <div className={styles.heroCta}>
@@ -62,8 +62,8 @@ export default async function Page() {
             </div>
             <div className={styles.sectionRight}>
               <p className={styles.sectionDescription}>
-                利用者の皆様が、これからの未来に適応したスキルを取得し、アイデアで稼げる未来をビジョンとしています。
-                弊社は従来の単純作業中心ではなく、利用者の皆様にプロンプトエンジニアリングスキルを会得させ、利用者皆様の経済的自立を促す、画期的なビジネスモデルです。
+                AIとITを活用した業務アウトソーシングサービスを提供しています。
+データ処理やコンテンツ制作などの業務を高品質かつ柔軟に対応し、企業様の業務効率化とコスト削減を実現します。
               </p>
               <div>
                 <ButtonLink href="/business">詳しく見る</ButtonLink>
