@@ -25,6 +25,10 @@ const nextConfig = {
             key: 'Cloudflare-CDN-Cache-Control',
             value: 'no-store',
           },
+          {
+            key: 'Vercel-CDN-Cache-Control',
+            value: 'no-store',
+          },
         ],
       },
     ];
