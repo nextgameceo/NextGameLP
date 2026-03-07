@@ -28,11 +28,11 @@ export default async function Page() {
           </div>
           <div className={styles.heroText}>
             <p className={styles.heroSubCatch}>
-              業界最高峰の工賃を貰いながら、AIプロンプトを学べるB型作業所
+              工賃を貰いながらプロンプトを学べるB型作業所
             </p>
-            <h1 className={styles.title}>あなたのアイデアを資産に</h1>
+            <h1 className={styles.title}>THE IDEA INTO AN ASSET</h1>
             <p className={styles.description}>
-              各々の才能を価値へと変える、最高の環境を提供します。
+              ご自身の才能を価値へと変える、最高の環境を提供します。
             </p>
           </div>
           <div className={styles.heroCta}>
