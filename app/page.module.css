@@ -14,8 +14,7 @@
   content: '';
   position: absolute;
   inset: 0;
-  background:
-    radial-gradient(ellipse 80% 60% at 50% 100%, rgba(109, 190, 214, 0.07), transparent);
+  background: radial-gradient(ellipse 80% 60% at 50% 100%, rgba(109, 190, 214, 0.07), transparent);
   pointer-events: none;
   z-index: 0;
 }
@@ -50,16 +49,16 @@
   font-size: 0.75rem;
   letter-spacing: 0.2em;
   color: rgba(109, 190, 214, 0.7);
-  text-transform: uppercase;
   animation: fadeSlideUp 0.8s ease 0.2s both;
 }
 
 .title {
-  font-size: 2.6rem;
-  font-weight: 700;
+  font-family: var(--font-orbitron);
+  font-size: 2rem;
+  font-weight: 800;
   text-align: center;
   line-height: 1.25;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.04em;
 }
 
 .description {
@@ -78,8 +77,9 @@
 }
 
 .heroScroll {
-  font-size: 0.68rem;
-  letter-spacing: 0.25em;
+  font-family: var(--font-orbitron);
+  font-size: 0.65rem;
+  letter-spacing: 0.3em;
   opacity: 0.3;
   text-transform: uppercase;
   animation: fadeSlideUp 0.8s ease 1s both, scrollAnim 2s ease 1.8s infinite;
@@ -97,7 +97,6 @@
   z-index: -1;
 }
 
-/* セクション共通 */
 .section {
   width: 1040px;
   max-width: calc(100% - 48px);
@@ -124,6 +123,7 @@
 }
 
 .sectionNumber {
+  font-family: var(--font-orbitron);
   font-size: 5rem;
   font-weight: 800;
   color: rgba(109, 190, 214, 0.08);
@@ -133,6 +133,7 @@
 }
 
 .sectionTitleEn {
+  font-family: var(--font-orbitron);
   font-size: 2.4rem;
   font-weight: 700;
   color: #ffffff;
@@ -156,7 +157,6 @@
   font-size: 0.9rem;
 }
 
-/* ワイヤー区切り線 */
 .divider {
   width: 1040px;
   max-width: calc(100% - 48px);
@@ -165,20 +165,17 @@
   background: linear-gradient(90deg, transparent, rgba(109, 190, 214, 0.2), transparent);
 }
 
-/* 利用者セクション */
 .wageSection {
   background: linear-gradient(180deg, #111111 0%, #0e0e0e 100%);
   border-top: 1px solid rgba(109, 190, 214, 0.1);
   border-bottom: 1px solid rgba(109, 190, 214, 0.1);
 }
 
-/* 採用セクション */
 .recruitSection {
   background: linear-gradient(180deg, #111111 0%, #000000 100%);
   border-top: 1px solid rgba(109, 190, 214, 0.1);
 }
 
-/* ニュース */
 .newsWrap {
   margin: 0;
 }
@@ -214,7 +211,7 @@
   }
 
   .title {
-    font-size: 2rem;
+    font-size: 1.6rem;
   }
 
   .section {
@@ -230,7 +227,7 @@
   }
 
   .title {
-    font-size: 1.7rem;
+    font-size: 1.3rem;
   }
 
   .description {
@@ -247,7 +244,7 @@
   }
 
   .sectionTitleEn {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
   }
 
   .sectionNumber {
