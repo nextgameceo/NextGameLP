@@ -132,10 +132,13 @@
   .top {
     flex-direction: column;
     gap: 40px;
+    align-items: center;
+    text-align: center;
   }
 
   .brand {
     min-width: unset;
+    align-items: center;
   }
 
   .nav {
@@ -143,14 +146,20 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 32px;
+    text-align: center;
   }
 
   .navGroup {
     gap: 12px;
+    align-items: center;
   }
 
   .navLabel {
     font-size: 0.6rem;
+  }
+
+  .navItems {
+    align-items: center;
   }
 
   .navItems li a {
