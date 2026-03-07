@@ -28,7 +28,7 @@ export default async function Page() {
           </div>
           <div className={styles.heroText}>
             <p className={styles.heroSubCatch}>
-              工賃を貰いながらプロンプトを学べるB型作業所
+              工賃を貰いながら最先端スキルを学べるB型作業所
             </p>
             <h1 className={styles.title}>THE IDEA INTO AN ASSET</h1>
             <p className={styles.description}>
