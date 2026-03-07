@@ -34,7 +34,7 @@ export default async function Page() {
             <p className={styles.description}>
               ご自身の才能を価値へと変える最高の環境を提供します
             </p>
-         
+          </div>
           <div className={styles.heroScroll}>scroll</div>
         </div>
         <Image
