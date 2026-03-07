@@ -63,7 +63,7 @@ export default async function Page() {
             <div className={styles.sectionRight}>
               <p className={styles.sectionDescription}>
                 AIとITを活用した業務アウトソーシングサービスを提供しています。
-データ処理やコンテンツ制作などの業務を高品質かつ柔軟に対応し、企業様の業務効率化とコスト削減を実現します。
+                データ処理やコンテンツ制作などの業務を高品質かつ柔軟に対応し、企業様の業務効率化とコスト削減を実現します。
               </p>
               <div>
                 <ButtonLink href="/business">詳しく見る</ButtonLink>
@@ -87,8 +87,8 @@ export default async function Page() {
               </div>
               <div className={styles.sectionRight}>
                 <p className={styles.sectionDescription}>
-利用者の皆様が、これからの未来に適応したスキルを取得し、アイデアで稼げる未来をビジョンとしています。 
-弊社は従来の単純作業中心の作業所ではなく、利用者の皆様に工賃を支払いつつ、実際の業務を通じて、プロンプトエンジニアリングスキルをOJT教育し、経済的に自立が出来る支援を行います。
+                  利用者の皆様が、これからの未来に適応したスキルを取得し、アイデアで稼げる未来をビジョンとしています。
+                  弊社は従来の単純作業中心の作業所ではなく、利用者の皆様に工賃を支払いつつ、実際の業務を通じて、プロンプトエンジニアリングスキルをOJT教育し、経済的に自立が出来る支援を行います。
                   またNEXTGAMEは、通所実績とスキルに応じて工賃が上がる仕組みを用意しています。
                   段階的なキャリアアップを経て、最終的には業務委託・個人事業主として独立するキャリアパスプランを設計します。
                 </p>
@@ -101,12 +101,38 @@ export default async function Page() {
         </section>
       </div>
 
-      {/* News */}
+      <div className={styles.divider} />
+
+      {/* About */}
       <section className={styles.section}>
         <FadeInSection>
           <div className={styles.sectionInner}>
             <div className={styles.sectionLeft}>
               <p className={styles.sectionNumber}>03</p>
+              <h2 className={styles.sectionTitleEn}>About</h2>
+              <span className={styles.sectionTitleJa}>企業情報</span>
+            </div>
+            <div className={styles.sectionRight}>
+              <p className={styles.sectionDescription}>
+                NEXTGAME株式会社は、愛知県名古屋市に拠点を置く就労継続支援B型事業所です。
+                代表取締役 内山博貴のもと、障害のある方々が「スキル」で稼ぎ、自立できる社会の実現を目指しています。
+              </p>
+              <div>
+                <ButtonLink href="/about">企業情報を見る</ButtonLink>
+              </div>
+            </div>
+          </div>
+        </FadeInSection>
+      </section>
+
+      <div className={styles.divider} />
+
+      {/* News */}
+      <section className={styles.section}>
+        <FadeInSection>
+          <div className={styles.sectionInner}>
+            <div className={styles.sectionLeft}>
+              <p className={styles.sectionNumber}>04</p>
               <h2 className={styles.sectionTitleEn}>News</h2>
               <span className={styles.sectionTitleJa}>お知らせ</span>
             </div>
@@ -130,7 +156,7 @@ export default async function Page() {
           <FadeInSection>
             <div className={styles.sectionInner}>
               <div className={styles.sectionLeft}>
-                <p className={styles.sectionNumber}>04</p>
+                <p className={styles.sectionNumber}>05</p>
                 <h2 className={styles.sectionTitleEn}>Recruit</h2>
                 <span className={styles.sectionTitleJa}>採用情報</span>
               </div>
