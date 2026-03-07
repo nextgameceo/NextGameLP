@@ -4,8 +4,15 @@ import Footer from '@/app/_components/Footer';
 import Header from '@/app/_components/Header';
 import InitialLoading from '@/app/_components/InitialLoading';
 import MotionWrapper from '@/app/_components/MotionWrapper';
+import { Orbitron } from 'next/font/google';
 import './globals.css';
 import styles from './layout.module.css';
+
+const orbitron = Orbitron({
+  subsets: ['latin'],
+  weight: ['400', '700', '800', '900'],
+  variable: '--font-orbitron',
+});
 
 export async function generateMetadata(): Promise<Metadata> {
   const data = await getMeta();
@@ -13,8 +20,7 @@ export async function generateMetadata(): Promise<Metadata> {
   const defaultTitle = 'NEXTGAME株式会社 | 未来と今を繋げるゲーム';
   const defaultDesc = '愛知県名古屋市のNEXTGAME株式会社です。';
 
-  const baseUrl =
-    process.env.BASE_URL || 'https://nextgame-limited.com';
+  const baseUrl = process.env.BASE_URL || 'https://nextgame-limited.com';
 
   if (!data) {
     return {
@@ -31,9 +37,7 @@ export async function generateMetadata(): Promise<Metadata> {
     openGraph: {
       title: data.ogTitle || defaultTitle,
       description: data.ogDescription || defaultDesc,
-      images: data.ogImage?.url
-        ? [{ url: data.ogImage.url }]
-        : undefined,
+      images: data.ogImage?.url ? [{ url: data.ogImage.url }] : undefined,
     },
     icons: {
       icon: [
@@ -43,12 +47,7 @@ export async function generateMetadata(): Promise<Metadata> {
         { url: '/favicons/icon-192x192.png', sizes: '192x192', type: 'image/png' },
         { url: '/favicons/icon-512x512.png', sizes: '512x512', type: 'image/png' },
       ],
-      apple: [
-        {
-          url: '/favicons/apple-touch-icon.png',
-          sizes: '180x180',
-        },
-      ],
+      apple: [{ url: '/favicons/apple-touch-icon.png', sizes: '180x180' }],
     },
     manifest: '/favicons/manifest.json',
     alternates: {
@@ -63,7 +62,7 @@ type Props = {
 
 export default function RootLayout({ children }: Props) {
   return (
-    <html lang="ja">
+    <html lang="ja" className={orbitron.variable}>
       <body className={`${styles.body} loading-active`}>
         <InitialLoading />
         <Header />
