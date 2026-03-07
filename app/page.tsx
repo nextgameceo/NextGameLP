@@ -137,7 +137,7 @@ export default async function Page() {
               <div className={styles.sectionRight}>
                 <p className={styles.sectionDescription}>
                   福祉業界の構造を変える、本気の仲間を募集しています。
-                  AIとITで障害者の経済的自立を実現する、未だかつてない挑戦に共に取り組みませんか。
+                  AIとITで利用者の経済的自立を実現する、未だかつてない挑戦に共に取り組みませんか？
                   業界最高峰の給与水準で、あなたの覚悟に応えます。
                 </p>
                 <div>
