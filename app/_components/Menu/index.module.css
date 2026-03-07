@@ -14,20 +14,83 @@
   }
 
   .nav.open {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: var(--color-bg-painted);
+    background: linear-gradient(160deg, #0a0a0a 0%, #111214 100%);
     color: var(--color-text-unpainted);
-    padding: 24px 16px;
+    padding: 80px 40px 40px;
+    z-index: 100;
+  }
+
+  .nav.open::before {
+    content: 'MENU';
+    font-family: var(--font-orbitron);
+    position: absolute;
+    top: 32px;
+    left: 40px;
+    font-size: 0.7rem;
+    letter-spacing: 0.3em;
+    color: var(--color-current);
+    opacity: 0.8;
+  }
+
+  .nav.open::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--color-current), transparent);
   }
 
   .items {
     flex-direction: column;
-    gap: 24px;
+    gap: 0;
+  }
+
+  .items li {
+    border-bottom: 1px solid rgba(109, 190, 214, 0.08);
+  }
+
+  .items li:first-child {
+    border-top: 1px solid rgba(109, 190, 214, 0.08);
+  }
+
+  .items li a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 4px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    color: rgba(255, 255, 255, 0.85);
+    transition: color 200ms ease, padding-left 200ms ease;
+  }
+
+  .items li a::after {
+    content: '→';
+    font-size: 0.9rem;
+    color: var(--color-current);
+    opacity: 0.6;
+    transition: opacity 200ms ease, transform 200ms ease;
+  }
+
+  .items li a:hover {
+    color: var(--color-current);
+    padding-left: 8px;
+  }
+
+  .items li a:hover::after {
+    opacity: 1;
+    transform: translateX(4px);
   }
 
   .button {
@@ -40,6 +103,12 @@
   .close {
     position: absolute;
     top: 24px;
-    right: 16px;
+    right: 24px;
+    opacity: 0.7;
+    transition: opacity 200ms ease;
+  }
+
+  .close:hover {
+    opacity: 1;
   }
 }
