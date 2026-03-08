@@ -8,21 +8,47 @@ export default function Page() {
 
       {/* Hero */}
       <div className={styles.hero}>
-        <p className={styles.heroLabel}>BUSINESS</p>
-        <h1 className={styles.heroTitle}>事業内容</h1>
-        <p className={styles.heroSub}>NEXTGAMEが手がける3つの事業領域</p>
+        <div className={styles.heroTop}>
+          <p className={styles.heroLabel}>BUSINESS</p>
+          <p className={styles.heroYear}>Est. 2024</p>
+        </div>
+        <h1 className={styles.heroTitle}>OUR<br />SERVICES</h1>
+        <p className={styles.heroJa}>NEXTGAMEが手がける3つの事業領域</p>
+        <div className={styles.heroStats}>
+          <div className={styles.heroStat}>
+            <span className={styles.heroStatNum}>3</span>
+            <span className={styles.heroStatLabel}>Services</span>
+          </div>
+          <div className={styles.heroStatDivider} />
+          <div className={styles.heroStat}>
+            <span className={styles.heroStatNum}>¥100K</span>
+            <span className={styles.heroStatLabel}>Web / month</span>
+          </div>
+          <div className={styles.heroStatDivider} />
+          <div className={styles.heroStat}>
+            <span className={styles.heroStatNum}>¥30K</span>
+            <span className={styles.heroStatLabel}>AI / month</span>
+          </div>
+        </div>
       </div>
 
       {/* 01 WEB */}
       <FadeInSection>
         <section className={styles.serviceSection}>
           <div className={styles.serviceHeader}>
-            <span className={styles.serviceNumber}>01</span>
-            <span className={styles.serviceTag}>WEB</span>
+            <div className={styles.serviceHeaderLeft}>
+              <span className={styles.serviceNumber}>01</span>
+              <div>
+                <span className={styles.serviceTag}>WEB DEVELOPMENT</span>
+                <h2 className={styles.serviceTitle}>
+                  Web Subscription
+                  <span className={styles.serviceTitleJa}>Web制作・運用サブスクリプション</span>
+                </h2>
+              </div>
+            </div>
           </div>
           <div className={styles.serviceBody}>
             <div className={styles.serviceLeft}>
-              <h2 className={styles.serviceTitle}>Web制作・運用<br />サブスクリプション</h2>
               <p className={styles.serviceDesc}>
                 Next.js・microCMS・Cloudflare・Firebase・GitHub・Vercelを組み合わせた、
                 高速かつスケーラブルなWebサイトを月額定額で提供します。
@@ -64,12 +90,19 @@ export default function Page() {
       <FadeInSection>
         <section className={styles.serviceSection}>
           <div className={styles.serviceHeader}>
-            <span className={styles.serviceNumber}>02</span>
-            <span className={styles.serviceTag}>MUSIC</span>
+            <div className={styles.serviceHeaderLeft}>
+              <span className={styles.serviceNumber}>02</span>
+              <div>
+                <span className={styles.serviceTag}>MUSIC PRODUCTION</span>
+                <h2 className={styles.serviceTitle}>
+                  Music Distribution
+                  <span className={styles.serviceTitleJa}>楽曲制作・音楽配信事業</span>
+                </h2>
+              </div>
+            </div>
           </div>
           <div className={`${styles.serviceBody} ${styles.serviceBodyReverse}`}>
             <div className={styles.serviceLeft}>
-              <h2 className={styles.serviceTitle}>楽曲制作・<br />音楽配信事業</h2>
               <p className={styles.serviceDesc}>
                 オリジナル楽曲の制作から、DistroKid・TuneCoreJapanを通じた
                 Spotify・Apple Music・YouTube Musicなど世界中の配信プラットフォームへの
@@ -109,12 +142,19 @@ export default function Page() {
       <FadeInSection>
         <section className={styles.serviceSection}>
           <div className={styles.serviceHeader}>
-            <span className={styles.serviceNumber}>03</span>
-            <span className={styles.serviceTag}>AI PROMPT</span>
+            <div className={styles.serviceHeaderLeft}>
+              <span className={styles.serviceNumber}>03</span>
+              <div>
+                <span className={styles.serviceTag}>AI CONSULTING</span>
+                <h2 className={styles.serviceTitle}>
+                  Prompt Consulting
+                  <span className={styles.serviceTitleJa}>プロンプトコンサルティング</span>
+                </h2>
+              </div>
+            </div>
           </div>
           <div className={styles.serviceBody}>
             <div className={styles.serviceLeft}>
-              <h2 className={styles.serviceTitle}>プロンプト<br />コンサルティング</h2>
               <p className={styles.serviceDesc}>
                 ChatGPT・Claude・Geminiなど最新のAIツールを業務に活用するための
                 プロンプトエンジニアリング支援を提供します。
@@ -151,8 +191,9 @@ export default function Page() {
       {/* CTA */}
       <FadeInSection>
         <div className={styles.cta}>
-          <p className={styles.ctaLabel}>CONTACT</p>
-          <h2 className={styles.ctaTitle}>まずはお気軽に<br />ご相談ください</h2>
+          <p className={styles.ctaLabel}>GET IN TOUCH</p>
+          <h2 className={styles.ctaTitle}>Let&#39;s Work<br />Together</h2>
+          <p className={styles.ctaJa}>まずはお気軽にご相談ください</p>
           <p className={styles.ctaSub}>
             貴社のニーズに合わせた最適なプランをご提案します。
             どんな些細なご相談もお気軽にどうぞ。
