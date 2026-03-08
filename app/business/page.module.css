@@ -9,63 +9,139 @@
 .hero {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 24px;
   margin-bottom: 100px;
   animation: fadeSlideUp 0.8s ease both;
 }
 
+.heroTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .heroLabel {
-  width: fit-content;
-  padding: 6px 14px;
   font-family: var(--font-orbitron);
   font-size: 0.7rem;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.3em;
+  color: var(--color-current);
+  padding: 6px 14px;
   border-radius: 999px;
   border: 1px solid rgba(109, 190, 214, 0.3);
-  color: var(--color-current);
+}
+
+.heroYear {
+  font-family: var(--font-orbitron);
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  color: rgba(255, 255, 255, 0.2);
 }
 
 .heroTitle {
-  font-size: 3rem;
-  font-weight: 800;
+  font-family: var(--font-orbitron);
+  font-size: clamp(3.5rem, 10vw, 7rem);
+  font-weight: 900;
   color: #ffffff;
-  line-height: 1.1;
+  line-height: 0.95;
+  letter-spacing: -0.02em;
 }
 
-.heroSub {
-  font-size: 0.9rem;
-  color: rgba(255, 255, 255, 0.45);
-  letter-spacing: 0.05em;
+.heroJa {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.4);
+  letter-spacing: 0.1em;
+}
+
+.heroStats {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  padding: 24px 0;
+  border-top: 1px solid rgba(109, 190, 214, 0.1);
+  border-bottom: 1px solid rgba(109, 190, 214, 0.1);
+  margin-top: 8px;
+}
+
+.heroStat {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.heroStatNum {
+  font-family: var(--font-orbitron);
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--color-current);
+  line-height: 1;
+}
+
+.heroStatLabel {
+  font-size: 0.7rem;
+  color: rgba(255, 255, 255, 0.35);
+  letter-spacing: 0.1em;
+}
+
+.heroStatDivider {
+  width: 1px;
+  height: 40px;
+  background: rgba(109, 190, 214, 0.15);
 }
 
 /* Service Section */
 .serviceSection {
-  padding: 60px 0;
+  padding: 80px 0;
 }
 
 .serviceHeader {
+  margin-bottom: 48px;
+}
+
+.serviceHeaderLeft {
   display: flex;
-  align-items: center;
-  gap: 16px;
-  margin-bottom: 40px;
+  align-items: flex-start;
+  gap: 24px;
 }
 
 .serviceNumber {
   font-family: var(--font-orbitron);
-  font-size: 4rem;
+  font-size: 5rem;
   font-weight: 800;
-  color: rgba(109, 190, 214, 0.08);
+  color: rgba(109, 190, 214, 0.06);
   line-height: 1;
+  flex-shrink: 0;
+  margin-top: -8px;
 }
 
 .serviceTag {
+  display: inline-block;
   font-family: var(--font-orbitron);
-  font-size: 0.75rem;
+  font-size: 0.65rem;
   letter-spacing: 0.25em;
   color: var(--color-current);
-  padding: 6px 16px;
+  padding: 4px 12px;
   border: 1px solid rgba(109, 190, 214, 0.3);
   border-radius: 2px;
+  margin-bottom: 12px;
+}
+
+.serviceTitle {
+  font-family: var(--font-orbitron);
+  font-size: 2rem;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.2;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.serviceTitleJa {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', YuGothic, sans-serif;
+  font-size: 0.85rem;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.4);
+  letter-spacing: 0.05em;
 }
 
 .serviceBody {
@@ -90,13 +166,6 @@
   gap: 24px;
 }
 
-.serviceTitle {
-  font-size: 2rem;
-  font-weight: 800;
-  color: #ffffff;
-  line-height: 1.3;
-}
-
 .serviceDesc {
   font-size: 0.9rem;
   line-height: 2;
@@ -115,9 +184,9 @@
   letter-spacing: 0.1em;
   padding: 4px 10px;
   border-radius: 2px;
-  background: rgba(109, 190, 214, 0.08);
-  border: 1px solid rgba(109, 190, 214, 0.2);
-  color: rgba(109, 190, 214, 0.8);
+  background: rgba(109, 190, 214, 0.06);
+  border: 1px solid rgba(109, 190, 214, 0.18);
+  color: rgba(109, 190, 214, 0.7);
 }
 
 /* Right - Price Card */
@@ -127,7 +196,7 @@
 }
 
 .priceCard {
-  background: rgba(255, 255, 255, 0.03);
+  background: rgba(255, 255, 255, 0.02);
   border: 1px solid rgba(109, 190, 214, 0.15);
   border-radius: 20px;
   padding: 36px;
@@ -138,14 +207,13 @@
 }
 
 .priceCard:hover {
-  border-color: rgba(109, 190, 214, 0.4);
-  box-shadow: 0 8px 40px rgba(109, 190, 214, 0.08);
+  border-color: rgba(109, 190, 214, 0.35);
+  box-shadow: 0 8px 40px rgba(109, 190, 214, 0.07);
 }
 
 .priceCardHighlight {
   background: linear-gradient(160deg, rgba(109, 190, 214, 0.06) 0%, rgba(109, 190, 214, 0.02) 100%);
-  border-color: rgba(109, 190, 214, 0.3);
-  box-shadow: 0 4px 24px rgba(109, 190, 214, 0.08);
+  border-color: rgba(109, 190, 214, 0.25);
 }
 
 .planName {
@@ -172,13 +240,13 @@
 
 .priceUnit {
   font-size: 0.9rem;
-  color: rgba(255, 255, 255, 0.4);
+  color: rgba(255, 255, 255, 0.35);
 }
 
 .contactNote {
   font-size: 0.85rem;
   line-height: 1.8;
-  color: rgba(255, 255, 255, 0.55);
+  color: rgba(255, 255, 255, 0.5);
   padding: 12px 16px;
   background: rgba(109, 190, 214, 0.04);
   border-radius: 8px;
@@ -191,13 +259,13 @@
   display: flex;
   flex-direction: column;
   gap: 12px;
-  border-top: 1px solid rgba(109, 190, 214, 0.1);
+  border-top: 1px solid rgba(109, 190, 214, 0.08);
   padding-top: 20px;
 }
 
 .featureList li {
   font-size: 0.85rem;
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(255, 255, 255, 0.65);
   padding-left: 20px;
   position: relative;
   line-height: 1.6;
@@ -224,12 +292,12 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  gap: 20px;
+  gap: 16px;
   margin-top: 80px;
-  padding: 80px 40px;
+  padding: 100px 40px;
   border-radius: 24px;
   border: 1px solid rgba(109, 190, 214, 0.12);
-  background: linear-gradient(160deg, #0e0e0e 0%, #111416 100%);
+  background: linear-gradient(160deg, #0a0a0a 0%, #111416 100%);
   position: relative;
   overflow: hidden;
 }
@@ -237,35 +305,44 @@
 .cta::before {
   content: '';
   position: absolute;
-  top: -80px;
+  top: -100px;
   left: 50%;
   transform: translateX(-50%);
-  width: 400px;
-  height: 400px;
-  background: radial-gradient(circle, rgba(109, 190, 214, 0.06), transparent 70%);
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(109, 190, 214, 0.05), transparent 70%);
   pointer-events: none;
 }
 
 .ctaLabel {
   font-family: var(--font-orbitron);
-  font-size: 0.7rem;
+  font-size: 0.65rem;
   letter-spacing: 0.3em;
   color: var(--color-current);
-  opacity: 0.8;
+  opacity: 0.7;
 }
 
 .ctaTitle {
-  font-size: 2rem;
-  font-weight: 800;
+  font-family: var(--font-orbitron);
+  font-size: clamp(2rem, 6vw, 3.5rem);
+  font-weight: 900;
   color: #ffffff;
-  line-height: 1.4;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+.ctaJa {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.35);
+  letter-spacing: 0.1em;
 }
 
 .ctaSub {
   font-size: 0.9rem;
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0.45);
   max-width: 440px;
   line-height: 1.8;
+  margin-bottom: 8px;
 }
 
 /* Animation */
@@ -281,7 +358,15 @@
   }
 
   .heroTitle {
-    font-size: 2rem;
+    font-size: 3.5rem;
+  }
+
+  .heroStats {
+    gap: 20px;
+  }
+
+  .heroStatNum {
+    font-size: 1.2rem;
   }
 
   .serviceBody {
@@ -298,11 +383,11 @@
   }
 
   .serviceTitle {
-    font-size: 1.6rem;
+    font-size: 1.5rem;
   }
 
   .serviceNumber {
-    font-size: 2.5rem;
+    font-size: 3rem;
   }
 
   .priceAmount {
@@ -310,10 +395,10 @@
   }
 
   .ctaTitle {
-    font-size: 1.5rem;
+    font-size: 2rem;
   }
 
   .cta {
-    padding: 48px 24px;
+    padding: 60px 24px;
   }
 }
