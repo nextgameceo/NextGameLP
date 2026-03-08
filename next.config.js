@@ -29,6 +29,18 @@ const nextConfig = {
             key: 'Vercel-CDN-Cache-Control',
             value: 'no-store',
           },
+          {
+            key: 'Surrogate-Control',
+            value: 'no-store',
+          },
+          {
+            key: 'Pragma',
+            value: 'no-cache',
+          },
+          {
+            key: 'Expires',
+            value: '0',
+          },
         ],
       },
     ];
