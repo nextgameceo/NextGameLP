@@ -1,21 +1,13 @@
 import { NextRequest, NextResponse } from 'next/server';
 
-const cachePolicies = {
-  noCache: 'no-store, must-revalidate',
-  publicIsr: 'public, s-maxage=60, stale-while-revalidate=300',
-};
-
 export function middleware(req: NextRequest) {
-  const searchParams = req.nextUrl.searchParams;
-  const cachePolicy = searchParams.has('dk') ? cachePolicies.noCache : cachePolicies.publicIsr;
-
   const response = NextResponse.next();
-
-  response.headers.set('CDN-Cache-Control', cachePolicy);
-
+  response.headers.set('CDN-Cache-Control', 'no-store');
+  response.headers.set('Vercel-CDN-Cache-Control', 'no-store');
+  response.headers.set('Cache-Control', 'no-store, must-revalidate');
   return response;
 }
 
 export const config = {
-  matcher: ['/news/:path*', '/business', '/members', '/recruit'],
+  matcher: ['/news/:path*', '/business/:path*', '/members', '/recruit', '/about', '/wage', '/privacy', '/ceo-message'],
 };
