@@ -8,43 +8,23 @@ export default function Page() {
 
       {/* Hero */}
       <div className={styles.hero}>
-        <div className={styles.heroTop}>
-          <p className={styles.heroLabel}>BUSINESS</p>
-          <p className={styles.heroYear}>Est. 2024</p>
-        </div>
-        <h1 className={styles.heroTitle}>OUR<br />SERVICES</h1>
-        <p className={styles.heroJa}>NEXTGAMEが手がける3つの事業領域</p>
-        <div className={styles.heroStats}>
-          <div className={styles.heroStat}>
-            <span className={styles.heroStatNum}>3</span>
-            <span className={styles.heroStatLabel}>Services</span>
-          </div>
-          <div className={styles.heroStatDivider} />
-          <div className={styles.heroStat}>
-            <span className={styles.heroStatNum}>¥100K</span>
-            <span className={styles.heroStatLabel}>Web / month</span>
-          </div>
-          <div className={styles.heroStatDivider} />
-          <div className={styles.heroStat}>
-            <span className={styles.heroStatNum}>¥30K</span>
-            <span className={styles.heroStatLabel}>AI / month</span>
-          </div>
-        </div>
+        <p className={styles.heroLabel}>BUSINESS</p>
+        <h1 className={styles.heroTitle}>OUR SERVICES</h1>
+        <p className={styles.heroJa}>
+          NEXTGAMEは、Web制作・音楽配信・AIコンサルティングの<br />
+          3つの領域で、クライアントの課題を解決します。
+        </p>
       </div>
 
       {/* 01 WEB */}
       <FadeInSection>
         <section className={styles.serviceSection}>
           <div className={styles.serviceHeader}>
-            <div className={styles.serviceHeaderLeft}>
-              <span className={styles.serviceNumber}>01</span>
-              <div>
-                <span className={styles.serviceTag}>WEB DEVELOPMENT</span>
-                <h2 className={styles.serviceTitle}>
-                  Web Subscription
-                  <span className={styles.serviceTitleJa}>Web制作・運用サブスクリプション</span>
-                </h2>
-              </div>
+            <span className={styles.serviceNumber}>01</span>
+            <div className={styles.serviceTitleWrap}>
+              <span className={styles.serviceTag}>WEB DEVELOPMENT</span>
+              <h2 className={styles.serviceTitle}>Web Subscription</h2>
+              <p className={styles.serviceTitleJa}>Web制作・運用サブスクリプション</p>
             </div>
           </div>
           <div className={styles.serviceBody}>
@@ -90,15 +70,11 @@ export default function Page() {
       <FadeInSection>
         <section className={styles.serviceSection}>
           <div className={styles.serviceHeader}>
-            <div className={styles.serviceHeaderLeft}>
-              <span className={styles.serviceNumber}>02</span>
-              <div>
-                <span className={styles.serviceTag}>MUSIC PRODUCTION</span>
-                <h2 className={styles.serviceTitle}>
-                  Music Distribution
-                  <span className={styles.serviceTitleJa}>楽曲制作・音楽配信事業</span>
-                </h2>
-              </div>
+            <span className={styles.serviceNumber}>02</span>
+            <div className={styles.serviceTitleWrap}>
+              <span className={styles.serviceTag}>MUSIC PRODUCTION</span>
+              <h2 className={styles.serviceTitle}>Music Distribution</h2>
+              <p className={styles.serviceTitleJa}>楽曲制作・音楽配信事業</p>
             </div>
           </div>
           <div className={`${styles.serviceBody} ${styles.serviceBodyReverse}`}>
@@ -142,15 +118,11 @@ export default function Page() {
       <FadeInSection>
         <section className={styles.serviceSection}>
           <div className={styles.serviceHeader}>
-            <div className={styles.serviceHeaderLeft}>
-              <span className={styles.serviceNumber}>03</span>
-              <div>
-                <span className={styles.serviceTag}>AI CONSULTING</span>
-                <h2 className={styles.serviceTitle}>
-                  Prompt Consulting
-                  <span className={styles.serviceTitleJa}>プロンプトコンサルティング</span>
-                </h2>
-              </div>
+            <span className={styles.serviceNumber}>03</span>
+            <div className={styles.serviceTitleWrap}>
+              <span className={styles.serviceTag}>AI CONSULTING</span>
+              <h2 className={styles.serviceTitle}>Prompt Consulting</h2>
+              <p className={styles.serviceTitleJa}>プロンプトコンサルティング</p>
             </div>
           </div>
           <div className={styles.serviceBody}>
@@ -192,11 +164,10 @@ export default function Page() {
       <FadeInSection>
         <div className={styles.cta}>
           <p className={styles.ctaLabel}>GET IN TOUCH</p>
-          <h2 className={styles.ctaTitle}>Let&#39;s Work<br />Together</h2>
+          <h2 className={styles.ctaTitle}>Let&#39;s Work Together</h2>
           <p className={styles.ctaJa}>まずはお気軽にご相談ください</p>
           <p className={styles.ctaSub}>
             貴社のニーズに合わせた最適なプランをご提案します。
-            どんな些細なご相談もお気軽にどうぞ。
           </p>
           <ButtonLink href="/contact">お問い合わせ</ButtonLink>
         </div>
