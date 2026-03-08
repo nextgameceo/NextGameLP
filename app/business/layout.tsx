@@ -1,13 +1,10 @@
 import type { Metadata } from 'next';
 import type { ReactNode } from 'react';
 
-import Hero from '@/app/_components/Hero';
-import Sheet from '@/app/_components/Sheet';
-
 export const metadata: Metadata = {
-  title: '事業内容｜シンプルなコーポレートサイト',
+  title: '事業内容 | NEXTGAME株式会社',
   openGraph: {
-    title: '事業内容｜シンプルなコーポレートサイト',
+    title: '事業内容 | NEXTGAME株式会社',
   },
   alternates: {
     canonical: '/business',
@@ -19,10 +16,5 @@ type Props = {
 };
 
 export default function RootLayout({ children }: Props) {
-  return (
-    <>
-      <Hero title="Business" sub="事業内容" />
-      <Sheet>{children}</Sheet>
-    </>
-  );
+  return <>{children}</>;
 }
