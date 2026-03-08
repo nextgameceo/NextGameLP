@@ -11,8 +11,8 @@ export default function Page() {
         <p className={styles.heroLabel}>BUSINESS</p>
         <h1 className={styles.heroTitle}>OUR SERVICES</h1>
         <p className={styles.heroJa}>
-          NEXTGAMEは、Web制作・音楽配信・AIコンサルティングの<br />
-          3つの領域で、クライアントの課題を解決します。
+          弊社は、Web制作及び運用・楽曲作成及び配信・AIプロンプトコンサルティングの3つの領域で、クライアントの課題を解決します。<br />
+  
         </p>
       </div>
 
