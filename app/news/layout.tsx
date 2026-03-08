@@ -1,12 +1,9 @@
-import Hero from '@/app/_components/Hero';
-import Sheet from '@/app/_components/Sheet';  
-
 export const runtime = 'edge';
 
 export const metadata = {
-  title: 'ニュース｜シンプルなコーポレートサイト',
+  title: 'ニュース | NEXTGAME株式会社',
   openGraph: {
-    title: 'ニュース｜シンプルなコーポレートサイト',
+    title: 'ニュース | NEXTGAME株式会社',
   },
   alternates: {
     canonical: '/news',
@@ -18,10 +15,5 @@ type Props = {
 };
 
 export default function RootLayout({ children }: Props) {
-  return (
-    <>
-      <Hero title="News" sub="ニュース" />
-      <Sheet>{children}</Sheet>
-    </>
-  );
+  return <>{children}</>;
 }
