@@ -1,3 +1,5 @@
+import Sheet from '@/app/_components/Sheet';
+
 export const metadata = {
   title: '採用情報 | NEXTGAME株式会社',
   openGraph: {
@@ -13,5 +15,5 @@ type Props = {
 };
 
 export default function RootLayout({ children }: Props) {
-  return <>{children}</>;
+  return <Sheet>{children}</Sheet>;
 }
