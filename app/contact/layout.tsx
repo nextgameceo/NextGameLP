@@ -1,10 +1,7 @@
-import Hero from '@/app/_components/Hero';
-import Sheet from '@/app/_components/Sheet';
-
 export const metadata = {
-  title: 'コンタクト｜シンプルなコーポレートサイト',
+  title: 'お問い合わせ | NEXTGAME株式会社',
   openGraph: {
-    title: 'コンタクト｜シンプルなコーポレートサイト',
+    title: 'お問い合わせ | NEXTGAME株式会社',
   },
   alternates: {
     canonical: '/contact',
@@ -16,10 +13,5 @@ type Props = {
 };
 
 export default function RootLayout({ children }: Props) {
-  return (
-    <>
-      <Hero title="Contact" sub="お問い合わせ" />
-      <Sheet>{children}</Sheet>
-    </>
-  );
+  return <>{children}</>;
 }
