@@ -30,7 +30,7 @@ export default async function Page() {
             <p className={styles.heroSubCatch}>
               工賃を貰いながら最先端スキルを学べるB型作業所
             </p>
-            <h1 className={styles.title}>THE IDEA INTO AN ASSET</h1>
+            <h1 className={styles.title}>YOUR IDEA INTO THE ASSETS</h1>
             <p className={styles.description}>
               ご自身の才能を価値へと変える最高の環境を提供します
             </p>
