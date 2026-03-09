@@ -58,8 +58,9 @@ export default async function Page() {
             </div>
             <div className={styles.sectionRight}>
               <p className={styles.sectionDescription}>
-                AIとITを活用した業務アウトソーシングサービスを提供しています。
-                データ処理やコンテンツ制作などの業務を高品質かつ柔軟に対応し、企業様の業務効率化とコスト削減を実現します。
+                まだWordPressですか？{'\n\n'}
+                制作会社に100万円以上を支払い、出来上がったサイトを「あとはご自身で」と渡される。そんな時代は終わりました。{'\n\n'}
+                NEXTGAMEは初期費用ゼロ。設計・デザイン・開発・運用・改善まで、すべてを一気通貫でサポートします。契約した翌月から、動き続けるWebサイトへ。「作って終わり」ではなく、毎月進化する資産として。
               </p>
               <div>
                 <ButtonLink href="/business">Read More</ButtonLink>
@@ -83,10 +84,7 @@ export default async function Page() {
               </div>
               <div className={styles.sectionRight}>
                 <p className={styles.sectionDescription}>
-                  利用者の皆様が、これからの未来に適応したスキルを取得し、アイデアで稼げる未来をビジョンとしています。
-                  弊社は従来の単純作業中心の作業所ではなく、利用者の皆様に工賃を支払いつつ、実際の業務を通じて、プロンプトエンジニアリングスキルをOJT教育し、経済的に自立が出来る支援を行います。
-                  またNEXTGAMEは、通所実績とスキルに応じて工賃が上がる仕組みを用意しています。
-                  段階的なキャリアアップを経て、最終的には業務委託・個人事業主として独立するキャリアパスプランを設計します。
+                  利用者の皆様が、これからの未来に適応したスキルを取得し、アイデアで稼げる未来をビジョンとしています。弊社は従来の単純作業中心の作業所ではなく、利用者の皆様に工賃を支払いつつ、実際の業務を通じて、プロンプトエンジニアリングスキルをOJT教育し、経済的に自立が出来る支援を行います。またNEXTGAMEは、通所実績とスキルに応じて工賃が上がる仕組みを用意しています。段階的なキャリアアップを経て、最終的には業務委託・個人事業主として独立するキャリアパスプランを設計します。
                 </p>
                 <div>
                   <ButtonLink href="/wage">Read More</ButtonLink>
@@ -110,8 +108,7 @@ export default async function Page() {
             </div>
             <div className={styles.sectionRight}>
               <p className={styles.sectionDescription}>
-                NEXTGAME株式会社は、愛知県名古屋市に拠点を置く就労継続支援B型事業所です。
-                代表取締役 内山博貴のもと、障害のある方々がスキルで稼ぎ、自立できる社会の実現を目指しています。
+                NEXTGAME株式会社は、愛知県名古屋市に拠点を置く就労継続支援B型事業所です。代表取締役 内山博貴のもと、障害のある方々がスキルで稼ぎ、自立できる社会の実現を目指しています。
               </p>
               <div>
                 <ButtonLink href="/about">Read More</ButtonLink>
@@ -158,9 +155,7 @@ export default async function Page() {
               </div>
               <div className={styles.sectionRight}>
                 <p className={styles.sectionDescription}>
-                  福祉業界の構造を変える、本気の仲間を募集しています。
-                  AIとITで利用者の経済的自立を実現する、未だかつてない挑戦に共に取り組みませんか？
-                  業界最高峰の給与水準で、あなたの覚悟に応えます。
+                  福祉業界の構造を変える、本気の仲間を募集しています。AIとITで利用者の経済的自立を実現する、未だかつてない挑戦に共に取り組みませんか？業界最高峰の給与水準で、あなたの覚悟に応えます。
                 </p>
                 <div>
                   <ButtonLink href="/recruit">Read More</ButtonLink>
