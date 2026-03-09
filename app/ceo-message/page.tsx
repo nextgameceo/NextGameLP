@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import styles from './page.module.css';
 
 export const metadata = {
@@ -20,6 +21,30 @@ export default function Page() {
           絶望から見出した福祉業界の現実を、NEXTGAMEはAIとITの融合でアップデートします。
         </p>
       </div>
+
+      {/* Profile */}
+      <div className={styles.profile}>
+        <div className={styles.profileImageWrap}>
+          <Image
+            src="/ceo.jpg"
+            alt="代表取締役 内山博貴"
+            width={300}
+            height={300}
+            className={styles.profileImage}
+          />
+          <div className={styles.profileImageRing} />
+        </div>
+        <div className={styles.profileInfo}>
+          <p className={styles.profileRole}>代表取締役</p>
+          <p className={styles.profileName}>内山 博貴</p>
+          <p className={styles.profileNameEn}>Hiroki Uchiyama</p>
+          <p className={styles.profileDesc}>
+            統合失調感情障害を発症し、精神科の隔離病棟へ措置入院。退院後はB型事業所の利用者として現場を内側から経験。その全てを燃料に、日本の障害者福祉業界に革命を起こす。
+          </p>
+        </div>
+      </div>
+
+      <div className={styles.divider} />
 
       {/* Section 01 - 創業の背景 */}
       <section className={styles.section}>
@@ -74,8 +99,19 @@ export default function Page() {
           <div className={styles.quoteBox}>
             <p className={styles.quoteText}>「為せば成る 為さねば成らぬ何事も 成らぬは人の為さぬなりけり」</p>
             <div className={styles.signature}>
-              <span className={styles.signatureRole}>代表取締役</span>
-              <span className={styles.signatureName}>内山 博貴</span>
+              <div className={styles.signatureImageWrap}>
+                <Image
+                  src="/ceo.jpg"
+                  alt="代表取締役 内山博貴"
+                  width={48}
+                  height={48}
+                  className={styles.signatureImage}
+                />
+              </div>
+              <div>
+                <span className={styles.signatureRole}>代表取締役</span>
+                <span className={styles.signatureName}>内山 博貴</span>
+              </div>
             </div>
           </div>
         </div>
