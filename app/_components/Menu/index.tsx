@@ -22,7 +22,7 @@ export default function Menu() {
   const close = () => setOpen(false);
 
   return (
-    <>
+    <div style={{ display: 'contents' }}>
       <nav className={cx(styles.nav, isOpen && styles.open)}>
 
         <div className={styles.mobileHeader}>
@@ -48,7 +48,6 @@ export default function Menu() {
                   <span className={styles.linkEn}>{item.labelEn}</span>
                   <span className={styles.linkJa}>{item.labelJa}</span>
                 </span>
-                {/* 下線を独立したspanで制御 */}
                 <span
                   className={cx(styles.underline, isOpen && styles.underlineVisible)}
                   style={{ transitionDelay: isOpen ? `${i * 60 + 200}ms` : '0ms' }}
@@ -78,6 +77,6 @@ export default function Menu() {
           <span /><span /><span />
         </span>
       </button>
-    </>
+    </div>
   );
 }
