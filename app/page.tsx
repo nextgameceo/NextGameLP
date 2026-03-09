@@ -58,9 +58,9 @@ export default async function Page() {
             </div>
             <div className={styles.sectionRight}>
               <p className={styles.sectionDescription}>
-                まだWordPressですか？{'\n\n'}
-                制作会社に100万円以上を支払い、出来上がったサイトを「あとはご自身で」と渡される。そんな時代は終わりました。{'\n\n'}
-                NEXTGAMEは初期費用ゼロ。{'\n\n'}設計・デザイン・開発・運用・改善まで、すべてを一括でサポートします。契約した翌月から、動き続けるWebサイトへ。「作って終わり」ではなく、毎日進化する資産として。{'\n\n'}
+                貴社のホームページはまだWordPressですか？{'\n\n'}
+                制作会社に100万円以上を支払い、出来上がったサイトを「あとはご自身で」と渡される時代は終わりました。{'\n\n'}
+                NEXTGAMEは初期費用ゼロ。{'\n\n'}設計・デザイン・開発・運用・改善まで、すべてを一括でサポートします。{'\n\n'}契約した翌月から、動き続けるWebサイトへ。{'\n\n'}作って終わりではなく、毎日進化する資産として。{'\n\n'}
               </p>
               <div>
                 <ButtonLink href="/business">Read More</ButtonLink>
