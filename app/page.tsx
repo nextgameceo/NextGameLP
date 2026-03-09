@@ -84,7 +84,7 @@ export default async function Page() {
               </div>
               <div className={styles.sectionRight}>
                 <p className={styles.sectionDescription}>
-                  利用者の皆様が、これからの未来に適応したスキルを取得し、アイデアで稼げる未来をビジョンとしています。弊社は従来の単純作業中心の作業所ではなく、利用者の皆様に工賃を支払いつつ、実際の業務を通じて、プロンプトエンジニアリングスキルをOJT教育し、経済的に自立が出来る支援を行います。またNEXTGAMEは、通所実績とスキルに応じて工賃が上がる仕組みを用意しています。段階的なキャリアアップを経て、最終的には業務委託・個人事業主として独立するキャリアパスプランを設計します。
+                  利用者の皆様が、これからの未来に適応したスキルを取得し、アイデアで稼げる未来をビジョンとしています。{'\n\n'}弊社は従来の単純作業中心の作業所ではなく、利用者の皆様に工賃を支払いつつ、実際の業務を通じて、プロンプトエンジニアリングスキルをOJT教育し、経済的に自立が出来る支援を行います。{'\n\n'}またNEXTGAMEは、通所実績とスキルに応じて工賃が上がる仕組みを用意しています。{'\n\n'}段階的なキャリアアップを経て、最終的には業務委託・個人事業主として独立するキャリアパスプランを設計します。
                 </p>
                 <div>
                   <ButtonLink href="/wage">Read More</ButtonLink>
@@ -108,7 +108,7 @@ export default async function Page() {
             </div>
             <div className={styles.sectionRight}>
               <p className={styles.sectionDescription}>
-                NEXTGAME株式会社は、愛知県名古屋市に拠点を置く、AIに特化した就労継続支援B型事業所です。代表取締役 内山博貴のもと、利用者の皆様がスキルで稼ぎ、自立できる社会の実現を目指しています。
+                NEXTGAME株式会社は、愛知県名古屋市に拠点を置く、AIに特化した就労継続支援B型事業所です。{'\n\n'}代表取締役 内山博貴のもと、利用者の皆様がスキルで稼ぎ、自立できる社会の実現を目指しています。
               </p>
               <div>
                 <ButtonLink href="/about">Read More</ButtonLink>
@@ -155,7 +155,7 @@ export default async function Page() {
               </div>
               <div className={styles.sectionRight}>
                 <p className={styles.sectionDescription}>
-                  福祉業界の構造を変える、本気の仲間を募集しています。AIとITで利用者の経済的自立を実現する、未だかつてない挑戦に共に取り組みませんか？業界最高峰の給与水準で、あなたの覚悟に応えます。
+                  福祉業界の構造を変える、本気の仲間を募集しています。{'\n\n'}AIとITで利用者の経済的自立を実現する、未だかつてない挑戦に共に取り組みませんか？{'\n\n'}業界最高峰の給与水準で、あなたの覚悟に応えます。
                 </p>
                 <div>
                   <ButtonLink href="/recruit">Read More</ButtonLink>
