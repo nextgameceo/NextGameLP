@@ -52,19 +52,11 @@
 }
 
 .linkJa {
-  display: block;
-  font-size: 0.62rem;
-  color: rgba(255, 255, 255, 0.25);
-  letter-spacing: 0.03em;
-  transition: color 200ms ease;
+  display: none;
 }
 
 .link:hover .linkEn {
   color: var(--color-current);
-}
-
-.link:hover .linkJa {
-  color: rgba(109, 190, 214, 0.5);
 }
 
 .menuBtn {
@@ -91,7 +83,6 @@
     overflow-y: auto;
   }
 
-  /* シアンの縦ライン（左端） */
   .nav.open::before {
     content: '';
     position: fixed;
@@ -156,13 +147,12 @@
   }
 
   .link {
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 20px;
-    padding: 16px 32px;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 4px;
+    padding: 18px 32px;
     border-radius: 0;
-    border-bottom: none;
     background: transparent;
     position: relative;
   }
@@ -190,28 +180,30 @@
 
   .linkEn {
     font-family: var(--font-orbitron);
-    font-size: 1.3rem;
-    font-weight: 800;
-    letter-spacing: 0.06em;
-    color: rgba(255, 255, 255, 0.15);
-    transition: color 250ms ease;
+    font-size: 1.6rem;
+    font-weight: 900;
+    letter-spacing: 0.04em;
+    color: var(--color-current);
+    transition: color 250ms ease, opacity 250ms ease;
     line-height: 1;
-    min-width: 80px;
+    opacity: 0.6;
   }
 
   .linkJa {
-    font-size: 0.78rem;
-    color: rgba(255, 255, 255, 0.5);
-    letter-spacing: 0.08em;
+    display: block;
+    font-size: 0.72rem;
+    color: rgba(255, 255, 255, 0.3);
+    letter-spacing: 0.1em;
     transition: color 250ms ease;
   }
 
   .link:hover .linkEn {
+    opacity: 1;
     color: var(--color-current);
   }
 
   .link:hover .linkJa {
-    color: rgba(255, 255, 255, 0.8);
+    color: rgba(255, 255, 255, 0.6);
   }
 
   /* Mobile Footer */
