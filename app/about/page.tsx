@@ -23,15 +23,15 @@ export default function Page() {
           </div>
           <div className={styles.row}>
             <dt className={styles.term}>所在地</dt>
-            <dd className={styles.desc}>〒460-0001 愛知県名古屋市中区三の丸内</dd>
+            <dd className={styles.desc}>Coming Soon</dd>
           </div>
           <div className={styles.row}>
             <dt className={styles.term}>代表者</dt>
-            <dd className={styles.desc}>代表取締役 内山 博貴</dd>
+            <dd className={styles.desc}>内山 博貴</dd>
           </div>
           <div className={styles.row}>
             <dt className={styles.term}>資本金</dt>
-            <dd className={styles.desc}>300,000円</dd>
+            <dd className={styles.desc}>出資者募集中</dd>
           </div>
           <div className={styles.row}>
             <dt className={styles.term}>事業内容</dt>
