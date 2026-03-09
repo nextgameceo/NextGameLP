@@ -23,7 +23,7 @@ export default function Page() {
           </div>
           <div className={styles.row}>
             <dt className={styles.term}>所在地</dt>
-            <dd className={styles.desc}>Coming Soon</dd>
+            <dd className={styles.desc}>愛知県名古屋市にて探し中です</dd>
           </div>
           <div className={styles.row}>
             <dt className={styles.term}>代表者</dt>
@@ -31,7 +31,7 @@ export default function Page() {
           </div>
           <div className={styles.row}>
             <dt className={styles.term}>資本金</dt>
-            <dd className={styles.desc}>出資者募集中</dd>
+            <dd className={styles.desc}>出資者募集中です</dd>
           </div>
           <div className={styles.row}>
             <dt className={styles.term}>事業内容</dt>
