@@ -41,7 +41,9 @@ export default function Header() {
     document.body.appendChild(script);
 
     return () => {
-      document.body.removeChild(script);
+      if (document.body.contains(script)) {
+        document.body.removeChild(script);
+      }
     };
   }, []);
 
@@ -49,22 +51,9 @@ export default function Header() {
     setActiveLang(code);
 
     if (code === 'ja') {
-      const iframe = document.querySelector<HTMLIFrameElement>(
-        '.goog-te-banner-frame'
-      );
-      if (iframe) {
-        const btn = iframe.contentDocument?.querySelector<HTMLElement>(
-          '.goog-te-button button'
-        );
-        btn?.click();
-      }
-      const select = document.querySelector<HTMLSelectElement>(
-        '.goog-te-combo'
-      );
-      if (select) {
-        select.value = '';
-        select.dispatchEvent(new Event('change'));
-      }
+      document.cookie = 'googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
+      document.cookie = 'googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=' + window.location.hostname;
+      window.location.reload();
       return;
     }
 
