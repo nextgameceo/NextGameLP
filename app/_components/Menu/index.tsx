@@ -22,7 +22,7 @@ export default function Menu() {
   const close = () => setOpen(false);
 
   return (
-    <div>
+    <>
       <nav className={cx(styles.nav, isOpen && styles.open)}>
 
         <div className={styles.mobileHeader}>
@@ -34,13 +34,25 @@ export default function Menu() {
 
         <ul className={styles.items}>
           {NAV_ITEMS.map((item, i) => (
-            <li key={item.href} className={styles.item} style={{ '--i': i } as React.CSSProperties}>
+            <li
+              key={item.href}
+              className={styles.item}
+              style={{
+                '--i': i,
+                '--delay': `${i * 55}ms`,
+              } as React.CSSProperties}
+            >
               <Link href={item.href} onClick={close} className={styles.link}>
                 <span className={styles.linkNum}>{String(i + 1).padStart(2, '0')}</span>
                 <span className={styles.linkText}>
                   <span className={styles.linkEn}>{item.labelEn}</span>
                   <span className={styles.linkJa}>{item.labelJa}</span>
                 </span>
+                {/* 下線を独立したspanで制御 */}
+                <span
+                  className={cx(styles.underline, isOpen && styles.underlineVisible)}
+                  style={{ transitionDelay: isOpen ? `${i * 60 + 200}ms` : '0ms' }}
+                />
               </Link>
             </li>
           ))}
@@ -66,6 +78,6 @@ export default function Menu() {
           <span /><span /><span />
         </span>
       </button>
-    </div>
+    </>
   );
 }
