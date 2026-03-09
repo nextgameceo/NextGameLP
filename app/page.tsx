@@ -103,7 +103,7 @@ export default async function Page() {
           <div className={styles.sectionInner}>
             <div className={styles.sectionLeft}>
               <p className={styles.sectionNumber}>03</p>
-              <h2 className={styles.sectionTitleEn}>About</h2>
+              <h2 className={styles.sectionTitleEn}>About Us</h2>
               <span className={styles.sectionTitleJa}>企業情報</span>
             </div>
             <div className={styles.sectionRight}>
