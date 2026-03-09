@@ -26,7 +26,7 @@
   gap: 20px;
   text-align: center;
   z-index: 1;
-  padding: 72px 24px 48px;
+  padding: 72px 24px 72px;
 }
 
 .heroLogoWrap {
@@ -228,7 +228,7 @@
   }
 
   .heroContent {
-    padding: 88px 16px 48px;
+    padding: 88px 16px 88px;
   }
 
   .title {
