@@ -52,7 +52,7 @@ export default function Page() {
         </div>
 
         <div className={styles.quote}>
-          <p>「人生に無駄なことはない。」</p>
+          <p>「為せば成る 為さねば成らぬ何事も 成らぬは人の為さぬなりけり」</p>
           <p className={styles.signature}>代表取締役 内山 博貴</p>
         </div>
       </div>
