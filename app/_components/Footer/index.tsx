@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import styles from './index.module.css';
 
 export default function Footer() {
@@ -7,8 +8,15 @@ export default function Footer() {
 
       <div className={styles.top}>
         <div className={styles.brand}>
-          <p className={styles.brandName}>NEXTGAME LIMITED</p>
-          <p className={styles.brandSub}>就労継続支援B型事業所</p>
+          <Link href="/" aria-label="トップへ戻る">
+            <Image
+              src="/logo.png"
+              alt="NEXTGAME"
+              width={120}
+              height={120}
+              className={styles.logo}
+            />
+          </Link>
         </div>
 
         <nav className={styles.nav}>
