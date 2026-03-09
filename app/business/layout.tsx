@@ -1,20 +1,16 @@
-import type { Metadata } from 'next';
-import type { ReactNode } from 'react';
+import { Metadata } from 'next';
+import Sheet from '@/app/_components/Sheet';
 
 export const metadata: Metadata = {
-  title: '事業内容 | NEXTGAME株式会社',
-  openGraph: {
-    title: '事業内容 | NEXTGAME株式会社',
-  },
-  alternates: {
-    canonical: '/business',
-  },
+  title: '事業内容 | Web制作・楽曲制作・AIコンサルティング',
+  description: 'NEXTGAMEの3つの事業：月額10万円のWeb制作サブスク、DistroKid/TuneCoreJapanを使った楽曲配信、ChatGPT・Claude・Geminiのプロンプトコンサルティング。',
+  alternates: { canonical: '/business' },
 };
 
 type Props = {
-  children: ReactNode;
+  children: React.ReactNode;
 };
 
 export default function RootLayout({ children }: Props) {
-  return <>{children}</>;
+  return <Sheet>{children}</Sheet>;
 }
