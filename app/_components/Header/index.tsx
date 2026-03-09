@@ -7,7 +7,7 @@ import Link from 'next/link';
 import { useEffect, useState } from 'react';
 
 const LANGUAGES = [
-  { code: 'ja', label: 'JA' },
+  { code: 'ja', label: 'JP' },
   { code: 'en', label: 'EN' },
   { code: 'zh-CN', label: '简' },
   { code: 'zh-TW', label: '繁' },
