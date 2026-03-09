@@ -32,7 +32,7 @@ export default async function Page() {
             </p>
             <h1 className={styles.title}>YOUR IDEAS INTO ASSETS</h1>
             <p className={styles.description}>
-              ご自身の才能を価値へと変える最高の環境を提供します
+              あなたの才能を価値へと変える最高の環境を提供します
             </p>
           </div>
           <div className={styles.heroScroll}>scroll</div>
