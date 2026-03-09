@@ -138,4 +138,58 @@ export default function AboutClient() {
                 </div>
                 <div className={styles.episodeItem}>
                   <p className={styles.episodeLabel}>投資家としての挫折</p>
-                  <p className={styles.episodeText}>入院前に私が​​​​​​​​​​​​​​​​
+                  <p className={styles.episodeText}>入院前に私が筆頭株主だった複数企業が、私の不在中に失速し、赤字転落や廃業に至っていた事実を知り、再び挫折しました。</p>
+                </div>
+              </div>
+              <div className={styles.missionBox}>
+                <p className={styles.missionLabel}>MISSION</p>
+                <p className={styles.missionText}>「利用者の皆様がAIを使いこなし、WEB業務一式を回す、前人未到な福祉会社を創る」</p>
+              </div>
+              <p className={styles.bodyText}>
+                隔離病棟での地獄、利用者としての屈辱、投資家としての挫折。その全てを燃料に、日本の障害者福祉業界構造の本質に革命を起こす事が私の執念です。
+              </p>
+            </div>
+          </div>
+          <div className={styles.divider} />
+          <div className={styles.section}>
+            <div className={styles.sectionHeader}>
+              <span className={styles.sectionNumber}>02</span>
+              <div className={styles.sectionTitleWrap}>
+                <span className={styles.sectionTag}>COMMITMENT</span>
+                <h2 className={styles.sectionTitle}>Resolution</h2>
+                <p className={styles.sectionTitleJa}>内山博貴の覚悟</p>
+              </div>
+            </div>
+            <div className={styles.sectionBody}>
+              <p className={styles.bodyText}>
+                隔離病棟から生還し、福祉の現場を内側から見てきた経験を武器に、来るべきシンギュラリティへ対応可能なスキルを身に付け、全員が報われるロジック。これこそ、社名に恥じない、次のゲームです。
+              </p>
+              <div className={styles.quoteBox}>
+                <p className={styles.quoteText}>「為せば成る 為さねば成らぬ何事も 成らぬは人の為さぬなりけり」</p>
+                <div className={styles.signature}>
+                  <div className={styles.signatureImageWrap}>
+                    <Image
+                      src="/ceo.jpg"
+                      alt="代表取締役 内山博貴"
+                      width={48}
+                      height={48}
+                      className={styles.signatureImage}
+                    />
+                  </div>
+                  <div>
+                    <span className={styles.signatureRole}>代表取締役</span>
+                    <span className={styles.signatureName}>内山 博貴</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className={styles.cta}>
+            <ButtonLink href="/contact">お問い合わせ</ButtonLink>
+          </div>
+        </div>
+      )}
+
+    </div>
+  );
+}
