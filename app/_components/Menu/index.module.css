@@ -13,7 +13,7 @@
 .items {
   display: flex;
   align-items: center;
-  gap: 32px;
+  gap: 4px;
   list-style: none;
   padding: 0;
 }
@@ -25,43 +25,46 @@
 .link {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   gap: 2px;
   text-decoration: none;
-  padding: 4px 0;
+  padding: 8px 12px;
+  border-radius: 6px;
   position: relative;
+  transition: background 200ms ease;
+}
+
+.link:hover {
+  background: rgba(109, 190, 214, 0.06);
 }
 
 .link::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 0;
-  height: 1px;
-  background: var(--color-current);
-  transition: width 250ms ease;
-}
-
-.link:hover::after {
-  width: 100%;
+  display: none;
 }
 
 .linkEn {
   font-family: var(--font-orbitron);
-  font-size: 0.6rem;
+  font-size: 0.58rem;
   font-weight: 700;
   letter-spacing: 0.15em;
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(255, 255, 255, 0.55);
   transition: color 200ms ease;
 }
 
 .linkJa {
-  display: none;
+  display: block;
+  font-size: 0.62rem;
+  color: rgba(255, 255, 255, 0.25);
+  letter-spacing: 0.03em;
+  transition: color 200ms ease;
 }
 
 .link:hover .linkEn {
   color: var(--color-current);
+}
+
+.link:hover .linkJa {
+  color: rgba(109, 190, 214, 0.5);
 }
 
 .menuBtn {
@@ -99,7 +102,6 @@
     z-index: 101;
   }
 
-  /* Mobile Header */
   .mobileHeader {
     display: flex;
     align-items: center;
@@ -135,7 +137,6 @@
     border-color: rgba(109, 190, 214, 0.3);
   }
 
-  /* Items */
   .items {
     flex-direction: column;
     gap: 0;
@@ -144,6 +145,7 @@
   }
 
   .item {
+    width: 100%;
     opacity: 0;
     transform: translateX(-16px);
     animation: slideIn 300ms ease forwards;
@@ -155,12 +157,9 @@
     align-items: center;
     justify-content: space-between;
     padding: 18px 28px;
+    border-radius: 0;
     border-bottom: 1px solid rgba(109, 190, 214, 0.06);
-    gap: 0;
-  }
-
-  .link::after {
-    display: none;
+    background: transparent;
   }
 
   .link:hover {
@@ -168,18 +167,14 @@
   }
 
   .linkEn {
-    font-family: var(--font-orbitron);
     font-size: 1rem;
-    font-weight: 700;
     letter-spacing: 0.1em;
     color: #ffffff;
   }
 
   .linkJa {
-    display: block;
     font-size: 0.72rem;
     color: rgba(255, 255, 255, 0.35);
-    letter-spacing: 0.05em;
   }
 
   .link:hover .linkEn {
@@ -190,7 +185,6 @@
     color: rgba(109, 190, 214, 0.6);
   }
 
-  /* Mobile Footer */
   .mobileFooter {
     display: flex;
     gap: 16px;
@@ -216,7 +210,6 @@
     border-color: var(--color-current);
   }
 
-  /* Hamburger */
   .menuBtn {
     display: flex;
     align-items: center;
