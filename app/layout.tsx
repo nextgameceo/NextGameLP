@@ -19,7 +19,6 @@ export async function generateMetadata(): Promise<Metadata> {
 
   const defaultTitle = 'NEXTGAME株式会社 | 就労継続支援B型・AIスキルで自立を目指す名古屋の作業所';
   const defaultDesc = '愛知県名古屋市の就労継続支援B型事業所。工賃をもらいながらAI・プロンプトエンジニアリングスキルを習得。Web制作・楽曲制作・AIコンサルティングの3事業を展開。障害のある方の経済的自立を支援します。';
-
   const baseUrl = process.env.BASE_URL || 'https://nextgame-limited.com';
 
   if (!data) {
@@ -31,6 +30,9 @@ export async function generateMetadata(): Promise<Metadata> {
       },
       description: defaultDesc,
       keywords: ['就労継続支援B型', '名古屋', 'AI', 'プロンプトエンジニアリング', '障害者雇用', '作業所', 'Web制作', '楽曲制作', 'NEXTGAME'],
+      verification: {
+        google: '2sC_rYGGxiVwF5tE6DUiqsp8HhszO7aGSl_ka14Yj1Q',
+      },
       openGraph: {
         type: 'website',
         locale: 'ja_JP',
@@ -68,6 +70,9 @@ export async function generateMetadata(): Promise<Metadata> {
     },
     description: data.description || defaultDesc,
     keywords: ['就労継続支援B型', '名古屋', 'AI', 'プロンプトエンジニアリング', '障害者雇用', '作業所', 'Web制作', '楽曲制作', 'NEXTGAME'],
+    verification: {
+      google: '2sC_rYGGxiVwF5tE6DUiqsp8HhszO7aGSl_ka14Yj1Q',
+    },
     openGraph: {
       type: 'website',
       locale: 'ja_JP',
