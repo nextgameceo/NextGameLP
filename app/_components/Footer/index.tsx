@@ -12,8 +12,8 @@ export default function Footer() {
             <Image
               src="/logo.png"
               alt="NEXTGAME"
-              width={240}
-              height={80}
+              width={800}
+              height={200}
               className={styles.logo}
             />
           </Link>
