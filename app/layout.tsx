@@ -145,6 +145,19 @@ export default function RootLayout({ children }: Props) {
           </MotionWrapper>
         </main>
         <Footer />
+        {/* Google Translate attribution - 規約上必要 */}
+        <div style={{
+          position: 'fixed',
+          bottom: '8px',
+          right: '8px',
+          fontSize: '0.55rem',
+          color: 'rgba(255,255,255,0.15)',
+          zIndex: 9999,
+          pointerEvents: 'none',
+          letterSpacing: '0.05em',
+        }}>
+          Powered by Google Translate
+        </div>
       </body>
     </html>
   );
