@@ -60,7 +60,7 @@ export default async function Page() {
               <p className={styles.sectionDescription}>
                 まだWordPressですか？{'\n\n'}
                 制作会社に100万円以上を支払い、出来上がったサイトを「あとはご自身で」と渡される。そんな時代は終わりました。{'\n\n'}
-                NEXTGAMEは初期費用ゼロ。設計・デザイン・開発・運用・改善まで、すべてを一気通貫でサポートします。契約した翌月から、動き続けるWebサイトへ。「作って終わり」ではなく、毎月進化する資産として。
+                NEXTGAMEは初期費用ゼロ。{'\n\n'}設計・デザイン・開発・運用・改善まで、すべてを一括でサポートします。契約した翌月から、動き続けるWebサイトへ。「作って終わり」ではなく、毎日進化する資産として。{'\n\n'}
               </p>
               <div>
                 <ButtonLink href="/business">Read More</ButtonLink>
@@ -108,7 +108,7 @@ export default async function Page() {
             </div>
             <div className={styles.sectionRight}>
               <p className={styles.sectionDescription}>
-                NEXTGAME株式会社は、愛知県名古屋市に拠点を置く就労継続支援B型事業所です。代表取締役 内山博貴のもと、障害のある方々がスキルで稼ぎ、自立できる社会の実現を目指しています。
+                NEXTGAME株式会社は、愛知県名古屋市に拠点を置く、AIに特化した就労継続支援B型事業所です。代表取締役 内山博貴のもと、利用者の皆様がスキルで稼ぎ、自立できる社会の実現を目指しています。
               </p>
               <div>
                 <ButtonLink href="/about">Read More</ButtonLink>
