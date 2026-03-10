@@ -22,16 +22,20 @@ export default function Page() {
       {/* 統計 */}
       <div className={styles.statsRow}>
         <div className={styles.stat}>
-          <p className={styles.statNumber}>¥20,000<span>〜</span></p>
+          <p className={styles.statNumber}>¥20,000</p>
           <p className={styles.statLabel}>スタート工賃</p>
         </div>
         <div className={styles.stat}>
-          <p className={styles.statNumber}>¥70,000<span>〜</span></p>
-          <p className={styles.statLabel}>施設外就労時工賃</p>
+          <p className={styles.statNumber}>¥50,000</p>
+          <p className={styles.statLabel}>目標平均工賃</p>
         </div>
         <div className={styles.stat}>
-          <p className={styles.statNumber}>PC<span>付与</span></p>
-          <p className={styles.statLabel}>施設外就労移行時</p>
+          <p className={styles.statNumber}>¥70,000</p>
+          <p className={styles.statLabel}>施設外就労 + PC付与</p>
+        </div>
+        <div className={styles.stat}>
+          <p className={styles.statNumber}>ASK</p>
+          <p className={styles.statLabel}>業務委託パートナー</p>
         </div>
       </div>
 
