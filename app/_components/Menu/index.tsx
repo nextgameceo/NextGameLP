@@ -22,7 +22,7 @@ export default function Menu() {
   const close = () => setOpen(false);
 
   return (
-    <div style={{ display: 'contents' }}>
+    <div>
       <nav className={cx(styles.nav, isOpen && styles.open)}>
 
         <div className={styles.mobileHeader}>
