@@ -26,16 +26,25 @@ export default async function Page(props: any) {
   return (
     <div className={styles.container}>
 
+      {/* ヘッダー */}
+      <div className={styles.header}>
+        <p className={styles.headerEn}>RECRUIT</p>
+        <h1 className={styles.headerTitle}>採用情報</h1>
+        <p className={styles.headerLead}>
+          福祉の枠を超えた、本気の仕事をしませんか。{'\n'}
+          NEXTGAMEで共にチャレンジする仲間を募集しています。
+        </p>
+      </div>
+
+      {/* 募集職種 */}
       <section className={styles.positions}>
         <div className={styles.sectionHeader}>
+          <p className={styles.sectionEn}>OPEN POSITIONS</p>
           <h2 className={styles.sectionTitle}>募集職種</h2>
-          <p className={styles.sectionLead}>
-            NEXTGAMEで共に挑戦する仲間を募集しています。
-          </p>
         </div>
 
         {data.contents.length === 0 ? (
-          <div className={styles.empty}>現在募集中のポジションはありません。</div>
+          <div className={styles.empty}>現在募集中のポジションはありません</div>
         ) : (
           <div className={styles.grid}>
             {data.contents.map((item) => (
@@ -49,39 +58,31 @@ export default async function Page(props: any) {
                 <div className={styles.cardBody}>
                   {item.job_description && (
                     <div className={styles.cardRow}>
-                      <p className={styles.cardLabel}>仕事内容</p>
+                      <p className={styles.cardLabel}>DESCRIPTION</p>
                       <div
                         className={styles.cardValue}
-                        dangerouslySetInnerHTML={{
-                          __html: item.job_description,
-                        }}
+                        dangerouslySetInnerHTML={{ __html: item.job_description }}
                       />
                     </div>
                   )}
 
                   {item.salary && (
                     <div className={styles.cardRow}>
-                      <p className={styles.cardLabel}>給与</p>
+                      <p className={styles.cardLabel}>SALARY</p>
                       <div
                         className={styles.cardValue}
-                        dangerouslySetInnerHTML={{
-                          __html: item.salary,
-                        }}
+                        dangerouslySetInnerHTML={{ __html: item.salary }}
                       />
                     </div>
                   )}
 
                   {item.capacity && (
                     <div className={styles.cardRow}>
-                      <p className={styles.cardLabel}>募集人数</p>
-                      <p className={styles.cardValue}>{item.capacity}</p>
-                    </div>
-                  )}
-
-                  {item.working_hours && (
-                    <div className={styles.cardRow}>
-                      <p className={styles.cardLabel}>勤務時間</p>
-                      <p className={styles.cardValue}>{item.working_hours}</p>
+                      <p className={styles.cardLabel}>HEADCOUNT</p>
+                      <div
+                        className={styles.cardValue}
+                        dangerouslySetInnerHTML={{ __html: item.capacity }}
+                      />
                     </div>
                   )}
                 </div>
@@ -92,52 +93,45 @@ export default async function Page(props: any) {
         )}
       </section>
 
+      {/* 選考フロー */}
       <section>
         <div className={styles.sectionHeader}>
+          <p className={styles.sectionEn}>HIRING PROCESS</p>
           <h2 className={styles.sectionTitle}>選考フロー</h2>
         </div>
 
         <ol className={styles.processList}>
           <li className={styles.processItem}>
             <span className={styles.processNumber}>01</span>
-            <div>
+            <div className={styles.processContent}>
               <p className={styles.processTitle}>書類選考</p>
-              <p className={styles.processText}>
-                ご応募内容をもとに選考を行います。
-              </p>
+              <p className={styles.processText}>ご応募内容をもとに選考を行います。</p>
             </div>
           </li>
-
           <li className={styles.processItem}>
             <span className={styles.processNumber}>02</span>
-            <div>
+            <div className={styles.processContent}>
               <p className={styles.processTitle}>一次面接</p>
-              <p className={styles.processText}>
-                業務内容やスキルについて確認します。
-              </p>
+              <p className={styles.processText}>業務内容やスキルについて確認します。</p>
             </div>
           </li>
-
           <li className={styles.processItem}>
             <span className={styles.processNumber}>03</span>
-            <div>
+            <div className={styles.processContent}>
               <p className={styles.processTitle}>最終面接</p>
-              <p className={styles.processText}>
-                ビジョンの共感度とカルチャーフィットを確認します。
-              </p>
+              <p className={styles.processText}>ビジョンの共感度とカルチャーフィットを確認します。</p>
             </div>
           </li>
         </ol>
       </section>
 
+      {/* CTA */}
       <div className={styles.footer}>
-        <div>
-          <h2 className={styles.message}>We are hiring</h2>
-          <p>私たちは共にチャレンジする仲間を募集しています。</p>
+        <div className={styles.footerText}>
+          <h2 className={styles.message}>WE ARE HIRING</h2>
+          <p className={styles.messageSub}>私たちは共にチャレンジする仲間を募集しています。</p>
         </div>
-        <ButtonLink href="/contact">
-          エントリーする
-        </ButtonLink>
+        <ButtonLink href="/contact">エントリーする</ButtonLink>
       </div>
 
     </div>
