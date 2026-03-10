@@ -27,7 +27,7 @@ export default function Page() {
         </div>
         <div className={styles.stat}>
           <p className={styles.statNumber}>¥50,000</p>
-          <p className={styles.statLabel}>目標平均工賃</p>
+          <p className={styles.statLabel}>目標工賃</p>
         </div>
         <div className={styles.stat}>
           <p className={styles.statNumber}>¥70,000</p>
@@ -71,6 +71,20 @@ export default function Page() {
               <div className={styles.stepLine} />
             </div>
             <div className={styles.stepBody}>
+              <p className={styles.stepWage}>¥50,000〜</p>
+              <h3 className={styles.stepTitle}>目標工賃フェーズ</h3>
+              <p className={styles.stepText}>
+                毎日通所を継続し、5ページ以上のホームページを一人で完成させられる、指導なしでタスクを自走できる、GitHubのプルリクエスト承認率が安定している。この4つが揃ったら¥50,000が見えてきます。この段階が施設外就労に向けた準備フェーズです。
+              </p>
+            </div>
+          </div>
+
+          <div className={styles.step}>
+            <div className={styles.stepLeft}>
+              <p className={styles.stepNumber}>03</p>
+              <div className={styles.stepLine} />
+            </div>
+            <div className={styles.stepBody}>
               <p className={styles.stepWage}>¥70,000〜 + PC付与</p>
               <h3 className={styles.stepTitle}>施設外就労（在宅勤務）</h3>
               <p className={styles.stepText}>
@@ -82,7 +96,7 @@ export default function Page() {
 
           <div className={styles.step}>
             <div className={styles.stepLeft}>
-              <p className={styles.stepNumber}>03</p>
+              <p className={styles.stepNumber}>04</p>
             </div>
             <div className={styles.stepBody}>
               <p className={styles.stepWage}>委託費用 要相談</p>
@@ -118,7 +132,7 @@ export default function Page() {
             <p className={styles.cardEn}>02</p>
             <h3 className={styles.cardTitle}>GitHubの成果物</h3>
             <p className={styles.cardText}>
-              実際の業務でGitHubに積み上げた成果物が評価されます。ブランチ・プルリクエストの質が、次のステージへの鍵です。
+              実際の業務でGitHubに積み上げた成果物が評価されます。ブランチ・プルリクエストの承認率が、次のステージへの鍵です。
             </p>
           </div>
           <div className={styles.card}>
