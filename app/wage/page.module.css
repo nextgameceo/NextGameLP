@@ -12,17 +12,19 @@
 
 .headerEn {
   font-family: var(--font-orbitron);
-  font-size: 0.65rem;
-  letter-spacing: 0.4em;
+  font-size: 1.8rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
   color: var(--color-current);
   margin-bottom: 8px;
 }
 
 .headerTitle {
-  font-size: 2.4rem;
-  font-weight: 700;
-  color: #ffffff;
-  margin-bottom: 16px;
+  font-size: 0.85rem;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.4);
+  margin-bottom: 24px;
+  letter-spacing: 0.15em;
 }
 
 .headerLead {
@@ -80,21 +82,23 @@
 .sectionHeader {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 6px;
 }
 
 .sectionEn {
   font-family: var(--font-orbitron);
-  font-size: 0.6rem;
-  letter-spacing: 0.3em;
+  font-size: 1.4rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
   color: var(--color-current);
-  opacity: 0.6;
 }
 
 .sectionTitle {
-  font-size: 1.4rem;
-  font-weight: 700;
-  color: #ffffff;
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.35);
+  letter-spacing: 0.15em;
+  margin-bottom: 8px;
 }
 
 .sectionLead {
@@ -155,21 +159,24 @@
 
 .stepWage {
   font-family: var(--font-orbitron);
-  font-size: 0.6rem;
-  letter-spacing: 0.15em;
-  color: rgba(109, 190, 214, 0.5);
+  font-size: 1.3rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  color: var(--color-current);
 }
 
 .stepTitle {
-  font-size: 1.1rem;
-  font-weight: 700;
-  color: #ffffff;
+  font-size: 0.78rem;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.4);
+  letter-spacing: 0.12em;
 }
 
 .stepText {
   font-size: 0.88rem;
   line-height: 1.9;
   color: rgba(255, 255, 255, 0.5);
+  margin-top: 4px;
 }
 
 .stepBadge {
@@ -274,8 +281,8 @@
     gap: 56px;
   }
 
-  .headerTitle {
-    font-size: 1.8rem;
+  .headerEn {
+    font-size: 1.3rem;
   }
 
   .statsRow {
@@ -290,6 +297,10 @@
     font-size: 0.6rem;
   }
 
+  .sectionEn {
+    font-size: 1.1rem;
+  }
+
   .cards {
     grid-template-columns: 1fr;
   }
@@ -298,6 +309,10 @@
     grid-template-columns: 32px 1fr;
     gap: 16px;
     padding: 24px 0;
+  }
+
+  .stepWage {
+    font-size: 1rem;
   }
 
   .message {
