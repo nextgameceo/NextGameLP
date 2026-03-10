@@ -60,7 +60,7 @@ export default function Page() {
               <p className={styles.stepWage}>¥20,000〜</p>
               <h3 className={styles.stepTitle}>通所スタート</h3>
               <p className={styles.stepText}>
-                まずはNEXTGAMEに通所しながら、AIとITの基礎スキルを習得します。GitHubで実際の成果物を管理し、クオリティとスキルレベルを継続的に評価。通所実績と技術習得に応じて、工賃は段階的にアップしていきます。
+                まずはNEXTGAMEに通所しながら、楽曲制作を通じてAIプロンプトの基礎を学びます。実際に音楽を作りながらプロンプトエンジニアリングのスキルを身につけ、徐々にWeb制作などのIT業務へとステップアップ。GitHubで成果物を管理し、通所実績と技術習得に応じて工賃は段階的にアップしていきます。
               </p>
             </div>
           </div>
