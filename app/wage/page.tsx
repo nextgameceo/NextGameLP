@@ -26,8 +26,8 @@ export default function Page() {
           <p className={styles.statLabel}>スタート工賃</p>
         </div>
         <div className={styles.stat}>
-          <p className={styles.statNumber}>¥50,000<span>以上</span></p>
-          <p className={styles.statLabel}>平均工賃目標</p>
+          <p className={styles.statNumber}>¥70,000<span>〜</span></p>
+          <p className={styles.statLabel}>施設外就労時工賃</p>
         </div>
         <div className={styles.stat}>
           <p className={styles.statNumber}>PC<span>付与</span></p>
@@ -67,7 +67,7 @@ export default function Page() {
               <div className={styles.stepLine} />
             </div>
             <div className={styles.stepBody}>
-              <p className={styles.stepWage}>工賃アップ + PC付与</p>
+              <p className={styles.stepWage}>¥70,000〜 + PC付与</p>
               <h3 className={styles.stepTitle}>施設外就労（在宅勤務）</h3>
               <p className={styles.stepText}>
                 GitHubでの成果物評価によりスキルが認められたら、自宅からリモートで業務に取り組む施設外就労へ移行します。この段階でハイスペックPCを付与。場所を選ばず働ける環境で、より実践的なスキルを磨きながら収入を伸ばしていきます。
