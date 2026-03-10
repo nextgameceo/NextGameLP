@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import { getNewsList } from '@/app/_libs/microcms';
 import { TOP_NEWS_LIMIT } from '@/app/_constants';
-import NewsList from '@/app/_components/NewsList';
+import TopNewsList from '@/app/_components/TopNewsList';
 import styles from './page.module.css';
 import ButtonLink from '@/app/_components/ButtonLink';
 import FadeInSection from '@/app/_components/FadeInSection';
@@ -131,7 +131,7 @@ export default async function Page() {
             </div>
             <div className={styles.sectionRight}>
               <div className={styles.newsWrap}>
-                <NewsList articles={data.contents} />
+                <TopNewsList articles={data.contents} />
               </div>
               <div>
                 <ButtonLink href="/news">Read More</ButtonLink>
