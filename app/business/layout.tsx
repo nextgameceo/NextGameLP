@@ -25,6 +25,6 @@ type Props = {
   children: React.ReactNode;
 };
 
-export default function RootLayout({ children }: Props) {
+export default function BusinessLayout({ children }: Props) {
   return <Sheet>{children}</Sheet>;
 }
