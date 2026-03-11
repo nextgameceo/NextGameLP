@@ -85,7 +85,7 @@ export default function Page() {
               <div className={styles.revenueLine} />
             </div>
             <div className={styles.revenueBody}>
-              <p className={styles.revenueTag}>安定収益</p>
+              <p className={styles.revenueTag}>Welfare Benefits</p>
               <h3 className={styles.revenueTitle}>障害福祉給付金</h3>
               <p className={styles.revenueText}>
                 利用者1名あたり月額約7,500〜10,000円×稼働日数×稼働率。利用者20名・稼働率90%時で月額約396万円。指定申請から3ヶ月後より収入開始。
@@ -103,7 +103,7 @@ export default function Page() {
               <div className={styles.revenueLine} />
             </div>
             <div className={styles.revenueBody}>
-              <p className={styles.revenueTag}>受託収益</p>
+              <p className={styles.revenueTag}>Web Development</p>
               <h3 className={styles.revenueTitle}>Web制作 月額サブスク</h3>
               <p className={styles.revenueText}>
                 初期費用ゼロ・月額10万円のホームページ制作サブスク。契約10社で月100万円。開所前から営業活動を開始し、開所時点での契約獲得を目指します。
@@ -121,7 +121,7 @@ export default function Page() {
               <div className={styles.revenueLine} />
             </div>
             <div className={styles.revenueBody}>
-              <p className={styles.revenueTag}>受託収益</p>
+              <p className={styles.revenueTag}>Music Production</p>
               <h3 className={styles.revenueTitle}>楽曲制作</h3>
               <p className={styles.revenueText}>
                 AIを活用した楽曲制作をDistroKid・TuneCoreJapan経由で配信。利用者のスキル習得と収益化を同時に実現します。
@@ -138,8 +138,8 @@ export default function Page() {
               <p className={styles.revenueNum}>04</p>
             </div>
             <div className={styles.revenueBody}>
-              <p className={styles.revenueTag}>コンサル収益</p>
-              <h3 className={styles.revenueTitle}>AIコンサルティング</h3>
+              <p className={styles.revenueTag}>Prompt consulting</p>
+              <h3 className={styles.revenueTitle}>プロンプトコンサルティング</h3>
               <p className={styles.revenueText}>
                 ChatGPT・Claude・Geminiのプロンプト活用支援。月額30,000円/社。中小企業のAI導入ニーズに対応します。
               </p>
