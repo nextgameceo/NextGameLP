@@ -17,8 +17,8 @@ const orbitron = Orbitron({
 export async function generateMetadata(): Promise<Metadata> {
   const data = await getMeta();
 
-  const defaultTitle = 'NEXTGAME株式会社 | 就労継続支援B型・AIスキルで自立を目指す名古屋の作業所';
-  const defaultDesc = '愛知県名古屋市の就労継続支援B型事業所。工賃をもらいながらAI・プロンプトエンジニアリングスキルを習得。Web制作・楽曲制作・AIコンサルティングの3事業を展開。障害のある方の経済的自立を支援します。';
+  const defaultTitle = 'NEXTGAME株式会社 | AIスキルで稼ぐ、名古屋の就労継続支援B型事業所';
+  const defaultDesc = '愛知県名古屋市のAI・IT特化型就労継続支援B型事業所。楽曲制作でAIプロンプトを学び、Web制作・ITスキルを習得しながら工賃を獲得。施設外就労・個人事業主として経済的に自立するキャリアパスを支援します。';
   const baseUrl = process.env.BASE_URL || 'https://nextgame-limited.com';
 
   if (!data) {
@@ -29,7 +29,7 @@ export async function generateMetadata(): Promise<Metadata> {
         template: '%s | NEXTGAME株式会社',
       },
       description: defaultDesc,
-      keywords: ['就労継続支援B型', '名古屋', 'AI', 'プロンプトエンジニアリング', '障害者雇用', '作業所', 'Web制作', '楽曲制作', 'NEXTGAME'],
+      keywords: ['就労継続支援B型', '名古屋', 'AI', 'プロンプトエンジニアリング', '利用者支援', '作業所', 'Web制作', '楽曲制作', 'NEXTGAME'],
       verification: {
         google: '2sC_rYGGxiVwF5tE6DUiqsp8HhszO7aGSl_ka14Yj1Q',
       },
@@ -69,7 +69,7 @@ export async function generateMetadata(): Promise<Metadata> {
       template: '%s | NEXTGAME株式会社',
     },
     description: data.description || defaultDesc,
-    keywords: ['就労継続支援B型', '名古屋', 'AI', 'プロンプトエンジニアリング', '障害者雇用', '作業所', 'Web制作', '楽曲制作', 'NEXTGAME'],
+    keywords: ['就労継続支援B型', '名古屋', 'AI', 'プロンプトエンジニアリング', '利用者支援', '作業所', 'Web制作', '楽曲制作', 'NEXTGAME'],
     verification: {
       google: '2sC_rYGGxiVwF5tE6DUiqsp8HhszO7aGSl_ka14Yj1Q',
     },
@@ -112,7 +112,7 @@ const jsonLd = {
   alternateName: 'NEXTGAME LIMITED',
   url: 'https://nextgame-limited.com',
   logo: 'https://nextgame-limited.com/logo.png',
-  description: '愛知県名古屋市の就労継続支援B型事業所。工賃をもらいながらAI・プロンプトエンジニアリングスキルを習得できます。',
+  description: '愛知県名古屋市のAI・IT特化型就労継続支援B型事業所。楽曲制作からWeb制作まで、AIプロンプトスキルを活かして工賃を獲得しながら経済的自立を目指せます。',
   address: {
     '@type': 'PostalAddress',
     addressRegion: '愛知県',
@@ -145,7 +145,6 @@ export default function RootLayout({ children }: Props) {
           </MotionWrapper>
         </main>
         <Footer />
-        {/* Google Translate attribution - 規約上必要 */}
         <div style={{
           position: 'fixed',
           bottom: '8px',
