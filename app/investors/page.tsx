@@ -24,8 +24,8 @@ export default function Page() {
           <p className={styles.kpiLabel}>融資目標額</p>
         </div>
         <div className={styles.kpi}>
-          <p className={styles.kpiNumber}>20名</p>
-          <p className={styles.kpiLabel}>利用者定員（MAX）</p>
+          <p className={styles.kpiNumber}>20名+α</p>
+          <p className={styles.kpiLabel}>利用者定員（施設外就労で拡大可）</p>
         </div>
         <div className={styles.kpi}>
           <p className={styles.kpiNumber}>3ヶ月目</p>
@@ -91,7 +91,7 @@ export default function Page() {
               <p className={styles.revenueTag}>基盤収益</p>
               <h3 className={styles.revenueTitle}>障害福祉給付金</h3>
               <p className={styles.revenueText}>
-                国が支払う公費であり、景気に左右されない安定収益です。利用者数と稼働率に応じて給付金が増加し、利用者20名・稼働率90%時で月額約396万円を見込みます。指定申請から3ヶ月後より収入開始。
+                国が支払う公費であり、景気に左右されない安定収益です。施設内利用者20名が上限ですが、施設外就労（在宅勤務）の活用により定員を超えた売上拡大が可能です。さらに業務委託フェーズへ移行した利用者は個人事業主として独立し、外部からの受託収益も加わります。指定申請から3ヶ月後より給付金収入開始。
               </p>
             </div>
             <div className={styles.revenueAmount}>
@@ -141,10 +141,10 @@ export default function Page() {
               <p className={styles.revenueNum}>04</p>
             </div>
             <div className={styles.revenueBody}>
-              <p className={styles.revenueTag}>Web / AIサービス事業</p>
-              <h3 className={styles.revenueTitle}>自社サービスの展開</h3>
+              <p className={styles.revenueTag}>Web / AIサービス事業 + 業務委託</p>
+              <h3 className={styles.revenueTitle}>自社サービス展開・個人事業主として独立</h3>
               <p className={styles.revenueText}>
-                自社のWebサービスやAI関連サービスを展開します。AIコンサルティング（月額30,000円/社）・Web制作サブスク（月額100,000円/社）により、福祉×IT×AIという新しい就労支援モデルを収益化します。
+                自社のWebサービスやAI関連サービスを展開します。AIコンサルティング（月額30,000円/社）・Web制作サブスク（月額100,000円/社）により収益化します。またスキルを習得した利用者は業務委託フェーズへ移行し、個人事業主として独立。外部受託収益がさらに積み上がる構造です。
               </p>
             </div>
             <div className={styles.revenueAmount}>
@@ -263,7 +263,7 @@ export default function Page() {
           </div>
           <div className={styles.simRow}>
             <p className={styles.simCell}>13ヶ月目〜</p>
-            <p className={styles.simCell}>20名（定員MAX）</p>
+            <p className={styles.simCell}>20名＋施設外就労</p>
             <p className={styles.simCell}>約500〜700万円</p>
             <p className={styles.simCell}>約350〜400万円</p>
             <p className={`${styles.simCell} ${styles.simPositive}`}>安定黒字</p>
@@ -284,14 +284,36 @@ export default function Page() {
               <div className={styles.roadmapLine} />
             </div>
             <div className={styles.roadmapBody}>
-              <p className={styles.roadmapTag}>完了</p>
-              <h3 className={styles.roadmapTitle}>法人登記・ホームページ公開</h3>
-              <p className={styles.roadmapText}>NEXTGAME株式会社として法人登記完了。オンライン事業計画書としてホームページを公開。</p>
+              <p className={styles.roadmapTag}>完了 / 2025.02.19</p>
+              <h3 className={styles.roadmapTitle}>法人登記完了</h3>
+              <p className={styles.roadmapText}>NEXTGAME株式会社として法人登記完了。法人番号：5180001170695</p>
             </div>
           </div>
           <div className={styles.roadmapItem}>
             <div className={styles.roadmapLeft}>
               <p className={styles.roadmapNum}>02</p>
+              <div className={styles.roadmapLine} />
+            </div>
+            <div className={styles.roadmapBody}>
+              <p className={styles.roadmapTag}>完了 / 2025.03.05</p>
+              <h3 className={styles.roadmapTitle}>名古屋市 障害福祉サービス事業 新規参入者研修 受講</h3>
+              <p className={styles.roadmapText}>名古屋市主催の新規参入者研修を受講済み。指定申請に向けた要件確認・手続きを進めている。</p>
+            </div>
+          </div>
+          <div className={styles.roadmapItem}>
+            <div className={styles.roadmapLeft}>
+              <p className={styles.roadmapNum}>03</p>
+              <div className={styles.roadmapLine} />
+            </div>
+            <div className={styles.roadmapBody}>
+              <p className={styles.roadmapTag}>完了 / 2025.03.11</p>
+              <h3 className={styles.roadmapTitle}>オンライン事業計画書（本サイト）公開</h3>
+              <p className={styles.roadmapText}>事業構想・ビジョン・ビジネスモデルをまとめたオンライン事業計画書として本ホームページを公開。</p>
+            </div>
+          </div>
+          <div className={styles.roadmapItem}>
+            <div className={styles.roadmapLeft}>
+              <p className={styles.roadmapNum}>04</p>
               <div className={styles.roadmapLine} />
             </div>
             <div className={styles.roadmapBody}>
@@ -302,7 +324,7 @@ export default function Page() {
           </div>
           <div className={styles.roadmapItem}>
             <div className={styles.roadmapLeft}>
-              <p className={styles.roadmapNum}>03</p>
+              <p className={styles.roadmapNum}>05</p>
               <div className={styles.roadmapLine} />
             </div>
             <div className={styles.roadmapBody}>
@@ -313,12 +335,12 @@ export default function Page() {
           </div>
           <div className={styles.roadmapItem}>
             <div className={styles.roadmapLeft}>
-              <p className={styles.roadmapNum}>04</p>
+              <p className={styles.roadmapNum}>06</p>
             </div>
             <div className={styles.roadmapBody}>
               <p className={styles.roadmapTag}>目標</p>
               <h3 className={styles.roadmapTitle}>開所・利用者受け入れ開始</h3>
-              <p className={styles.roadmapText}>1年以内の開所を目標。初年度は利用者5名からスタートし、定員20名を目指す。</p>
+              <p className={styles.roadmapText}>1年以内の開所を目標。初年度は利用者5名からスタートし、定員20名＋施設外就労での拡大を目指す。</p>
             </div>
           </div>
         </div>
