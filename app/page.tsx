@@ -32,7 +32,7 @@ export default async function Page() {
             </p>
             <h1 className={styles.title}>YOUR IDEAS INTO ASSETS</h1>
             <p className={styles.description}>
-              あなたの才能を価値へと変える最高の環境を提供します
+              あなたのアイデアを資産へ
             </p>
           </div>
           <div className={styles.heroScroll}>scroll</div>
@@ -53,8 +53,8 @@ export default async function Page() {
           <div className={styles.sectionInner}>
             <div className={styles.sectionLeft}>
               <p className={styles.sectionNumber}>01</p>
-              <h2 className={styles.sectionTitleEn}>Business</h2>
-              <span className={styles.sectionTitleJa}>事業内容</span>
+              <h2 className={styles.sectionTitleEn}>To The Company</h2>
+              <span className={styles.sectionTitleJa}>企業様へ</span>
             </div>
             <div className={styles.sectionRight}>
               <p className={styles.sectionDescription}>
@@ -104,7 +104,7 @@ export default async function Page() {
             <div className={styles.sectionLeft}>
               <p className={styles.sectionNumber}>03</p>
               <h2 className={styles.sectionTitleEn}>About Us</h2>
-              <span className={styles.sectionTitleJa}>企業情報</span>
+              <span className={styles.sectionTitleJa}>弊社について</span>
             </div>
             <div className={styles.sectionRight}>
               <p className={styles.sectionDescription}>
