@@ -81,16 +81,16 @@
 
 .kpiNumber {
   font-family: var(--font-orbitron);
-  font-size: clamp(1.1rem, 2.5vw, 1.6rem);
+  font-size: clamp(1rem, 2.5vw, 1.5rem);
   font-weight: 800;
   color: #ffffff;
   line-height: 1.1;
 }
 
 .kpiLabel {
-  font-size: 0.7rem;
+  font-size: 0.68rem;
   color: rgba(255, 255, 255, 0.35);
-  letter-spacing: 0.05em;
+  letter-spacing: 0.03em;
   line-height: 1.5;
   text-align: center;
 }
@@ -252,14 +252,14 @@
 
 .revenueAmountNum {
   font-family: var(--font-orbitron);
-  font-size: 0.85rem;
+  font-size: 0.82rem;
   font-weight: 700;
   color: var(--color-current);
   white-space: nowrap;
 }
 
 .revenueAmountLabel {
-  font-size: 0.65rem;
+  font-size: 0.62rem;
   color: rgba(255, 255, 255, 0.25);
   white-space: nowrap;
   margin-top: 4px;
@@ -270,7 +270,7 @@
   background: rgba(109, 190, 214, 0.02);
   border: 1px solid rgba(109, 190, 214, 0.1);
   border-radius: 16px;
-  padding: 32px 24px 24px;
+  padding: 28px 20px 20px;
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -280,6 +280,7 @@
   display: flex;
   gap: 20px;
   padding-left: 4px;
+  flex-wrap: wrap;
 }
 
 .chartLegendRevenue {
@@ -303,27 +304,17 @@
   color: rgba(100, 220, 150, 0.8);
 }
 
-.chartTooltip {
-  background: rgba(6, 6, 8, 0.95);
-  border: 1px solid rgba(109, 190, 214, 0.2);
-  border-radius: 8px;
-  padding: 12px 16px;
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
+.chartSvgWrap {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
-.chartTooltipLabel {
-  font-family: var(--font-orbitron);
-  font-size: 0.6rem;
-  letter-spacing: 0.1em;
-  color: rgba(255, 255, 255, 0.4);
-  margin-bottom: 4px;
-}
-
-.chartTooltipItem {
-  font-size: 0.82rem;
-  font-weight: 600;
+.chartSvg {
+  width: 100%;
+  height: auto;
+  min-width: 480px;
+  display: block;
 }
 
 .chartNote {
@@ -346,6 +337,7 @@
   grid-template-columns: 1.2fr 1fr 1.3fr 1.3fr 1.4fr;
   background: rgba(109, 190, 214, 0.06);
   border-bottom: 1px solid rgba(109, 190, 214, 0.1);
+  min-width: 520px;
 }
 
 .simHeaderCell {
@@ -353,7 +345,7 @@
   font-size: 0.58rem;
   letter-spacing: 0.1em;
   color: rgba(109, 190, 214, 0.6);
-  padding: 12px 16px;
+  padding: 12px 14px;
 }
 
 .simRow {
@@ -361,6 +353,7 @@
   grid-template-columns: 1.2fr 1fr 1.3fr 1.3fr 1.4fr;
   border-bottom: 1px solid rgba(109, 190, 214, 0.05);
   transition: background 150ms ease;
+  min-width: 520px;
 }
 
 .simRow:last-child {
@@ -372,11 +365,10 @@
 }
 
 .simCell {
-  font-size: 0.8rem;
+  font-size: 0.78rem;
   color: rgba(255, 255, 255, 0.6);
-  padding: 16px;
+  padding: 14px;
   line-height: 1.6;
-  white-space: pre-line;
 }
 
 .simNegative {
@@ -427,7 +419,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 14px 20px;
+  padding: 13px 18px;
   border-bottom: 1px solid rgba(109, 190, 214, 0.05);
   gap: 12px;
   transition: background 150ms ease;
@@ -453,14 +445,14 @@
 }
 
 .fundingItemLabel {
-  font-size: 0.8rem;
+  font-size: 0.78rem;
   color: rgba(255, 255, 255, 0.55);
   line-height: 1.5;
 }
 
 .fundingItemAmount {
   font-family: var(--font-orbitron);
-  font-size: 0.75rem;
+  font-size: 0.72rem;
   color: var(--color-current);
   white-space: nowrap;
   flex-shrink: 0;
@@ -527,7 +519,7 @@
 }
 
 .roadmapTitle {
-  font-size: 0.95rem;
+  font-size: 0.92rem;
   font-weight: 700;
   color: #ffffff;
   line-height: 1.5;
@@ -596,11 +588,10 @@
 @media (max-width: 768px) {
   .container {
     padding: 100px 0 60px;
-    gap: 60px;
+    gap: 56px;
     max-width: calc(100% - 32px);
   }
 
-  /* KPI：2列に */
   .kpiRow {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -610,112 +601,98 @@
   }
 
   .kpiNumber {
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
 
   .kpiLabel {
-    font-size: 0.65rem;
+    font-size: 0.62rem;
   }
 
-  /* カード：1列に */
   .cards {
     grid-template-columns: 1fr;
   }
 
-  /* 収益リスト：グリッドを縦積みに */
   .revenueItem {
-    grid-template-columns: 40px 1fr;
+    grid-template-columns: 36px 1fr;
     grid-template-rows: auto auto;
+    gap: 12px 16px;
+    padding: 20px 16px;
   }
 
   .revenueAmount {
     grid-column: 2;
     grid-row: 2;
     text-align: left;
-    padding-top: 0;
-    padding-left: 0;
   }
 
   .revenueAmountNum {
-    font-size: 0.78rem;
+    font-size: 0.75rem;
+    white-space: normal;
   }
 
   .revenueAmountLabel {
     white-space: normal;
   }
 
-  /* グラフ */
   .chartWrap {
-    padding: 20px 12px 16px;
+    padding: 16px 12px;
     border-radius: 12px;
   }
 
-  .chartLegendRow {
-    gap: 12px;
-    flex-wrap: wrap;
-  }
-
-  /* テーブル：横スクロール */
-  .simTable {
-    display: block;
-  }
-
-  .simHeader,
-  .simRow {
-    min-width: 560px;
-  }
-
-  .simCell,
-  .simHeaderCell {
-    padding: 12px 10px;
-    font-size: 0.72rem;
-  }
-
-  /* 資金調達グリッド：1列に */
   .fundingGrid {
     grid-template-columns: 1fr;
-    gap: 32px;
+    gap: 28px;
   }
 
   .fundingItem {
     padding: 12px 14px;
-    flex-direction: column;
-    align-items: flex-start;
+    flex-wrap: wrap;
     gap: 4px;
   }
 
-  .fundingItemAmount {
-    font-size: 0.82rem;
+  .fundingItemLabel {
+    font-size: 0.75rem;
+    flex: 1;
+    min-width: 0;
   }
 
-  /* ロードマップ */
+  .fundingItemAmount {
+    font-size: 0.75rem;
+  }
+
   .roadmapItem {
-    padding: 20px 16px;
-    gap: 14px;
+    padding: 18px 14px;
+    gap: 12px;
   }
 
   .roadmapTitle {
-    font-size: 0.88rem;
+    font-size: 0.85rem;
   }
 
-  /* メッセージ */
+  .roadmapText {
+    font-size: 0.78rem;
+  }
+
   .message {
-    padding: 28px 20px;
+    padding: 24px 18px;
   }
 
   .messageText {
     font-size: 0.85rem;
+    line-height: 1.9;
   }
 
-  /* CTA */
   .cta {
     flex-direction: column;
     align-items: center;
     padding: 40px 0;
   }
 
-  /* セクションタイトル */
   .sectionTitle {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
+  }
+
+  .sectionLead {
+    font-size: 0.83rem;
   }
 }
