@@ -2,59 +2,51 @@
 
 import styles from './page.module.css';
 import ButtonLink from '@/app/_components/ButtonLink';
-import {
-  AreaChart,
-  Area,
-  XAxis,
-  YAxis,
-  CartesianGrid,
-  Tooltip,
-  ReferenceLine,
-  ResponsiveContainer,
-  Legend,
-} from 'recharts';
 
 const chartData = [
-  { month: '1ヶ月目',  revenue: 40,  expense: 265, profit: -225 },
-  { month: '2ヶ月目',  revenue: 50,  expense: 265, profit: -215 },
-  { month: '3ヶ月目',  revenue: 150, expense: 280, profit: -130 },
-  { month: '4ヶ月目',  revenue: 190, expense: 285, profit: -95  },
-  { month: '5ヶ月目',  revenue: 220, expense: 295, profit: -75  },
-  { month: '6ヶ月目',  revenue: 250, expense: 310, profit: -60  },
-  { month: '7ヶ月目',  revenue: 300, expense: 315, profit: -15  },
-  { month: '8ヶ月目',  revenue: 350, expense: 320, profit: 30   },
-  { month: '9ヶ月目',  revenue: 400, expense: 325, profit: 75   },
-  { month: '10ヶ月目', revenue: 440, expense: 328, profit: 112  },
-  { month: '11ヶ月目', revenue: 470, expense: 330, profit: 140  },
-  { month: '12ヶ月目', revenue: 500, expense: 330, profit: 170  },
-  { month: '13ヶ月目', revenue: 560, expense: 350, profit: 210  },
-  { month: '18ヶ月目', revenue: 650, expense: 380, profit: 270  },
-  { month: '24ヶ月目', revenue: 700, expense: 400, profit: 300  },
+  { month: '1ヶ月',  revenue: 40,  expense: 265, profit: -225 },
+  { month: '2ヶ月',  revenue: 50,  expense: 265, profit: -215 },
+  { month: '3ヶ月',  revenue: 150, expense: 280, profit: -130 },
+  { month: '4ヶ月',  revenue: 190, expense: 285, profit: -95  },
+  { month: '5ヶ月',  revenue: 220, expense: 295, profit: -75  },
+  { month: '6ヶ月',  revenue: 250, expense: 310, profit: -60  },
+  { month: '7ヶ月',  revenue: 300, expense: 315, profit: -15  },
+  { month: '8ヶ月',  revenue: 350, expense: 320, profit: 30   },
+  { month: '9ヶ月',  revenue: 400, expense: 325, profit: 75   },
+  { month: '10ヶ月', revenue: 440, expense: 328, profit: 112  },
+  { month: '11ヶ月', revenue: 470, expense: 330, profit: 140  },
+  { month: '12ヶ月', revenue: 500, expense: 330, profit: 170  },
+  { month: '13ヶ月', revenue: 560, expense: 350, profit: 210  },
+  { month: '18ヶ月', revenue: 650, expense: 380, profit: 270  },
+  { month: '24ヶ月', revenue: 700, expense: 400, profit: 300  },
 ];
 
-const CustomTooltip = ({ active, payload, label }: {
-  active?: boolean;
-  payload?: Array<{ name: string; value: number; color: string }>;
-  label?: string;
-}) => {
-  if (active && payload && payload.length) {
-    return (
-      <div className={styles.chartTooltip}>
-        <p className={styles.chartTooltipLabel}>{label}</p>
-        {payload.map((entry) => (
-          <p
-            key={entry.name}
-            className={styles.chartTooltipItem}
-            style={{ color: entry.color }}
-          >
-            {entry.name}：{entry.value > 0 ? '+' : ''}{entry.value}万円
-          </p>
-        ))}
-      </div>
-    );
-  }
-  return null;
+const CHART_W = 900;
+const CHART_H = 300;
+const PAD = { top: 24, right: 24, bottom: 40, left: 56 };
+const innerW = CHART_W - PAD.left - PAD.right;
+const innerH = CHART_H - PAD.top - PAD.bottom;
+
+const allValues = chartData.flatMap(d => [d.revenue, d.expense, d.profit]);
+const minVal = Math.min(...allValues);
+const maxVal = Math.max(...allValues);
+const range = maxVal - minVal;
+
+const xScale = (i: number) => PAD.left + (i / (chartData.length - 1)) * innerW;
+const yScale = (v: number) => PAD.top + innerH - ((v - minVal) / range) * innerH;
+
+const toPath = (key: 'revenue' | 'expense' | 'profit') =>
+  chartData
+    .map((d, i) => `${i === 0 ? 'M' : 'L'} ${xScale(i).toFixed(1)},${yScale(d[key]).toFixed(1)}`)
+    .join(' ');
+
+const toArea = (key: 'revenue' | 'expense' | 'profit', baseY: number) => {
+  const line = toPath(key);
+  const last = `L ${xScale(chartData.length - 1).toFixed(1)},${baseY} L ${xScale(0).toFixed(1)},${baseY} Z`;
+  return `${line} ${last}`;
 };
+
+const zeroY = yScale(0);
 
 export default function Page() {
   return (
@@ -214,7 +206,7 @@ export default function Page() {
         </div>
       </div>
 
-      {/* 収支シミュレーション + グラフ */}
+      {/* 収支シミュレーション + SVGグラフ */}
       <div className={styles.section}>
         <div className={styles.sectionHeader}>
           <p className={styles.sectionEn}>FINANCIAL SIMULATION</p>
@@ -224,95 +216,136 @@ export default function Page() {
           </p>
         </div>
 
-        {/* グラフ */}
+        {/* SVGグラフ */}
         <div className={styles.chartWrap}>
           <div className={styles.chartLegendRow}>
             <span className={styles.chartLegendRevenue}>■ 売上</span>
             <span className={styles.chartLegendExpense}>■ 支出</span>
             <span className={styles.chartLegendProfit}>■ 損益</span>
           </div>
-          <ResponsiveContainer width="100%" height={360}>
-            <AreaChart
-              data={chartData}
-              margin={{ top: 16, right: 16, left: 0, bottom: 0 }}
+
+          <div className={styles.chartSvgWrap}>
+            <svg
+              viewBox={`0 0 ${CHART_W} ${CHART_H}`}
+              preserveAspectRatio="xMidYMid meet"
+              className={styles.chartSvg}
             >
               <defs>
-                <linearGradient id="colorRevenue" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="5%"  stopColor="rgba(109,190,214,0.5)" />
-                  <stop offset="95%" stopColor="rgba(109,190,214,0.02)" />
+                <linearGradient id="gradRevenue" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%"   stopColor="rgba(109,190,214,0.35)" />
+                  <stop offset="100%" stopColor="rgba(109,190,214,0.02)" />
                 </linearGradient>
-                <linearGradient id="colorExpense" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="5%"  stopColor="rgba(255,100,100,0.3)" />
-                  <stop offset="95%" stopColor="rgba(255,100,100,0.02)" />
+                <linearGradient id="gradExpense" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%"   stopColor="rgba(255,100,100,0.25)" />
+                  <stop offset="100%" stopColor="rgba(255,100,100,0.02)" />
                 </linearGradient>
-                <linearGradient id="colorProfit" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="5%"  stopColor="rgba(100,220,150,0.4)" />
-                  <stop offset="95%" stopColor="rgba(100,220,150,0.02)" />
+                <linearGradient id="gradProfit" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%"   stopColor="rgba(100,220,150,0.3)" />
+                  <stop offset="100%" stopColor="rgba(100,220,150,0.02)" />
                 </linearGradient>
               </defs>
-              <CartesianGrid
-                strokeDasharray="3 3"
-                stroke="rgba(255,255,255,0.05)"
-                vertical={false}
-              />
-              <XAxis
-                dataKey="month"
-                tick={{ fill: 'rgba(255,255,255,0.3)', fontSize: 10 }}
-                axisLine={{ stroke: 'rgba(255,255,255,0.1)' }}
-                tickLine={false}
-                interval={2}
-              />
-              <YAxis
-                tick={{ fill: 'rgba(255,255,255,0.3)', fontSize: 10 }}
-                axisLine={false}
-                tickLine={false}
-                tickFormatter={(v) => `${v}万`}
-                width={44}
-              />
-              <Tooltip content={<CustomTooltip />} />
-              <ReferenceLine
-                y={0}
+
+              {/* グリッド横線 */}
+              {[-200, -100, 0, 100, 200, 300, 400, 500, 600, 700].map((v) => (
+                <line
+                  key={v}
+                  x1={PAD.left}
+                  x2={CHART_W - PAD.right}
+                  y1={yScale(v)}
+                  y2={yScale(v)}
+                  stroke="rgba(255,255,255,0.05)"
+                  strokeWidth="1"
+                />
+              ))}
+
+              {/* Y軸ラベル */}
+              {[-200, 0, 200, 400, 700].map((v) => (
+                <text
+                  key={v}
+                  x={PAD.left - 8}
+                  y={yScale(v) + 4}
+                  textAnchor="end"
+                  fontSize="10"
+                  fill="rgba(255,255,255,0.25)"
+                >
+                  {v}万
+                </text>
+              ))}
+
+              {/* X軸ラベル */}
+              {chartData.map((d, i) => (
+                i % 2 === 0 && (
+                  <text
+                    key={i}
+                    x={xScale(i)}
+                    y={CHART_H - 8}
+                    textAnchor="middle"
+                    fontSize="10"
+                    fill="rgba(255,255,255,0.25)"
+                  >
+                    {d.month}
+                  </text>
+                )
+              ))}
+
+              {/* 損益分岐ライン (y=0) */}
+              <line
+                x1={PAD.left}
+                x2={CHART_W - PAD.right}
+                y1={zeroY}
+                y2={zeroY}
                 stroke="rgba(255,255,255,0.2)"
-                strokeDasharray="4 4"
-                label={{
-                  value: '損益分岐ライン',
-                  fill: 'rgba(255,255,255,0.35)',
-                  fontSize: 10,
-                  position: 'insideTopRight',
-                }}
+                strokeWidth="1"
+                strokeDasharray="6 4"
               />
-              <Area
-                type="monotone"
-                dataKey="expense"
-                name="支出"
-                stroke="rgba(255,100,100,0.7)"
-                strokeWidth={2}
-                fill="url(#colorExpense)"
-                dot={false}
-                activeDot={{ r: 4, fill: 'rgba(255,100,100,0.9)' }}
+              <text
+                x={CHART_W - PAD.right - 4}
+                y={zeroY - 6}
+                textAnchor="end"
+                fontSize="10"
+                fill="rgba(255,255,255,0.3)"
+              >
+                損益分岐ライン
+              </text>
+
+              {/* エリア塗り */}
+              <path d={toArea('expense', PAD.top + innerH)} fill="url(#gradExpense)" />
+              <path d={toArea('revenue', PAD.top + innerH)} fill="url(#gradRevenue)" />
+              <path d={toArea('profit', zeroY)}             fill="url(#gradProfit)" />
+
+              {/* ライン */}
+              <path d={toPath('expense')} fill="none" stroke="rgba(255,100,100,0.7)"  strokeWidth="2" strokeLinejoin="round" />
+              <path d={toPath('revenue')} fill="none" stroke="rgba(109,190,214,0.9)"  strokeWidth="2" strokeLinejoin="round" />
+              <path d={toPath('profit')}  fill="none" stroke="rgba(100,220,150,0.85)" strokeWidth="2" strokeLinejoin="round" />
+
+              {/* 損益分岐点マーカー（8ヶ月目） */}
+              <circle
+                cx={xScale(7)}
+                cy={yScale(chartData[7].profit)}
+                r="5"
+                fill="rgba(100,220,150,1)"
               />
-              <Area
-                type="monotone"
-                dataKey="revenue"
-                name="売上"
-                stroke="rgba(109,190,214,0.9)"
-                strokeWidth={2}
-                fill="url(#colorRevenue)"
-                dot={false}
-                activeDot={{ r: 4, fill: 'rgba(109,190,214,1)' }}
+              <line
+                x1={xScale(7)}
+                x2={xScale(7)}
+                y1={yScale(chartData[7].profit) - 8}
+                y2={PAD.top + 4}
+                stroke="rgba(100,220,150,0.3)"
+                strokeWidth="1"
+                strokeDasharray="3 3"
               />
-              <Area
-                type="monotone"
-                dataKey="profit"
-                name="損益"
-                stroke="rgba(100,220,150,0.8)"
-                strokeWidth={2}
-                fill="url(#colorProfit)"
-                dot={false}
-                activeDot={{ r: 4, fill: 'rgba(100,220,150,1)' }}
-              />
-            </AreaChart>
-          </ResponsiveContainer>
+              <text
+                x={xScale(7)}
+                y={PAD.top - 2}
+                textAnchor="middle"
+                fontSize="10"
+                fill="rgba(100,220,150,0.8)"
+              >
+                ▲ 黒字転換
+              </text>
+            </svg>
+          </div>
+
           <p className={styles.chartNote}>
             ※ 8ヶ月目前後で損益分岐点を通過し、黒字転換を目指します。施設外就労・業務委託フェーズ移行により更なる売上拡大を見込みます。
           </p>
