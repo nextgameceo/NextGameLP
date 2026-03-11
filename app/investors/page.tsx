@@ -1,5 +1,60 @@
+'use client';
+
 import styles from './page.module.css';
 import ButtonLink from '@/app/_components/ButtonLink';
+import {
+  AreaChart,
+  Area,
+  XAxis,
+  YAxis,
+  CartesianGrid,
+  Tooltip,
+  ReferenceLine,
+  ResponsiveContainer,
+  Legend,
+} from 'recharts';
+
+const chartData = [
+  { month: '1ヶ月目',  revenue: 40,  expense: 265, profit: -225 },
+  { month: '2ヶ月目',  revenue: 50,  expense: 265, profit: -215 },
+  { month: '3ヶ月目',  revenue: 150, expense: 280, profit: -130 },
+  { month: '4ヶ月目',  revenue: 190, expense: 285, profit: -95  },
+  { month: '5ヶ月目',  revenue: 220, expense: 295, profit: -75  },
+  { month: '6ヶ月目',  revenue: 250, expense: 310, profit: -60  },
+  { month: '7ヶ月目',  revenue: 300, expense: 315, profit: -15  },
+  { month: '8ヶ月目',  revenue: 350, expense: 320, profit: 30   },
+  { month: '9ヶ月目',  revenue: 400, expense: 325, profit: 75   },
+  { month: '10ヶ月目', revenue: 440, expense: 328, profit: 112  },
+  { month: '11ヶ月目', revenue: 470, expense: 330, profit: 140  },
+  { month: '12ヶ月目', revenue: 500, expense: 330, profit: 170  },
+  { month: '13ヶ月目', revenue: 560, expense: 350, profit: 210  },
+  { month: '18ヶ月目', revenue: 650, expense: 380, profit: 270  },
+  { month: '24ヶ月目', revenue: 700, expense: 400, profit: 300  },
+];
+
+const CustomTooltip = ({ active, payload, label }: {
+  active?: boolean;
+  payload?: Array<{ name: string; value: number; color: string }>;
+  label?: string;
+}) => {
+  if (active && payload && payload.length) {
+    return (
+      <div className={styles.chartTooltip}>
+        <p className={styles.chartTooltipLabel}>{label}</p>
+        {payload.map((entry) => (
+          <p
+            key={entry.name}
+            className={styles.chartTooltipItem}
+            style={{ color: entry.color }}
+          >
+            {entry.name}：{entry.value > 0 ? '+' : ''}{entry.value}万円
+          </p>
+        ))}
+      </div>
+    );
+  }
+  return null;
+};
 
 export default function Page() {
   return (
@@ -10,7 +65,10 @@ export default function Page() {
         <p className={styles.headerEn}>FOR INVESTORS</p>
         <h1 className={styles.headerTitle}>投資家・金融機関の方へ</h1>
         <p className={styles.headerLead}>
-          NEXTGAMEは、AIとITスキルを活用し、障害のある方が本当に稼げる就労環境を創ることを目的とした次世代型の就労支援事業です。{'\n\n'}本ホームページはNEXTGAMEの事業構想・ビジョン・ビジネスモデルを公開するオンライン事業計画書として作成されています。{'\n\n'}現在、事業立ち上げ資金として3,500万円の資金調達を計画しています。
+          NEXTGAMEは、AIとITスキルを活用し、障害のある方が本当に稼げる就労環境を創ることを目的とした次世代型の就労支援事業です。
+        </p>
+        <p className={styles.headerLead}>
+          本ホームページはNEXTGAMEの事業構想・ビジョン・ビジネスモデルを公開するオンライン事業計画書として作成されています。現在、事業立ち上げ資金として3,500万円の資金調達を計画しています。
         </p>
         <div className={styles.headerBadge}>
           このページは融資審査・投資検討のための情報開示ページです
@@ -20,12 +78,12 @@ export default function Page() {
       {/* KPI */}
       <div className={styles.kpiRow}>
         <div className={styles.kpi}>
-          <p className={styles.kpiNumber}>¥35,000,000</p>
+          <p className={styles.kpiNumber}>3,500万円</p>
           <p className={styles.kpiLabel}>融資目標額</p>
         </div>
         <div className={styles.kpi}>
           <p className={styles.kpiNumber}>20名+α</p>
-          <p className={styles.kpiLabel}>利用者定員（施設外就労で拡大可）</p>
+          <p className={styles.kpiLabel}>定員（施設外就労で拡大可）</p>
         </div>
         <div className={styles.kpi}>
           <p className={styles.kpiNumber}>3ヶ月目</p>
@@ -156,6 +214,150 @@ export default function Page() {
         </div>
       </div>
 
+      {/* 収支シミュレーション + グラフ */}
+      <div className={styles.section}>
+        <div className={styles.sectionHeader}>
+          <p className={styles.sectionEn}>FINANCIAL SIMULATION</p>
+          <h2 className={styles.sectionTitle}>収支シミュレーション</h2>
+          <p className={styles.sectionLead}>
+            開所から24ヶ月の収支見通しです。3ヶ月目より給付金収入が開始し、8ヶ月目前後での損益分岐点通過を目指します。
+          </p>
+        </div>
+
+        {/* グラフ */}
+        <div className={styles.chartWrap}>
+          <div className={styles.chartLegendRow}>
+            <span className={styles.chartLegendRevenue}>■ 売上</span>
+            <span className={styles.chartLegendExpense}>■ 支出</span>
+            <span className={styles.chartLegendProfit}>■ 損益</span>
+          </div>
+          <ResponsiveContainer width="100%" height={360}>
+            <AreaChart
+              data={chartData}
+              margin={{ top: 16, right: 16, left: 0, bottom: 0 }}
+            >
+              <defs>
+                <linearGradient id="colorRevenue" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="5%"  stopColor="rgba(109,190,214,0.5)" />
+                  <stop offset="95%" stopColor="rgba(109,190,214,0.02)" />
+                </linearGradient>
+                <linearGradient id="colorExpense" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="5%"  stopColor="rgba(255,100,100,0.3)" />
+                  <stop offset="95%" stopColor="rgba(255,100,100,0.02)" />
+                </linearGradient>
+                <linearGradient id="colorProfit" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="5%"  stopColor="rgba(100,220,150,0.4)" />
+                  <stop offset="95%" stopColor="rgba(100,220,150,0.02)" />
+                </linearGradient>
+              </defs>
+              <CartesianGrid
+                strokeDasharray="3 3"
+                stroke="rgba(255,255,255,0.05)"
+                vertical={false}
+              />
+              <XAxis
+                dataKey="month"
+                tick={{ fill: 'rgba(255,255,255,0.3)', fontSize: 10 }}
+                axisLine={{ stroke: 'rgba(255,255,255,0.1)' }}
+                tickLine={false}
+                interval={2}
+              />
+              <YAxis
+                tick={{ fill: 'rgba(255,255,255,0.3)', fontSize: 10 }}
+                axisLine={false}
+                tickLine={false}
+                tickFormatter={(v) => `${v}万`}
+                width={44}
+              />
+              <Tooltip content={<CustomTooltip />} />
+              <ReferenceLine
+                y={0}
+                stroke="rgba(255,255,255,0.2)"
+                strokeDasharray="4 4"
+                label={{
+                  value: '損益分岐ライン',
+                  fill: 'rgba(255,255,255,0.35)',
+                  fontSize: 10,
+                  position: 'insideTopRight',
+                }}
+              />
+              <Area
+                type="monotone"
+                dataKey="expense"
+                name="支出"
+                stroke="rgba(255,100,100,0.7)"
+                strokeWidth={2}
+                fill="url(#colorExpense)"
+                dot={false}
+                activeDot={{ r: 4, fill: 'rgba(255,100,100,0.9)' }}
+              />
+              <Area
+                type="monotone"
+                dataKey="revenue"
+                name="売上"
+                stroke="rgba(109,190,214,0.9)"
+                strokeWidth={2}
+                fill="url(#colorRevenue)"
+                dot={false}
+                activeDot={{ r: 4, fill: 'rgba(109,190,214,1)' }}
+              />
+              <Area
+                type="monotone"
+                dataKey="profit"
+                name="損益"
+                stroke="rgba(100,220,150,0.8)"
+                strokeWidth={2}
+                fill="url(#colorProfit)"
+                dot={false}
+                activeDot={{ r: 4, fill: 'rgba(100,220,150,1)' }}
+              />
+            </AreaChart>
+          </ResponsiveContainer>
+          <p className={styles.chartNote}>
+            ※ 8ヶ月目前後で損益分岐点を通過し、黒字転換を目指します。施設外就労・業務委託フェーズ移行により更なる売上拡大を見込みます。
+          </p>
+        </div>
+
+        {/* テーブル */}
+        <div className={styles.simTable}>
+          <div className={styles.simHeader}>
+            <p className={styles.simHeaderCell}>期間</p>
+            <p className={styles.simHeaderCell}>利用者数</p>
+            <p className={styles.simHeaderCell}>月次売上目安</p>
+            <p className={styles.simHeaderCell}>月次支出目安</p>
+            <p className={styles.simHeaderCell}>状況</p>
+          </div>
+          <div className={styles.simRow}>
+            <p className={styles.simCell}>1〜2ヶ月目</p>
+            <p className={styles.simCell}>2〜4名</p>
+            <p className={styles.simCell}>約30〜50万円</p>
+            <p className={styles.simCell}>約265万円</p>
+            <p className={`${styles.simCell} ${styles.simNegative}`}>赤字（運転資金で補填）</p>
+          </div>
+          <div className={styles.simRow}>
+            <p className={styles.simCell}>3〜6ヶ月目</p>
+            <p className={styles.simCell}>6〜12名</p>
+            <p className={styles.simCell}>約150〜250万円</p>
+            <p className={styles.simCell}>約280〜310万円</p>
+            <p className={`${styles.simCell} ${styles.simNegative}`}>縮小傾向の赤字</p>
+          </div>
+          <div className={styles.simRow}>
+            <p className={styles.simCell}>7〜12ヶ月目</p>
+            <p className={styles.simCell}>15〜20名</p>
+            <p className={styles.simCell}>約300〜500万円</p>
+            <p className={styles.simCell}>約310〜330万円</p>
+            <p className={`${styles.simCell} ${styles.simBreakeven}`}>損益分岐点通過</p>
+          </div>
+          <div className={styles.simRow}>
+            <p className={styles.simCell}>13ヶ月目〜</p>
+            <p className={styles.simCell}>20名＋施設外就労</p>
+            <p className={styles.simCell}>約500〜700万円</p>
+            <p className={styles.simCell}>約350〜400万円</p>
+            <p className={`${styles.simCell} ${styles.simPositive}`}>安定黒字</p>
+          </div>
+        </div>
+      </div>
+
       {/* 4. Funding Plan */}
       <div className={styles.section}>
         <div className={styles.sectionHeader}>
@@ -219,54 +421,6 @@ export default function Page() {
                 <p className={styles.fundingItemAmount}>3,500万円</p>
               </div>
             </div>
-          </div>
-        </div>
-      </div>
-
-      {/* 収支シミュレーション */}
-      <div className={styles.section}>
-        <div className={styles.sectionHeader}>
-          <p className={styles.sectionEn}>FINANCIAL SIMULATION</p>
-          <h2 className={styles.sectionTitle}>収支シミュレーション</h2>
-          <p className={styles.sectionLead}>
-            開所から36ヶ月の収支見通しです。3ヶ月目より給付金収入が開始し、利用者増加とIT受託売上の拡大により段階的に黒字転換を目指します。
-          </p>
-        </div>
-        <div className={styles.simTable}>
-          <div className={styles.simHeader}>
-            <p className={styles.simHeaderCell}>期間</p>
-            <p className={styles.simHeaderCell}>利用者数</p>
-            <p className={styles.simHeaderCell}>月次売上目安</p>
-            <p className={styles.simHeaderCell}>月次支出目安</p>
-            <p className={styles.simHeaderCell}>状況</p>
-          </div>
-          <div className={styles.simRow}>
-            <p className={styles.simCell}>1〜2ヶ月目</p>
-            <p className={styles.simCell}>2〜4名</p>
-            <p className={styles.simCell}>IT売上のみ{'\n'}約30〜50万円</p>
-            <p className={styles.simCell}>約265万円</p>
-            <p className={`${styles.simCell} ${styles.simNegative}`}>赤字（運転資金で補填）</p>
-          </div>
-          <div className={styles.simRow}>
-            <p className={styles.simCell}>3〜6ヶ月目</p>
-            <p className={styles.simCell}>6〜12名</p>
-            <p className={styles.simCell}>給付金＋IT{'\n'}約150〜250万円</p>
-            <p className={styles.simCell}>約280〜310万円</p>
-            <p className={`${styles.simCell} ${styles.simNegative}`}>縮小傾向の赤字</p>
-          </div>
-          <div className={styles.simRow}>
-            <p className={styles.simCell}>7〜12ヶ月目</p>
-            <p className={styles.simCell}>15〜20名</p>
-            <p className={styles.simCell}>給付金＋IT{'\n'}約300〜500万円</p>
-            <p className={styles.simCell}>約310〜330万円</p>
-            <p className={`${styles.simCell} ${styles.simBreakeven}`}>損益分岐点通過</p>
-          </div>
-          <div className={styles.simRow}>
-            <p className={styles.simCell}>13ヶ月目〜</p>
-            <p className={styles.simCell}>20名＋施設外就労</p>
-            <p className={styles.simCell}>約500〜700万円</p>
-            <p className={styles.simCell}>約350〜400万円</p>
-            <p className={`${styles.simCell} ${styles.simPositive}`}>安定黒字</p>
           </div>
         </div>
       </div>
@@ -354,7 +508,13 @@ export default function Page() {
         </div>
         <div className={styles.message}>
           <p className={styles.messageText}>
-            NEXTGAMEは、福祉 × AI × IT という新しい領域で、社会課題の解決と持続可能な事業成長を両立する次世代型の福祉モデルを創ります。{'\n\n'}障害のある方が「通うための場所」ではなく、「稼ぐスキルを会得する場所」として機能する事業所を目指しています。利用者がAIスキルを武器に個人事業主として独立するキャリアパスを設計することで、福祉の在り方そのものを変えていきます。{'\n\n'}資本金30万円からのスタートです。しかし、この確信は誰にも負けません。数字と熱量、両方で判断していただければ幸いです。
+            NEXTGAMEは、福祉 × AI × IT という新しい領域で、社会課題の解決と持続可能な事業成長を両立する次世代型の福祉モデルを創ります。
+          </p>
+          <p className={styles.messageText}>
+            障害のある方が「通うための場所」ではなく、「稼ぐスキルを会得する場所」として機能する事業所を目指しています。利用者がAIスキルを武器に個人事業主として独立するキャリアパスを設計することで、福祉の在り方そのものを変えていきます。
+          </p>
+          <p className={styles.messageText}>
+            資本金30万円からのスタートです。しかし、この確信は誰にも負けません。数字と熱量、両方で判断していただければ幸いです。
           </p>
           <p className={styles.messageSignature}>代表取締役　内山 博貴</p>
         </div>
