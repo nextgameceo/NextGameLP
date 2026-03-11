@@ -53,14 +53,12 @@ export default async function Page() {
           <div className={styles.sectionInner}>
             <div className={styles.sectionLeft}>
               <p className={styles.sectionNumber}>01</p>
-              <h2 className={styles.sectionTitleEn}>To The Companys</h2>
+              <h2 className={styles.sectionTitleEn}>To The Company</h2>
               <span className={styles.sectionTitleJa}>企業様へ</span>
             </div>
             <div className={styles.sectionRight}>
               <p className={styles.sectionDescription}>
-                貴社のホームページはまだWordPressですか？{'\n\n'}
-                制作会社に100万円以上を支払い、出来上がったサイトを「あとはご自身で」と渡される時代は終わりました。{'\n\n'}
-                NEXTGAMEは初期費用ゼロ。{'\n\n'}設計・デザイン・開発・運用・改善まで、すべてを一括でサポートします。{'\n\n'}契約した翌月から、動き続けるWebサイトへ。{'\n\n'}作って終わりではなく、毎日進化する資産として。{'\n\n'}
+                貴社のホームページはまだWordPressですか？{'\n\n'}制作会社に100万円以上を支払い、出来上がったサイトを「あとはご自身で」と渡される時代は終わりました。{'\n\n'}NEXTGAMEは初期費用ゼロ。設計・デザイン・開発・運用・改善まで、すべてを一括でサポートします。{'\n\n'}契約した翌月から、動き続けるWebサイトへ。作って終わりではなく、毎日進化する資産として。
               </p>
               <div>
                 <ButtonLink href="/business">Read More</ButtonLink>
@@ -180,10 +178,10 @@ export default async function Page() {
               </div>
               <div className={styles.sectionRight}>
                 <p className={styles.sectionDescription}>
-                  資本金30万円からのスタートです。{'\n\n'}しかし、障害のある方々がAIスキルで本当に稼げる場所をつくるという確信は、誰にも負けません。{'\n\n'}このホームページ自体が、私たちの事業計画書です。融資目標3,500万円。数字と熱量、両方で判断していただければ幸いです。
+                  投資家・金融機関の皆様へ{'\n\n'}NEXTGAMEは、AIとITスキルを活用し、障害のある方が本当に稼げる就労環境を創ることを目的とした次世代型の就労支援事業です。{'\n\n'}日本では現在、障害者人口の増加と共に、就労支援サービスの需要が急速に拡大しています。しかし多くのB型作業所では、平均工賃が月額2万円前後に留まるなど、持続的な収益モデルの構築が大きな課題となっています。{'\n\n'}NEXTGAMEはこの課題に対し、AI・ITスキルを中心とした高付加価値業務を提供することで、利用者の収入向上と事業の持続可能性を両立する新しいモデルを構築します。{'\n\n'}本ホームページは、NEXTGAMEの事業構想・ビジョン・事業モデルをまとめた、オンライン事業計画書として公開しています。現在、事業立ち上げ資金として3,500万円の資金調達を計画しています。{'\n\n'}社会課題の解決と持続可能な事業成長を両立する新しい福祉モデルにご関心をお持ちの投資家・金融機関の皆様は、ぜひ詳細をご覧ください。
                 </p>
                 <div>
-                  <ButtonLink href="/investors">Read More</ButtonLink>
+                  <ButtonLink href="/investors">詳細を見る</ButtonLink>
                 </div>
               </div>
             </div>
