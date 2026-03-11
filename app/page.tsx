@@ -53,7 +53,7 @@ export default async function Page() {
           <div className={styles.sectionInner}>
             <div className={styles.sectionLeft}>
               <p className={styles.sectionNumber}>01</p>
-              <h2 className={styles.sectionTitleEn}>To The Company</h2>
+              <h2 className={styles.sectionTitleEn}>To The Companys</h2>
               <span className={styles.sectionTitleJa}>企業様へ</span>
             </div>
             <div className={styles.sectionRight}>
@@ -175,7 +175,7 @@ export default async function Page() {
             <div className={styles.sectionInner}>
               <div className={styles.sectionLeft}>
                 <p className={styles.sectionNumber}>06</p>
-                <h2 className={styles.sectionTitleEn}>Investors</h2>
+                <h2 className={styles.sectionTitleEn}>For Investors</h2>
                 <span className={styles.sectionTitleJa}>投資家・融資機関の方へ</span>
               </div>
               <div className={styles.sectionRight}>
