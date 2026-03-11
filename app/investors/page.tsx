@@ -5,12 +5,12 @@ export default function Page() {
   return (
     <div className={styles.container}>
 
-      {/* ヘッダー */}
+      {/* 1. Hero */}
       <div className={styles.header}>
-        <p className={styles.headerEn}>INVESTORS & LENDERS</p>
-        <h1 className={styles.headerTitle}>投資家・融資機関の方へ</h1>
+        <p className={styles.headerEn}>FOR INVESTORS</p>
+        <h1 className={styles.headerTitle}>投資家・金融機関の方へ</h1>
         <p className={styles.headerLead}>
-          NEXTGAME株式会社は、AI特化型就労継続支援B型事業所として愛知県名古屋市への開所を目指しています。本ページでは事業計画・収支シミュレーション・資金調達計画を開示しています。
+          NEXTGAMEは、AIとITスキルを活用し、障害のある方が本当に稼げる就労環境を創ることを目的とした次世代型の就労支援事業です。{'\n\n'}本ホームページはNEXTGAMEの事業構想・ビジョン・ビジネスモデルを公開するオンライン事業計画書として作成されています。{'\n\n'}現在、事業立ち上げ資金として3,500万円の資金調達を計画しています。
         </p>
         <div className={styles.headerBadge}>
           このページは融資審査・投資検討のための情報開示ページです
@@ -37,44 +37,47 @@ export default function Page() {
         </div>
       </div>
 
-      {/* なぜ今か */}
+      {/* 2. Market Opportunity */}
       <div className={styles.section}>
         <div className={styles.sectionHeader}>
-          <p className={styles.sectionEn}>WHY NOW</p>
-          <h2 className={styles.sectionTitle}>なぜ今、このビジネスか</h2>
+          <p className={styles.sectionEn}>MARKET OPPORTUNITY</p>
+          <h2 className={styles.sectionTitle}>市場機会</h2>
+          <p className={styles.sectionLead}>
+            日本の障害者就労支援市場は拡大を続けており、NEXTGAMEが参入する領域には明確な課題と大きな機会が存在します。
+          </p>
         </div>
         <div className={styles.cards}>
           <div className={styles.card}>
             <p className={styles.cardEn}>01</p>
-            <h3 className={styles.cardTitle}>市場の安定性</h3>
+            <h3 className={styles.cardTitle}>市場規模</h3>
             <p className={styles.cardText}>
-              障害福祉サービスの給付金は国が支払う公費です。景気に左右されない安定収益が見込めます。就労継続支援B型の市場規模は年々拡大しており、需要は右肩上がりです。
+              日本の障害者人口は現在約964万人とされており、就労支援サービスの需要は年々拡大しています。就労継続支援B型事業所は全国約17,000事業所が存在し、市場規模は年間1兆円を超えています。
             </p>
           </div>
           <div className={styles.card}>
             <p className={styles.cardEn}>02</p>
-            <h3 className={styles.cardTitle}>AI特化の独自性</h3>
+            <h3 className={styles.cardTitle}>構造的課題</h3>
             <p className={styles.cardText}>
-              従来の作業所は単純作業が中心。NEXTGAMEはAIプロンプト・Web制作・楽曲制作に特化した日本初レベルの事業所です。競合が少なく、差別化が明確です。
+              しかし多くの事業所では平均工賃が月額約23,000円に留まり、収益性と持続可能性の課題を抱えています。単純作業中心のビジネスモデルでは、利用者の収入向上と事業継続の両立が困難な状況です。
             </p>
           </div>
           <div className={styles.card}>
             <p className={styles.cardEn}>03</p>
-            <h3 className={styles.cardTitle}>複数収益の構造</h3>
+            <h3 className={styles.cardTitle}>NEXTGAMEの解答</h3>
             <p className={styles.cardText}>
-              障害福祉給付金に加え、Web制作月額受託・楽曲制作・AIコンサルティングの4本柱で収益を構成。給付金が遅延しても受託収益でカバーできる構造です。
+              NEXTGAMEはAI・ITスキルを活用した高付加価値業務により、この構造を変えることを目指します。利用者の収入向上と事業の持続可能性を同時に実現する新しいモデルです。
             </p>
           </div>
         </div>
       </div>
 
-      {/* 収益モデル */}
+      {/* 3. Business Model */}
       <div className={styles.section}>
         <div className={styles.sectionHeader}>
-          <p className={styles.sectionEn}>REVENUE MODEL</p>
-          <h2 className={styles.sectionTitle}>収益モデル</h2>
+          <p className={styles.sectionEn}>BUSINESS MODEL</p>
+          <h2 className={styles.sectionTitle}>ビジネスモデル</h2>
           <p className={styles.sectionLead}>
-            4本柱の収益構造により、給付金収入が安定するまでの期間をIT受託売上で補完します。
+            NEXTGAMEは福祉給付金を基盤収益としながら、IT受託・教育・自社サービスの3軸で収益を積み上げます。
           </p>
         </div>
         <div className={styles.revenueList}>
@@ -85,10 +88,10 @@ export default function Page() {
               <div className={styles.revenueLine} />
             </div>
             <div className={styles.revenueBody}>
-              <p className={styles.revenueTag}>Welfare Benefits</p>
+              <p className={styles.revenueTag}>基盤収益</p>
               <h3 className={styles.revenueTitle}>障害福祉給付金</h3>
               <p className={styles.revenueText}>
-                利用者1名あたり月額約7,500〜10,000円×稼働日数×稼働率。利用者20名・稼働率90%時で月額約396万円。指定申請から3ヶ月後より収入開始。
+                国が支払う公費であり、景気に左右されない安定収益です。利用者数と稼働率に応じて給付金が増加し、利用者20名・稼働率90%時で月額約396万円を見込みます。指定申請から3ヶ月後より収入開始。
               </p>
             </div>
             <div className={styles.revenueAmount}>
@@ -103,10 +106,10 @@ export default function Page() {
               <div className={styles.revenueLine} />
             </div>
             <div className={styles.revenueBody}>
-              <p className={styles.revenueTag}>Web Development</p>
-              <h3 className={styles.revenueTitle}>Web制作 月額サブスク</h3>
+              <p className={styles.revenueTag}>IT業務アウトソーシング</p>
+              <h3 className={styles.revenueTitle}>企業からの受託業務</h3>
               <p className={styles.revenueText}>
-                初期費用ゼロ・月額10万円のホームページ制作サブスク。契約10社で月100万円。開所前から営業活動を開始し、開所時点での契約獲得を目指します。
+                企業からデータ処理・AI業務・コンテンツ制作・Web制作などを受託します。利用者がOJTで習得したスキルを実際の業務に活用し、工賃と事業収益を同時に生み出す構造です。
               </p>
             </div>
             <div className={styles.revenueAmount}>
@@ -121,15 +124,15 @@ export default function Page() {
               <div className={styles.revenueLine} />
             </div>
             <div className={styles.revenueBody}>
-              <p className={styles.revenueTag}>Music Production</p>
-              <h3 className={styles.revenueTitle}>楽曲制作</h3>
+              <p className={styles.revenueTag}>AI / ITスキル教育</p>
+              <h3 className={styles.revenueTitle}>高付加価値業務への参加環境</h3>
               <p className={styles.revenueText}>
-                AIを活用した楽曲制作をDistroKid・TuneCoreJapan経由で配信。利用者のスキル習得と収益化を同時に実現します。
+                利用者がAIツールやITスキルを習得し、高付加価値業務へ参加できる環境を構築します。楽曲制作でAIプロンプトを学び、Web制作・ITスキルへとステップアップするカリキュラムを設計しています。
               </p>
             </div>
             <div className={styles.revenueAmount}>
               <p className={styles.revenueAmountNum}>月3〜5曲/人</p>
-              <p className={styles.revenueAmountLabel}>制作目標</p>
+              <p className={styles.revenueAmountLabel}>楽曲制作目標</p>
             </div>
           </div>
 
@@ -138,18 +141,85 @@ export default function Page() {
               <p className={styles.revenueNum}>04</p>
             </div>
             <div className={styles.revenueBody}>
-              <p className={styles.revenueTag}>Prompt consulting</p>
-              <h3 className={styles.revenueTitle}>プロンプトコンサルティング</h3>
+              <p className={styles.revenueTag}>Web / AIサービス事業</p>
+              <h3 className={styles.revenueTitle}>自社サービスの展開</h3>
               <p className={styles.revenueText}>
-                ChatGPT・Claude・Geminiのプロンプト活用支援。月額30,000円/社。中小企業のAI導入ニーズに対応します。
+                自社のWebサービスやAI関連サービスを展開します。AIコンサルティング（月額30,000円/社）・Web制作サブスク（月額100,000円/社）により、福祉×IT×AIという新しい就労支援モデルを収益化します。
               </p>
             </div>
             <div className={styles.revenueAmount}>
-              <p className={styles.revenueAmountNum}>3万円×社数</p>
+              <p className={styles.revenueAmountNum}>3万円〜/社</p>
               <p className={styles.revenueAmountLabel}>月額</p>
             </div>
           </div>
 
+        </div>
+      </div>
+
+      {/* 4. Funding Plan */}
+      <div className={styles.section}>
+        <div className={styles.sectionHeader}>
+          <p className={styles.sectionEn}>FUNDING PLAN</p>
+          <h2 className={styles.sectionTitle}>資金調達計画</h2>
+          <p className={styles.sectionLead}>
+            NEXTGAMEでは事業立ち上げ資金として3,500万円の資金調達を計画しています。複数の調達先を組み合わせることでリスクを分散します。
+          </p>
+        </div>
+        <div className={styles.fundingGrid}>
+          <div className={styles.fundingUse}>
+            <p className={styles.fundingSubTitle}>資金用途</p>
+            <div className={styles.fundingItems}>
+              <div className={styles.fundingItem}>
+                <p className={styles.fundingItemLabel}>事業所開設費（物件取得・内装）</p>
+                <p className={styles.fundingItemAmount}>750万円</p>
+              </div>
+              <div className={styles.fundingItem}>
+                <p className={styles.fundingItemLabel}>設備投資（PC・IT環境 24台）</p>
+                <p className={styles.fundingItemAmount}>750万円</p>
+              </div>
+              <div className={styles.fundingItem}>
+                <p className={styles.fundingItemLabel}>人材採用・運転資金（6ヶ月分）</p>
+                <p className={styles.fundingItemAmount}>1,590万円</p>
+              </div>
+              <div className={styles.fundingItem}>
+                <p className={styles.fundingItemLabel}>指定申請・許認可費用</p>
+                <p className={styles.fundingItemAmount}>約100万円</p>
+              </div>
+              <div className={styles.fundingItem}>
+                <p className={styles.fundingItemLabel}>予備費</p>
+                <p className={styles.fundingItemAmount}>約310万円</p>
+              </div>
+              <div className={`${styles.fundingItem} ${styles.fundingTotal}`}>
+                <p className={styles.fundingItemLabel}>合計</p>
+                <p className={styles.fundingItemAmount}>3,500万円</p>
+              </div>
+            </div>
+          </div>
+          <div className={styles.fundingSource}>
+            <p className={styles.fundingSubTitle}>調達先</p>
+            <div className={styles.fundingItems}>
+              <div className={styles.fundingItem}>
+                <p className={styles.fundingItemLabel}>日本政策金融公庫（創業融資）</p>
+                <p className={styles.fundingItemAmount}>〜2,000万円</p>
+              </div>
+              <div className={styles.fundingItem}>
+                <p className={styles.fundingItemLabel}>銀行・信用金庫</p>
+                <p className={styles.fundingItemAmount}>〜1,500万円</p>
+              </div>
+              <div className={styles.fundingItem}>
+                <p className={styles.fundingItemLabel}>補助金・助成金</p>
+                <p className={styles.fundingItemAmount}>〜500万円</p>
+              </div>
+              <div className={styles.fundingItem}>
+                <p className={styles.fundingItemLabel}>エンジェル投資家</p>
+                <p className={styles.fundingItemAmount}>応相談</p>
+              </div>
+              <div className={`${styles.fundingItem} ${styles.fundingTotal}`}>
+                <p className={styles.fundingItemLabel}>目標合計</p>
+                <p className={styles.fundingItemAmount}>3,500万円</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -201,73 +271,6 @@ export default function Page() {
         </div>
       </div>
 
-      {/* 資金計画 */}
-      <div className={styles.section}>
-        <div className={styles.sectionHeader}>
-          <p className={styles.sectionEn}>FUNDING PLAN</p>
-          <h2 className={styles.sectionTitle}>資金調達計画</h2>
-          <p className={styles.sectionLead}>
-            総調達目標3,500万円。複数の調達先を組み合わせることでリスクを分散します。
-          </p>
-        </div>
-        <div className={styles.fundingGrid}>
-          <div className={styles.fundingUse}>
-            <p className={styles.fundingSubTitle}>資金用途</p>
-            <div className={styles.fundingItems}>
-              <div className={styles.fundingItem}>
-                <p className={styles.fundingItemLabel}>物件取得・内装費</p>
-                <p className={styles.fundingItemAmount}>750万円</p>
-              </div>
-              <div className={styles.fundingItem}>
-                <p className={styles.fundingItemLabel}>PC・周辺機器（24台）</p>
-                <p className={styles.fundingItemAmount}>750万円</p>
-              </div>
-              <div className={styles.fundingItem}>
-                <p className={styles.fundingItemLabel}>運転資金（6ヶ月分）</p>
-                <p className={styles.fundingItemAmount}>1,590万円</p>
-              </div>
-              <div className={styles.fundingItem}>
-                <p className={styles.fundingItemLabel}>指定申請・許認可費用</p>
-                <p className={styles.fundingItemAmount}>約100万円</p>
-              </div>
-              <div className={styles.fundingItem}>
-                <p className={styles.fundingItemLabel}>予備費</p>
-                <p className={styles.fundingItemAmount}>約310万円</p>
-              </div>
-              <div className={`${styles.fundingItem} ${styles.fundingTotal}`}>
-                <p className={styles.fundingItemLabel}>合計</p>
-                <p className={styles.fundingItemAmount}>3,500万円</p>
-              </div>
-            </div>
-          </div>
-          <div className={styles.fundingSource}>
-            <p className={styles.fundingSubTitle}>調達先</p>
-            <div className={styles.fundingItems}>
-              <div className={styles.fundingItem}>
-                <p className={styles.fundingItemLabel}>日本政策金融公庫（創業融資）</p>
-                <p className={styles.fundingItemAmount}>〜2,000万円</p>
-              </div>
-              <div className={styles.fundingItem}>
-                <p className={styles.fundingItemLabel}>銀行・信用金庫</p>
-                <p className={styles.fundingItemAmount}>〜1,500万円</p>
-              </div>
-              <div className={styles.fundingItem}>
-                <p className={styles.fundingItemLabel}>補助金・助成金</p>
-                <p className={styles.fundingItemAmount}>〜500万円</p>
-              </div>
-              <div className={styles.fundingItem}>
-                <p className={styles.fundingItemLabel}>エンジェル投資家</p>
-                <p className={styles.fundingItemAmount}>応相談</p>
-              </div>
-              <div className={`${styles.fundingItem} ${styles.fundingTotal}`}>
-                <p className={styles.fundingItemLabel}>目標合計</p>
-                <p className={styles.fundingItemAmount}>3,500万円</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
       {/* ロードマップ */}
       <div className={styles.section}>
         <div className={styles.sectionHeader}>
@@ -283,7 +286,7 @@ export default function Page() {
             <div className={styles.roadmapBody}>
               <p className={styles.roadmapTag}>完了</p>
               <h3 className={styles.roadmapTitle}>法人登記・ホームページ公開</h3>
-              <p className={styles.roadmapText}>NEXTGAME株式会社として法人登記完了。事業計画書としてのホームページを公開。</p>
+              <p className={styles.roadmapText}>NEXTGAME株式会社として法人登記完了。オンライン事業計画書としてホームページを公開。</p>
             </div>
           </div>
           <div className={styles.roadmapItem}>
@@ -321,12 +324,18 @@ export default function Page() {
         </div>
       </div>
 
-      {/* 代表メッセージ */}
-      <div className={styles.message}>
-        <p className={styles.messageText}>
-          資本金30万円からのスタートです。大きな数字ではありません。しかし、障害のある方々がAIスキルで本当に稼げる場所をつくるという確信は、誰にも負けません。このホームページ自体が、私たちの事業計画書です。数字と熱量、両方で判断していただければ幸いです。
-        </p>
-        <p className={styles.messageSignature}>代表取締役　内山 博貴</p>
+      {/* 5. Vision */}
+      <div className={styles.section}>
+        <div className={styles.sectionHeader}>
+          <p className={styles.sectionEn}>VISION</p>
+          <h2 className={styles.sectionTitle}>ビジョン</h2>
+        </div>
+        <div className={styles.message}>
+          <p className={styles.messageText}>
+            NEXTGAMEは、福祉 × AI × IT という新しい領域で、社会課題の解決と持続可能な事業成長を両立する次世代型の福祉モデルを創ります。{'\n\n'}障害のある方が「通うための場所」ではなく、「稼ぐスキルを会得する場所」として機能する事業所を目指しています。利用者がAIスキルを武器に個人事業主として独立するキャリアパスを設計することで、福祉の在り方そのものを変えていきます。{'\n\n'}資本金30万円からのスタートです。しかし、この確信は誰にも負けません。数字と熱量、両方で判断していただければ幸いです。
+          </p>
+          <p className={styles.messageSignature}>代表取締役　内山 博貴</p>
+        </div>
       </div>
 
       {/* CTA */}
