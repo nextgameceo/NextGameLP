@@ -94,7 +94,6 @@
   font-weight: 700;
   letter-spacing: 0.05em;
   color: rgba(255, 255, 255, 0.3);
-  white-space: nowrap;
 }
 
 .tabBtnActive .tabLabel {
@@ -104,7 +103,7 @@
 .tabJa {
   font-size: 0.65rem;
   color: rgba(255, 255, 255, 0.2);
-  letter-spacing: 0.08em;
+  letter-spacing: 0.05em;
 }
 
 .tabBtnActive .tabJa {
@@ -143,8 +142,8 @@
   display: inline-block;
   width: fit-content;
   font-family: var(--font-orbitron);
-  font-size: 0.65rem;
-  letter-spacing: 0.15em;
+  font-size: 0.6rem;
+  letter-spacing: 0.1em;
   color: var(--color-current);
   padding: 4px 12px;
   border: 1px solid rgba(109, 190, 214, 0.3);
@@ -162,7 +161,7 @@
 .serviceTitleJa {
   font-size: 0.82rem;
   color: rgba(255, 255, 255, 0.35);
-  letter-spacing: 0.05em;
+  letter-spacing: 0.03em;
 }
 
 .serviceBody {
@@ -193,7 +192,7 @@
 .techBadge {
   font-family: var(--font-orbitron);
   font-size: 0.58rem;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.05em;
   padding: 4px 10px;
   border-radius: 2px;
   background: rgba(109, 190, 214, 0.06);
@@ -212,27 +211,29 @@
 }
 
 .problemQuestion {
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: 700;
   color: #ffffff;
+  line-height: 1.5;
 }
 
 .problemList {
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 6px;
   padding-left: 12px;
 }
 
 .problemItem {
-  font-size: 0.88rem;
+  font-size: 0.85rem;
   color: rgba(255, 150, 150, 0.8);
-  letter-spacing: 0.05em;
+  line-height: 1.6;
 }
 
 .problemSub {
-  font-size: 0.9rem;
-  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.45);
+  line-height: 1.7;
   padding-top: 8px;
   border-top: 1px solid rgba(255, 100, 100, 0.1);
 }
@@ -247,23 +248,22 @@
 }
 
 .oldModelText {
-  font-size: 0.88rem;
+  font-size: 0.85rem;
   line-height: 1.9;
   color: rgba(255, 255, 255, 0.45);
 }
 
 .oldModelResult {
   display: flex;
-  gap: 12px;
+  gap: 8px;
   flex-wrap: wrap;
 }
 
 .oldModelResultItem {
   padding: 6px 14px;
   border: 1px solid rgba(255, 100, 100, 0.2);
-  font-size: 0.78rem;
+  font-size: 0.75rem;
   color: rgba(255, 150, 150, 0.7);
-  letter-spacing: 0.05em;
 }
 
 .oldModelSub {
@@ -283,19 +283,20 @@
 
 .answerLabel {
   font-family: var(--font-orbitron);
-  font-size: 0.7rem;
-  letter-spacing: 0.15em;
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
   color: var(--color-current);
 }
 
 .answerPrice {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   font-weight: 800;
   color: #ffffff;
+  line-height: 1.4;
 }
 
 .answerText {
-  font-size: 0.88rem;
+  font-size: 0.85rem;
   line-height: 1.9;
   color: rgba(255, 255, 255, 0.55);
 }
@@ -313,7 +314,7 @@
 .recommendLabel {
   font-family: var(--font-orbitron);
   font-size: 0.6rem;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.15em;
   color: var(--color-current);
 }
 
@@ -337,7 +338,7 @@
   font-size: 0.75rem;
   font-weight: 700;
   flex-shrink: 0;
-  margin-top: 2px;
+  margin-top: 3px;
 }
 
 /* ===== Before / After ===== */
@@ -397,7 +398,7 @@
   font-size: 0.78rem;
   color: rgba(255, 150, 150, 0.6);
   line-height: 1.6;
-  padding-left: 12px;
+  padding-left: 10px;
   border-left: 1px solid rgba(255, 100, 100, 0.15);
 }
 
@@ -405,7 +406,7 @@
   font-size: 0.78rem;
   color: rgba(109, 190, 214, 0.8);
   line-height: 1.6;
-  padding-left: 12px;
+  padding-left: 10px;
   border-left: 1px solid rgba(109, 190, 214, 0.2);
 }
 
@@ -453,9 +454,10 @@
 }
 
 .diffItemTitle {
-  font-size: 0.9rem;
+  font-size: 0.88rem;
   font-weight: 700;
   color: #ffffff;
+  line-height: 1.5;
 }
 
 .diffItemText {
@@ -498,22 +500,21 @@
 .whyLabel {
   font-family: var(--font-orbitron);
   font-size: 0.6rem;
-  letter-spacing: 0.25em;
+  letter-spacing: 0.2em;
   color: var(--color-current);
   opacity: 0.7;
 }
 
 .whyTitle {
-  font-size: 0.95rem;
+  font-size: 0.92rem;
   font-weight: 700;
   color: #ffffff;
-  line-height: 1.5;
+  line-height: 1.6;
 }
 
 .whyJa {
   font-size: 0.72rem;
   color: rgba(255, 255, 255, 0.3);
-  letter-spacing: 0.05em;
 }
 
 .whyList {
@@ -533,7 +534,7 @@
 .whyItemLabel {
   font-family: var(--font-orbitron);
   font-size: 0.62rem;
-  letter-spacing: 0.15em;
+  letter-spacing: 0.1em;
   color: var(--color-current);
   opacity: 0.8;
 }
@@ -555,7 +556,6 @@
   font-size: 0.68rem;
   color: #000;
   font-weight: 700;
-  white-space: nowrap;
   display: inline-block;
 }
 
@@ -590,14 +590,14 @@
 .whyCompareLabel {
   font-size: 0.68rem;
   color: rgba(255,255,255,0.35);
+  line-height: 1.4;
 }
 
 .whyComparePrice {
-  font-size: 0.75rem;
+  font-size: 0.78rem;
   font-weight: 700;
   color: rgba(255,255,255,0.75);
   line-height: 1.5;
-  white-space: pre-line;
 }
 
 .whyCompareDivider {
@@ -826,6 +826,7 @@
 
   .tabJa {
     font-size: 0.6rem;
+    letter-spacing: 0;
   }
 
   .tabBtn {
@@ -834,5 +835,18 @@
 
   .beforeAfterGrid {
     grid-template-columns: 1fr;
+  }
+
+  .serviceTag {
+    font-size: 0.55rem;
+    letter-spacing: 0.05em;
+  }
+
+  .serviceHeader {
+    gap: 12px;
+  }
+
+  .serviceNumber {
+    font-size: 2.5rem;
   }
 }
