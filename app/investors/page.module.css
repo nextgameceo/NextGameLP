@@ -1,0 +1,543 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+
+/* ===== ヘッダー ===== */
+.header {
+  padding-bottom: 48px;
+  border-bottom: 1px solid rgba(109, 190, 214, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.headerEn {
+  font-family: var(--font-orbitron);
+  font-size: 1.8rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  color: var(--color-current);
+}
+
+.headerTitle {
+  font-size: 0.85rem;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.4);
+  letter-spacing: 0.15em;
+}
+
+.headerLead {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.5);
+  line-height: 1.9;
+  max-width: 600px;
+  margin-top: 4px;
+}
+
+.headerBadge {
+  display: inline-flex;
+  width: fit-content;
+  padding: 8px 16px;
+  border: 1px solid rgba(109, 190, 214, 0.2);
+  font-size: 0.72rem;
+  color: rgba(109, 190, 214, 0.6);
+  letter-spacing: 0.05em;
+  margin-top: 8px;
+}
+
+/* ===== KPI ===== */
+.kpiRow {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  background: rgba(109, 190, 214, 0.08);
+  border: 1px solid rgba(109, 190, 214, 0.1);
+  width: 100%;
+}
+
+.kpi {
+  background: #060608;
+  padding: 32px 16px;
+  text-align: center;
+  transition: background 200ms ease;
+  min-width: 0;
+}
+
+.kpi:hover {
+  background: rgba(109, 190, 214, 0.03);
+}
+
+.kpiNumber {
+  font-family: var(--font-orbitron);
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--color-current);
+  line-height: 1.2;
+}
+
+.kpiLabel {
+  margin-top: 8px;
+  font-size: 0.65rem;
+  color: rgba(255, 255, 255, 0.35);
+  letter-spacing: 0.08em;
+  line-height: 1.5;
+}
+
+/* ===== セクション共通 ===== */
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.sectionHeader {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.sectionEn {
+  font-family: var(--font-orbitron);
+  font-size: 1.3rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  color: var(--color-current);
+}
+
+.sectionTitle {
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.35);
+  letter-spacing: 0.15em;
+  margin-bottom: 4px;
+}
+
+.sectionLead {
+  font-size: 0.88rem;
+  line-height: 1.9;
+  color: rgba(255, 255, 255, 0.4);
+  max-width: 560px;
+}
+
+/* ===== カード ===== */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: rgba(109, 190, 214, 0.08);
+  border: 1px solid rgba(109, 190, 214, 0.1);
+}
+
+.card {
+  background: #060608;
+  padding: 32px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: background 200ms ease;
+}
+
+.card:hover {
+  background: rgba(109, 190, 214, 0.03);
+}
+
+.cardEn {
+  font-family: var(--font-orbitron);
+  font-size: 0.55rem;
+  letter-spacing: 0.2em;
+  color: rgba(109, 190, 214, 0.3);
+}
+
+.cardTitle {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.cardText {
+  font-size: 0.82rem;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+/* ===== 収益モデル ===== */
+.revenueList {
+  display: flex;
+  flex-direction: column;
+}
+
+.revenueItem {
+  display: grid;
+  grid-template-columns: 48px 1fr auto;
+  gap: 24px;
+  padding: 28px 0;
+  border-bottom: 1px solid rgba(109, 190, 214, 0.06);
+  align-items: start;
+}
+
+.revenueItem:last-child {
+  border-bottom: none;
+}
+
+.revenueLeft {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.revenueNum {
+  font-family: var(--font-orbitron);
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: var(--color-current);
+  letter-spacing: 0.1em;
+}
+
+.revenueLine {
+  width: 1px;
+  flex: 1;
+  min-height: 24px;
+  background: linear-gradient(180deg, rgba(109, 190, 214, 0.3) 0%, transparent 100%);
+  margin-top: 8px;
+}
+
+.revenueBody {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.revenueTag {
+  font-family: var(--font-orbitron);
+  font-size: 0.55rem;
+  letter-spacing: 0.15em;
+  color: rgba(109, 190, 214, 0.4);
+}
+
+.revenueTitle {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.revenueText {
+  font-size: 0.85rem;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.45);
+}
+
+.revenueAmount {
+  text-align: right;
+  flex-shrink: 0;
+}
+
+.revenueAmountNum {
+  font-family: var(--font-orbitron);
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--color-current);
+  white-space: nowrap;
+}
+
+.revenueAmountLabel {
+  font-size: 0.65rem;
+  color: rgba(255, 255, 255, 0.3);
+  margin-top: 4px;
+  text-align: right;
+}
+
+/* ===== 収支シミュレーション ===== */
+.simTable {
+  border: 1px solid rgba(109, 190, 214, 0.1);
+  overflow: hidden;
+}
+
+.simHeader {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr 1.2fr 1.2fr 1.2fr;
+  background: rgba(109, 190, 214, 0.06);
+  border-bottom: 1px solid rgba(109, 190, 214, 0.1);
+}
+
+.simHeaderCell {
+  padding: 14px 16px;
+  font-family: var(--font-orbitron);
+  font-size: 0.55rem;
+  letter-spacing: 0.1em;
+  color: rgba(109, 190, 214, 0.5);
+}
+
+.simRow {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr 1.2fr 1.2fr 1.2fr;
+  border-bottom: 1px solid rgba(109, 190, 214, 0.05);
+  transition: background 200ms ease;
+}
+
+.simRow:last-child {
+  border-bottom: none;
+}
+
+.simRow:hover {
+  background: rgba(109, 190, 214, 0.02);
+}
+
+.simCell {
+  padding: 16px;
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.55);
+  line-height: 1.6;
+  white-space: pre-line;
+}
+
+.simNegative {
+  color: rgba(255, 100, 100, 0.7);
+}
+
+.simBreakeven {
+  color: rgba(255, 200, 100, 0.8);
+}
+
+.simPositive {
+  color: rgba(109, 190, 214, 0.9);
+}
+
+/* ===== 資金計画 ===== */
+.fundingGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  background: rgba(109, 190, 214, 0.08);
+  border: 1px solid rgba(109, 190, 214, 0.1);
+}
+
+.fundingUse,
+.fundingSource {
+  background: #060608;
+  padding: 32px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.fundingSubTitle {
+  font-family: var(--font-orbitron);
+  font-size: 0.6rem;
+  letter-spacing: 0.2em;
+  color: rgba(109, 190, 214, 0.5);
+}
+
+.fundingItems {
+  display: flex;
+  flex-direction: column;
+}
+
+.fundingItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(109, 190, 214, 0.05);
+}
+
+.fundingItem:last-child {
+  border-bottom: none;
+}
+
+.fundingTotal {
+  margin-top: 8px;
+  padding-top: 16px !important;
+  border-top: 1px solid rgba(109, 190, 214, 0.2) !important;
+  border-bottom: none !important;
+}
+
+.fundingTotal .fundingItemLabel,
+.fundingTotal .fundingItemAmount {
+  color: var(--color-current) !important;
+  font-weight: 700;
+}
+
+.fundingItemLabel {
+  font-size: 0.82rem;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.fundingItemAmount {
+  font-family: var(--font-orbitron);
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.7);
+  white-space: nowrap;
+  margin-left: 16px;
+}
+
+/* ===== ロードマップ ===== */
+.roadmap {
+  display: flex;
+  flex-direction: column;
+}
+
+.roadmapItem {
+  display: grid;
+  grid-template-columns: 48px 1fr;
+  gap: 24px;
+  padding: 28px 0;
+  border-bottom: 1px solid rgba(109, 190, 214, 0.06);
+}
+
+.roadmapItem:last-child {
+  border-bottom: none;
+}
+
+.roadmapLeft {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.roadmapNum {
+  font-family: var(--font-orbitron);
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: var(--color-current);
+  letter-spacing: 0.1em;
+}
+
+.roadmapLine {
+  width: 1px;
+  flex: 1;
+  min-height: 24px;
+  background: linear-gradient(180deg, rgba(109, 190, 214, 0.3) 0%, transparent 100%);
+  margin-top: 8px;
+}
+
+.roadmapBody {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-bottom: 8px;
+}
+
+.roadmapTag {
+  font-family: var(--font-orbitron);
+  font-size: 0.55rem;
+  letter-spacing: 0.15em;
+  color: rgba(109, 190, 214, 0.5);
+}
+
+.roadmapTitle {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.roadmapText {
+  font-size: 0.85rem;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.45);
+}
+
+/* ===== 代表メッセージ ===== */
+.message {
+  padding: 40px;
+  border-left: 2px solid rgba(109, 190, 214, 0.3);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  position: relative;
+}
+
+.message::before {
+  content: '"';
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  font-family: var(--font-orbitron);
+  font-size: 4rem;
+  color: rgba(109, 190, 214, 0.06);
+  line-height: 1;
+  pointer-events: none;
+}
+
+.messageText {
+  font-size: 1rem;
+  line-height: 2.1;
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 500;
+}
+
+.messageSignature {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.3);
+  letter-spacing: 0.1em;
+}
+
+/* ===== CTA ===== */
+.cta {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  padding-top: 16px;
+  border-top: 1px solid rgba(109, 190, 214, 0.08);
+}
+
+/* ===== レスポンシブ ===== */
+@media (max-width: 640px) {
+  .container {
+    gap: 56px;
+  }
+
+  .headerEn {
+    font-size: 1.2rem;
+  }
+
+  .kpiRow {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .kpiNumber {
+    font-size: 0.9rem;
+  }
+
+  .sectionEn {
+    font-size: 1rem;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .revenueItem {
+    grid-template-columns: 32px 1fr;
+    gap: 16px;
+  }
+
+  .revenueAmount {
+    display: none;
+  }
+
+  .simHeader,
+  .simRow {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .simHeaderCell:nth-child(n+3),
+  .simCell:nth-child(n+3) {
+    display: none;
+  }
+
+  .fundingGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .roadmapItem {
+    grid-template-columns: 32px 1fr;
+    gap: 16px;
+  }
+
+  .message {
+    padding: 24px 24px 24px 28px;
+  }
+}
