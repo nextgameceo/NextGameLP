@@ -108,7 +108,7 @@ export default async function Page() {
             </div>
             <div className={styles.sectionRight}>
               <p className={styles.sectionDescription}>
-                NEXTGAME株式会社は、愛知県名古屋市に拠点を置く、AIに特化した就労継続支援B型事業所です。{'\n\n'}代表取締役 内山博貴のもと、利用者の皆様がスキルで稼ぎ、自立できる社会の実現を目指しています。
+                NEXTGAME株式会社は、AI特化型の就労継続支援B型事業所です。{'\n\n'}楽曲制作でAIプロンプトを学び、GitHubで実績を積み、個人事業主として独立するキャリアパスを提供しています。{'\n\n'}「通うための場所」ではなく、「稼ぐスキルを会得する場所」を目指しています。
               </p>
               <div>
                 <ButtonLink href="/about">Read More</ButtonLink>
