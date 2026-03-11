@@ -165,6 +165,31 @@ export default async function Page() {
           </FadeInSection>
         </section>
       </div>
+
+      <div className={styles.divider} />
+
+      {/* Investors */}
+      <div className={styles.investorsSection}>
+        <section className={styles.section}>
+          <FadeInSection>
+            <div className={styles.sectionInner}>
+              <div className={styles.sectionLeft}>
+                <p className={styles.sectionNumber}>06</p>
+                <h2 className={styles.sectionTitleEn}>Investors</h2>
+                <span className={styles.sectionTitleJa}>投資家・融資機関の方へ</span>
+              </div>
+              <div className={styles.sectionRight}>
+                <p className={styles.sectionDescription}>
+                  資本金30万円からのスタートです。{'\n\n'}しかし、障害のある方々がAIスキルで本当に稼げる場所をつくるという確信は、誰にも負けません。{'\n\n'}このホームページ自体が、私たちの事業計画書です。融資目標3,500万円。数字と熱量、両方で判断していただければ幸いです。
+                </p>
+                <div>
+                  <ButtonLink href="/investors">Read More</ButtonLink>
+                </div>
+              </div>
+            </div>
+          </FadeInSection>
+        </section>
+      </div>
     </>
   );
 }
