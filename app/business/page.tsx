@@ -11,12 +11,12 @@ const tracks = [
   {
     title: "NEXTGAME",
     embedUrl:
-      "https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/hiroki-uchiyama-905347469/nextgame&color=%236dbed6&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=false",
+      "https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/hiroki-uchiyama-905347469/nextgame&color=%236dbed6&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=false&visual=false",
   },
   {
     title: "1人じゃない",
     embedUrl:
-      "https://w.soundcloud.com/player/?url=https%3A//on.soundcloud.com/H9lKud87YY1DNdfTLW&color=%236dbed6&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=false",
+      "https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/hiroki-uchiyama-905347469/1a2&color=%236dbed6&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=false&visual=false",
   },
 ];
 
@@ -268,31 +268,27 @@ export default function Page() {
                           display: 'flex',
                           alignItems: 'center',
                           gap: '8px',
-                          padding: '12px 16px 0',
+                          padding: '12px 16px 8px',
                         }}>
                           <span style={{
-                            width: '6px',
-                            height: '6px',
-                            borderRadius: '50%',
-                            background: '#6dbed6',
-                            boxShadow: '0 0 6px #6dbed6',
-                            flexShrink: 0,
-                            display: 'inline-block',
+                            width: '6px', height: '6px', borderRadius: '50%',
+                            background: '#6dbed6', boxShadow: '0 0 6px #6dbed6',
+                            flexShrink: 0, display: 'inline-block',
                           }} />
                           <span style={{
-                            fontSize: '0.82rem',
-                            fontWeight: 500,
-                            letterSpacing: '0.04em',
-                            color: 'rgba(255,255,255,0.85)',
+                            fontSize: '0.82rem', fontWeight: 500,
+                            letterSpacing: '0.04em', color: 'rgba(255,255,255,0.85)',
                           }}>{track.title}</span>
                         </div>
-                        <iframe
-                          src={track.embedUrl}
-                          height="166"
-                          allow="autoplay"
-                          title={track.title}
-                          style={{ width: '100%', border: 'none', display: 'block' }}
-                        />
+                        <div style={{ overflow: 'hidden', height: '100px' }}>
+                          <iframe
+                            src={track.embedUrl}
+                            height="166"
+                            allow="autoplay"
+                            title={track.title}
+                            style={{ width: '100%', border: 'none', display: 'block', marginTop: '-8px' }}
+                          />
+                        </div>
                       </div>
                     ))}
                   </div>
