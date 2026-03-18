@@ -7,6 +7,19 @@ import FadeInSection from '@/app/_components/FadeInSection';
 
 type Tab = 'web' | 'music' | 'ai';
 
+const tracks = [
+  {
+    title: "NEXTGAME",
+    embedUrl:
+      "https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/hiroki-uchiyama-905347469/nextgame&color=%236dbed6&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=false",
+  },
+  {
+    title: "1人じゃない",
+    embedUrl:
+      "https://w.soundcloud.com/player/?url=https%3A//on.soundcloud.com/H9lKud87YY1DNdfTLW&color=%236dbed6&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=false",
+  },
+];
+
 export default function Page() {
   const [activeTab, setActiveTab] = useState<Tab>('web');
 
@@ -62,8 +75,6 @@ export default function Page() {
             </div>
             <div className={styles.serviceBody}>
               <div className={styles.serviceLeft}>
-
-                {/* 問題提起 */}
                 <div className={styles.problemBlock}>
                   <p className={styles.problemQuestion}>ホームページ、作ったまま放置していませんか？</p>
                   <div className={styles.problemList}>
@@ -73,8 +84,6 @@ export default function Page() {
                   </div>
                   <p className={styles.problemSub}>それは「Webサイトを持っている」のではなく、「眠らせている」状態です。</p>
                 </div>
-
-                {/* 従来の問題 */}
                 <div className={styles.oldModelBlock}>
                   <p className={styles.oldModelText}>
                     多くの制作会社は作って納品したら終わり。更新・改善・SEO対策はすべて別料金。結果、誰も触れないまま古くなっていきます。
@@ -85,8 +94,6 @@ export default function Page() {
                     <p className={styles.oldModelResultItem}>資産にならない</p>
                   </div>
                 </div>
-
-                {/* NEXTGAMEの答え */}
                 <div className={styles.answerBlock}>
                   <p className={styles.answerLabel}>NEXTGAMEは運用がメインです。</p>
                   <p className={styles.answerPrice}>初期費用 0円。月額 100,000円。</p>
@@ -94,39 +101,17 @@ export default function Page() {
                     制作・更新・SEO改善・コンテンツ追加・デザイン修正まで、すべて月額内で対応します。Webサイトを「毎月成長する集客資産」に変えます。
                   </p>
                 </div>
-
-                {/* こんな企業におすすめ */}
                 <div className={styles.recommendBlock}>
                   <p className={styles.recommendLabel}>こんな企業におすすめ</p>
                   <div className={styles.recommendList}>
-                    <div className={styles.recommendItem}>
-                      <span className={styles.recommendCheck}>✓</span>
-                      <p>ホームページが古く、更新できていない</p>
-                    </div>
-                    <div className={styles.recommendItem}>
-                      <span className={styles.recommendCheck}>✓</span>
-                      <p>WordPressの管理が面倒・セキュリティが不安</p>
-                    </div>
-                    <div className={styles.recommendItem}>
-                      <span className={styles.recommendCheck}>✓</span>
-                      <p>Webからの問い合わせをもっと増やしたい</p>
-                    </div>
-                    <div className={styles.recommendItem}>
-                      <span className={styles.recommendCheck}>✓</span>
-                      <p>制作会社に頼むと高額で更新も別料金だった</p>
-                    </div>
-                    <div className={styles.recommendItem}>
-                      <span className={styles.recommendCheck}>✓</span>
-                      <p>スマホで見たときの表示が崩れている</p>
-                    </div>
-                    <div className={styles.recommendItem}>
-                      <span className={styles.recommendCheck}>✓</span>
-                      <p>Googleの検索順位を上げたい</p>
-                    </div>
+                    <div className={styles.recommendItem}><span className={styles.recommendCheck}>✓</span><p>ホームページが古く、更新できていない</p></div>
+                    <div className={styles.recommendItem}><span className={styles.recommendCheck}>✓</span><p>WordPressの管理が面倒・セキュリティが不安</p></div>
+                    <div className={styles.recommendItem}><span className={styles.recommendCheck}>✓</span><p>Webからの問い合わせをもっと増やしたい</p></div>
+                    <div className={styles.recommendItem}><span className={styles.recommendCheck}>✓</span><p>制作会社に頼むと高額で更新も別料金だった</p></div>
+                    <div className={styles.recommendItem}><span className={styles.recommendCheck}>✓</span><p>スマホで見たときの表示が崩れている</p></div>
+                    <div className={styles.recommendItem}><span className={styles.recommendCheck}>✓</span><p>Googleの検索順位を上げたい</p></div>
                   </div>
                 </div>
-
-                {/* Before / After */}
                 <div className={styles.beforeAfterBlock}>
                   <p className={styles.beforeAfterLabel}>BEFORE / AFTER</p>
                   <p className={styles.beforeAfterTitle}>導入後、何が変わるか</p>
@@ -149,8 +134,6 @@ export default function Page() {
                     </div>
                   </div>
                 </div>
-
-                {/* 差別化 */}
                 <div className={styles.diffBlock}>
                   <p className={styles.diffLabel}>WHY NEXTGAME</p>
                   <p className={styles.diffTitle}>他社と何が違うのか</p>
@@ -173,8 +156,6 @@ export default function Page() {
                     </div>
                   </div>
                 </div>
-
-                {/* 技術スタック */}
                 <div className={styles.techStackBlock}>
                   <p className={styles.techStackLabel}>TECH STACK</p>
                   <div className={styles.techStack}>
@@ -186,8 +167,6 @@ export default function Page() {
                     プラグイン依存のWordPressではなく、高速・安全・拡張可能なNext.jsで構築します。毎月のコンテンツ運用にはAIを活用し、Webサイトを成長し続けるメディアとして運用します。
                   </p>
                 </div>
-
-                {/* コスト比較 */}
                 <div className={styles.whyBox}>
                   <p className={styles.whyLabel}>COST COMPARISON</p>
                   <p className={styles.whyTitle}>Web運用サブスクと従来型の比較</p>
@@ -195,14 +174,10 @@ export default function Page() {
                     <div className={styles.whyItem}>
                       <span className={styles.whyItemLabel}>表示速度（Googleスコア）</span>
                       <div className={styles.whyBar}>
-                        <div className={styles.whyBarFill} style={{width: '95%'}}>
-                          <span>Next.js 95点</span>
-                        </div>
+                        <div className={styles.whyBarFill} style={{width: '95%'}}><span>Next.js 95点</span></div>
                       </div>
                       <div className={styles.whyBar}>
-                        <div className={`${styles.whyBarFill} ${styles.whyBarSub}`} style={{width: '55%'}}>
-                          <span>WordPress 55点</span>
-                        </div>
+                        <div className={`${styles.whyBarFill} ${styles.whyBarSub}`} style={{width: '55%'}}><span>WordPress 55点</span></div>
                       </div>
                     </div>
                     <div className={styles.whyItem}>
@@ -221,9 +196,7 @@ export default function Page() {
                     </div>
                   </div>
                 </div>
-
               </div>
-
               <div className={styles.serviceRight}>
                 <div className={styles.priceCard}>
                   <p className={styles.planName}>MONTHLY PLAN</p>
@@ -272,24 +245,59 @@ export default function Page() {
                 <div className={styles.recommendBlock}>
                   <p className={styles.recommendLabel}>こんな方におすすめ</p>
                   <div className={styles.recommendList}>
-                    <div className={styles.recommendItem}>
-                      <span className={styles.recommendCheck}>✓</span>
-                      <p>店舗・サービスのオリジナルBGMが欲しい</p>
-                    </div>
-                    <div className={styles.recommendItem}>
-                      <span className={styles.recommendCheck}>✓</span>
-                      <p>YouTube・SNS動画用のBGMやジングルが必要</p>
-                    </div>
-                    <div className={styles.recommendItem}>
-                      <span className={styles.recommendCheck}>✓</span>
-                      <p>音楽を作りたいが機材・知識がない</p>
-                    </div>
-                    <div className={styles.recommendItem}>
-                      <span className={styles.recommendCheck}>✓</span>
-                      <p>Spotifyなどに自分の曲を配信してみたい</p>
-                    </div>
+                    <div className={styles.recommendItem}><span className={styles.recommendCheck}>✓</span><p>店舗・サービスのオリジナルBGMが欲しい</p></div>
+                    <div className={styles.recommendItem}><span className={styles.recommendCheck}>✓</span><p>YouTube・SNS動画用のBGMやジングルが必要</p></div>
+                    <div className={styles.recommendItem}><span className={styles.recommendCheck}>✓</span><p>音楽を作りたいが機材・知識がない</p></div>
+                    <div className={styles.recommendItem}><span className={styles.recommendCheck}>✓</span><p>Spotifyなどに自分の曲を配信してみたい</p></div>
                   </div>
                 </div>
+
+                {/* ===== SoundCloud プレイヤー ===== */}
+                <div className={styles.whyBox}>
+                  <p className={styles.whyLabel}>SAMPLE TRACKS</p>
+                  <p className={styles.whyTitle}>制作サンプルをお聴きください</p>
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: '16px', marginTop: '20px' }}>
+                    {tracks.map((track, i) => (
+                      <div key={i} style={{
+                        borderRadius: '12px',
+                        overflow: 'hidden',
+                        border: '1px solid rgba(109,190,214,0.2)',
+                        background: 'rgba(6,14,28,0.6)',
+                      }}>
+                        <div style={{
+                          display: 'flex',
+                          alignItems: 'center',
+                          gap: '8px',
+                          padding: '12px 16px 0',
+                        }}>
+                          <span style={{
+                            width: '6px',
+                            height: '6px',
+                            borderRadius: '50%',
+                            background: '#6dbed6',
+                            boxShadow: '0 0 6px #6dbed6',
+                            flexShrink: 0,
+                            display: 'inline-block',
+                          }} />
+                          <span style={{
+                            fontSize: '0.82rem',
+                            fontWeight: 500,
+                            letterSpacing: '0.04em',
+                            color: 'rgba(255,255,255,0.85)',
+                          }}>{track.title}</span>
+                        </div>
+                        <iframe
+                          src={track.embedUrl}
+                          height="166"
+                          allow="autoplay"
+                          title={track.title}
+                          style={{ width: '100%', border: 'none', display: 'block' }}
+                        />
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
                 <div className={styles.whyBox}>
                   <p className={styles.whyLabel}>WHY MUSIC?</p>
                   <p className={styles.whyTitle}>音楽は、最も感情に直結するブランド資産。</p>
@@ -352,26 +360,11 @@ export default function Page() {
                 <div className={styles.recommendBlock}>
                   <p className={styles.recommendLabel}>こんな企業におすすめ</p>
                   <div className={styles.recommendList}>
-                    <div className={styles.recommendItem}>
-                      <span className={styles.recommendCheck}>✓</span>
-                      <p>ChatGPTを導入したが使いこなせていない</p>
-                    </div>
-                    <div className={styles.recommendItem}>
-                      <span className={styles.recommendCheck}>✓</span>
-                      <p>社員のAIリテラシーを底上げしたい</p>
-                    </div>
-                    <div className={styles.recommendItem}>
-                      <span className={styles.recommendCheck}>✓</span>
-                      <p>議事録・メール・資料作成を自動化したい</p>
-                    </div>
-                    <div className={styles.recommendItem}>
-                      <span className={styles.recommendCheck}>✓</span>
-                      <p>IT人材を採用せずにDXを進めたい</p>
-                    </div>
-                    <div className={styles.recommendItem}>
-                      <span className={styles.recommendCheck}>✓</span>
-                      <p>月30万円以上の人件費をAIで削減したい</p>
-                    </div>
+                    <div className={styles.recommendItem}><span className={styles.recommendCheck}>✓</span><p>ChatGPTを導入したが使いこなせていない</p></div>
+                    <div className={styles.recommendItem}><span className={styles.recommendCheck}>✓</span><p>社員のAIリテラシーを底上げしたい</p></div>
+                    <div className={styles.recommendItem}><span className={styles.recommendCheck}>✓</span><p>議事録・メール・資料作成を自動化したい</p></div>
+                    <div className={styles.recommendItem}><span className={styles.recommendCheck}>✓</span><p>IT人材を採用せずにDXを進めたい</p></div>
+                    <div className={styles.recommendItem}><span className={styles.recommendCheck}>✓</span><p>月30万円以上の人件費をAIで削減したい</p></div>
                   </div>
                 </div>
                 <div className={styles.beforeAfterBlock}>
