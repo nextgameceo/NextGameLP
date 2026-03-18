@@ -126,6 +126,22 @@ const jsonLd = {
   ],
 };
 
+// ← 追加
+const jsonLdWebSite = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: 'NEXTGAME株式会社',
+  url: 'https://nextgame-limited.com',
+  potentialAction: {
+    '@type': 'SearchAction',
+    target: {
+      '@type': 'EntryPoint',
+      urlTemplate: 'https://nextgame-limited.com/news?q={search_term_string}',
+    },
+    'query-input': 'required name=search_term_string',
+  },
+};
+
 type Props = {
   children: React.ReactNode;
 };
@@ -137,6 +153,11 @@ export default function RootLayout({ children }: Props) {
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+        {/* ← 追加 */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdWebSite) }}
         />
         <InitialLoading />
         <Header />
