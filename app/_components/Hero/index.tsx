@@ -1,4 +1,3 @@
-// Hero/index.tsx
 import styles from './index.module.css'
 import Image from 'next/image'
 import ButtonLink from '@/app/_components/ButtonLink'
@@ -12,21 +11,6 @@ export default function Hero({ title, sub }: Props) {
   return (
     <section className={styles.container}>
 
-      {/* 背景動画 */}
-      <video
-        autoPlay
-        muted
-        loop
-        playsInline
-        className={styles.bgVideo}
-      >
-        <source src="/videos/NEXTGAME-PV.mp4" type="video/mp4" />
-      </video>
-
-      {/* オーバーレイ（動画の上に暗幕） */}
-      <div className={styles.overlay} />
-
-      {/* 既存コンテンツ（z-indexで動画の上に表示） */}
       <div className={styles.content}>
 
         <div className={styles.logoWrap}>
@@ -49,6 +33,17 @@ export default function Hero({ title, sub }: Props) {
           <p className={styles.text}>
             弊社は、各々の才能を価値へと変える、最高の環境を提供します。
           </p>
+        </div>
+
+        {/* YouTube PV */}
+        <div className={styles.videoWrap}>
+          <iframe
+            src="https://www.youtube.com/embed/kPMuXnHZ_4A"
+            title="NEXTGAME PV"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+            className={styles.videoFrame}
+          />
         </div>
 
         <div className={styles.ctaWrap}>
