@@ -40,11 +40,13 @@ export async function generateMetadata(): Promise<Metadata> {
         siteName: 'NEXTGAME株式会社',
         title: defaultTitle,
         description: defaultDesc,
+        images: [{ url: `${baseUrl}/ogp.png`, width: 1200, height: 630 }],
       },
       twitter: {
         card: 'summary_large_image',
         title: defaultTitle,
         description: defaultDesc,
+        images: [`${baseUrl}/ogp.png`],
       },
       icons: {
         icon: [
@@ -81,13 +83,17 @@ export async function generateMetadata(): Promise<Metadata> {
       siteName: 'NEXTGAME株式会社',
       title: data.ogTitle || data.title || defaultTitle,
       description: data.ogDescription || data.description || defaultDesc,
-      images: data.ogImage?.url ? [{ url: data.ogImage.url }] : undefined,
+      images: data.ogImage?.url
+        ? [{ url: data.ogImage.url }]
+        : [{ url: `${baseUrl}/ogp.png`, width: 1200, height: 630 }],
     },
     twitter: {
       card: 'summary_large_image',
       title: data.ogTitle || data.title || defaultTitle,
       description: data.ogDescription || data.description || defaultDesc,
-      images: data.ogImage?.url ? [data.ogImage.url] : undefined,
+      images: data.ogImage?.url
+        ? [data.ogImage.url]
+        : [`${baseUrl}/ogp.png`],
     },
     icons: {
       icon: [
@@ -126,7 +132,6 @@ const jsonLd = {
   ],
 };
 
-// ← 追加
 const jsonLdWebSite = {
   '@context': 'https://schema.org',
   '@type': 'WebSite',
@@ -154,7 +159,6 @@ export default function RootLayout({ children }: Props) {
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
-        {/* ← 追加 */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdWebSite) }}
