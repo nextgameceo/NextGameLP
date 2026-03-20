@@ -35,6 +35,18 @@ export default async function Page() {
               あなたのアイデアを資産へ
             </p>
           </div>
+
+          {/* YouTube PV */}
+          <div className={styles.videoWrap}>
+            <iframe
+              src="https://www.youtube.com/embed/kPMuXnHZ_4A"
+              title="NEXTGAME PV"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              className={styles.videoFrame}
+            />
+          </div>
+
           <div className={styles.heroScroll}>scroll</div>
         </div>
         <Image
