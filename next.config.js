@@ -13,10 +13,9 @@ const nextConfig = {
       {
         source: '/(.*)',
         headers: [
-          // ↓ これを追加
           {
             key: 'Content-Security-Policy',
-            value: "frame-src 'self' https://www.youtube.com https://www.youtube-nocookie.com;",
+            value: "frame-src 'self' https://www.youtube.com https://www.youtube-nocookie.com https://w.soundcloud.com https://soundcloud.com;",
           },
           {
             key: 'Cache-Control',
