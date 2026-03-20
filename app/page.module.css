@@ -85,27 +85,6 @@
   animation: fadeSlideUp 0.8s ease 1s both, scrollAnim 2s ease 1.8s infinite;
 }
 
-/* YouTube動画 */
-.videoWrap {
-  position: relative;
-  width: 100%;
-  max-width: 800px;
-  aspect-ratio: 16 / 9;
-  border-radius: 12px;
-  overflow: hidden;
-  z-index: 1;
-  animation: fadeSlideUp 0.8s ease 0.7s both;
-}
-
-.videoFrame {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border: none;
-}
-
 .bgimg {
   position: absolute;
   top: 0;
