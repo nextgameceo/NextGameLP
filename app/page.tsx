@@ -5,6 +5,7 @@ import TopNewsList from '@/app/_components/TopNewsList';
 import styles from './page.module.css';
 import ButtonLink from '@/app/_components/ButtonLink';
 import FadeInSection from '@/app/_components/FadeInSection';
+import YoutubePlayer from '@/app/_components/YoutubePlayer';
 
 export default async function Page() {
   const data = await getNewsList({
@@ -37,15 +38,7 @@ export default async function Page() {
           </div>
 
           {/* YouTube PV */}
-          <div className={styles.videoWrap}>
-            <iframe
-              src="https://www.youtube.com/embed/kPMuXnHZ_4A?controls=0&modestbranding=1&rel=0"
-              title="NEXTGAME PV"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-              className={styles.videoFrame}
-            />
-          </div>
+          <YoutubePlayer videoId="kPMuXnHZ_4A" />
 
           <div className={styles.heroScroll}>scroll</div>
         </div>
