@@ -39,7 +39,7 @@ export default async function Page() {
           {/* YouTube PV */}
           <div className={styles.videoWrap}>
             <iframe
-              src="https://www.youtube.com/embed/kPMuXnHZ_4A"
+              src="https://www.youtube.com/embed/kPMuXnHZ_4A?controls=0&modestbranding=1&rel=0"
               title="NEXTGAME PV"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
