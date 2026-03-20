@@ -38,7 +38,7 @@ export default async function Page() {
           </div>
 
           {/* YouTube PV */}
-          <YoutubePlayer videoId="kPMuXnHZ_4A" />
+          <YoutubePlayer videoId="kPMuXnHZ_4A" /> 
 
           <div className={styles.heroScroll}>scroll</div>
         </div>
