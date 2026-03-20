@@ -13,6 +13,11 @@ const nextConfig = {
       {
         source: '/(.*)',
         headers: [
+          // ↓ これを追加
+          {
+            key: 'Content-Security-Policy',
+            value: "frame-src 'self' https://www.youtube.com https://www.youtube-nocookie.com;",
+          },
           {
             key: 'Cache-Control',
             value: 'no-store, no-cache, must-revalidate, proxy-revalidate',
