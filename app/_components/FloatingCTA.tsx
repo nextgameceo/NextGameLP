@@ -42,7 +42,7 @@ export default function FloatingCTA() {
 
         .ng-cta-wrapper {
           position: fixed;
-          bottom: 24px;
+          bottom: 8px;
           left: 50%;
           transform: translateX(-50%) translateY(120px);
           z-index: 9999;
@@ -272,7 +272,7 @@ export default function FloatingCTA() {
         }
 
         @media (max-width: 480px) {
-          .ng-cta-wrapper { bottom: 16px; width: calc(100% - 24px); }
+          .ng-cta-wrapper { bottom: 8px; width: calc(100% - 24px); }
           .ng-bar-inner { padding: 13px 16px; }
           .ng-btn { padding: 12px 14px; }
           .ng-btn-ja { font-size: 0.77rem; }
